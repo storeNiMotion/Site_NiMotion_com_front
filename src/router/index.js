@@ -92,17 +92,17 @@ const router = createRouter({
           component: Search
         },
         {
-          meta: { title: '产品中心' },
+          meta: { title: 'Product' },
           path: '/product',                                       // 产品中心ProductsList
           component: Products
         },
         {
-          meta: { title: '产品分类列表' },
+          meta: { title: 'Product Category List' },
           path: '/product/:id',                                   // 产品分类列表
           component: ProductsList
         },
         {
-          meta: { title: '产品列表' },
+          meta: { title: 'Product List' },
           path: '/product/list/:id',
           component: ProductChannel
         },
@@ -112,67 +112,67 @@ const router = createRouter({
         //   component: ProductsDetail
         // },
         {
-          meta: { title: '智能控制器详情' },
+          meta: { title: 'Smart Controller Details' },
           path: '/product/controller/detail/:id',                 // 控制器详情页
           component: ControllerDetail
         },
         {
-          meta: { title: '一体化步进电机详情' },
+          meta: { title: 'Integrated stepper motor details' },
           path: '/product/stepper/detail/:id',                    // 步进电机详情页
           component: StepperDetail
         },
         {
-          meta: { title: '总线驱动器详情' },
+          meta: { title: 'Bus Driver Details' },
           path: '/product/driver/detail/:id',                    // 驱动器详情页
           component: DriverDetail
         },
         {
-          meta: { title: '一体化丝杆电机详情' },
+          meta: { title: 'Integrated lead screw motor details' },
           path: '/product/screw/detail/:id',                      // 丝杆电机详情页
           component: ScrewDetail
         },
         {
-          meta: { title: '一体化伺服电机详情' },
+          meta: { title: 'Integrated servo motor details' },
           path: '/product/servo/detail/:id',                     // 伺服电机详情页
           component: ServoDetail
         },
         {
-          meta: { title: '一体化无刷电机详情' },
+          meta: { title: 'Integrated brushless motor details' },
           path: '/product/brushless/detail/:id',                 // 无刷电机详情页
           component: BrushlessDetail
         },
         {
-          meta: { title: '运动模组详情' },
+          meta: { title: 'Sports module details' },
           path: '/product/transmission/detail/:id',              // 传动组件详情页
           component: TransmissionDetail
         },
         {
-          meta: { title: '工业软件详情' },
+          meta: { title: 'Industrial Software Details' },
           path: '/product/software/detail/:id',                  // 工业软件详情页
           component: SoftwareDetail
         },
         {
-          meta: { title: '机器人详情' },
+          meta: { title: 'Robot Details' },
           path: '/product/robot/detail/:id',                     // 机器人详情页
           component: RobotDetail
         },
         {
-          meta: { title: 'IO模块详情' },
+          meta: { title: 'IO module details' },
           path: '/product/IO/detail/:id',                        // IO模块详情页
           component: IODetail
         },
         {
-          meta: { title: '转换器详情' },
+          meta: { title: 'Converter Details' },
           path: '/product/converter/detail/:id',                 // 转换器详情页
           component: ConverterDetail
         },
         {
-          meta: { title: '线缆详情' },
+          meta: { title: 'Cable Details' },
           path: '/product/cables/detail/:id',                    // 线缆详情页
           component: CablesDetail
         },
         {
-          meta: { title: '产品定制方案' },
+          meta: { title: 'Product customization solutions' },
           path: '/product/solutions/detail/:id',                 // 定制方案详情页
           component: SolutionsDetail
         },
