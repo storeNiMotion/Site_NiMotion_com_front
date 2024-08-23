@@ -8,44 +8,14 @@ const categoryStore = useCategoryStore()
 
 const icon = [
   {
-    "value": "淘宝", 
-    "imgsrc": "http://www.nimotion.cn/static/images/icon/icon_tao.webp",        // /src/assets/images/icon_tao.png
-    "href": "https://nimotion-bj.taobao.com/search.htm?spm=a1z10.1-c-s.w5002-17849657215.1.5f9e26e2RqX4a8&search=y"
+    "value": "facebook", 
+    "imgsrc": "http://www.nimotion.cn/static/images/icon/icon_facebook.png",        // /src/assets/images/icon_tao.png
+    "href": "https://www.facebook.com/profile.php?id=100064082113096"
   },
   {
-    "value": "1688", 
-    "imgsrc": "http://www.nimotion.cn/static/images/icon/icon_a1.webp", 
-    "href": "https://nimotion.1688.com/"
-  },
-  {
-    "value": "Alibaba", 
-    "imgsrc": "http://www.nimotion.cn/static/images/icon/icon_a2.webp", 
-    "href": "https://nimotion.en.alibaba.com/?spm=a2700.icbuShop.0.0.2732773a6KCGWa"
-  },
-  {
-    "value": "爱采购", 
-    "imgsrc": "http://www.nimotion.cn/static/images/icon/icon_cai.webp", 
-    "href": "https://b2b.baidu.com/shop?name=%E5%8C%97%E4%BA%AC%E7%AB%8B%E8%BF%88%E8%83%9C%E6%8E%A7%E5%88%B6%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E8%B4%A3%E4%BB%BB%E5%85%AC%E5%8F%B8&xzhid=30577829&tpath=index&fid=67174400%2C1686911569688&pi=b2b.land....2102203120202990"
-  },
-  {
-    "value": "B站", 
-    "imgsrc": "http://www.nimotion.cn/static/images/icon/icon_bilibili.webp", 
-    "href": "https://space.bilibili.com/2090164166"
-  },
-  {
-    "value": "抖音", 
-    "imgsrc": "http://www.nimotion.cn/static/images/icon/icon_douyin.webp", 
-    "href": "https://www.douyin.com/user/MS4wLjABAAAAA9w4NrH07Bba-z_sIBmLpXPXsGj8MQFvhQD0PTHgZ_R3JLcyEmvPbRJHdYGTEsmX"
-  },
-  {
-    "value": "知乎", 
-    "imgsrc": "http://www.nimotion.cn/static/images/icon/icon_zhihu.webp", 
-    "href": "https://www.zhihu.com/org/nimotion"
-  },
-  {
-    "value": "CSDN", 
-    "imgsrc": "http://www.nimotion.cn/static/images/icon/icon_csdn.webp", 
-    "href": "https://blog.csdn.net/m0_46512607"
+    "value": "youtube", 
+    "imgsrc": "http://www.nimotion.cn/static/images/icon/icon_youtube.png", 
+    "href": "https://studio.youtube.com/channel/UCLjINSmccbbtVgx7f9W3GrA/videos/upload?filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D"
   },
 ]
 
@@ -64,16 +34,19 @@ const icon = [
                   <li class="logo-image"><img src="../../../assets/images/横版白色透明-logo.png" alt=""></li>
                   <li class="tel">
                     <a href="">
-                      <span class="iconfont icon-dianhua" style="margin-right: 4px;"></span><h4>服务热线</h4>
+                      <span class="iconfont icon-dianhua" style="margin-right: 4px;"></span><h4>Telephone</h4>
                     </a>
                     <h3>010-60213882</h3>
                   </li>
                   <li class="info">
                     <ul>
-                      <li><h5>北京立迈胜控制技术有限责任公司</h5><p>Beijing NiMotion Control Technology Co.,Ltd.</p></li>
-                      <li><h5>手 机：15652093730</h5></li>
-                      <li><h5>邮 箱：nimotion@nimotion.com</h5></li>
-                      <li><h5>网 址：www.nimotion.cn</h5></li>
+                      <li>
+                        <h5>Beijing NiMotion Control Technology Co.,Ltd.</h5>
+                        <!-- <p>Beijing NiMotion Control Technology Co.,Ltd.</p -->
+                      </li>
+                      <li><h5>cell phone：15652093730</h5></li>
+                      <li><h5>Mail：nimotion@nimotion.com</h5></li>
+                      <li><h5>Website：www.nimotion.cn</h5></li>
                     </ul>
                   </li>
                 </ul>
@@ -106,22 +79,22 @@ const icon = [
               <ul>
                 <li>
                   <div class="pic"><img src="../../../assets/images/img_wei.jpg" alt=""></div>
-                  <p>微信公众号</p>
+                  <p>WeChat Official Account</p>
                 </li>
                 <li>
                   <div class="pic"><img src="../../../assets/images/img_video.jpg" alt=""></div>
-                  <p>视频号</p>
+                  <p>Video Number</p>
                 </li>
               </ul>
             </div>
             <div class="link">
               <ul class="fr-link">
-                <li><span>友情链接: </span></li>
+                <li><span>Friendly Links: </span></li>
                 
-                <li><a href="http://www.nimotion.net/" target="_blank">南京立迈胜</a></li>
+                <li><a href="http://www.nimotion.net/" target="_blank">Nanjing Limaisheng</a></li>
               </ul>
               <ul>
-                <li><span>地 址: 北京市大兴区金星西路12号院3号楼</span></li>
+                <li><span>Address: Building 3, No. 12, Jinxing West Road, Daxing District, Beijing</span></li>
               </ul>
               <!-- <li><span>地 址: 北京市大兴区金星西路12号院3号楼</span></li> -->
               <ul class="icon-link">
@@ -138,8 +111,8 @@ const icon = [
           <!-- 版权 -->
           <div class="footer-nav-three">
             <div class="copyright">
-              <p>CopyRight © 2024 NiMition立迈胜 版权所有</p>
-              <a href="https://beian.mps.gov.cn/#/query/webSearch?code=32011602010374" rel="noreferrer" target="_blank"><img src="@/assets/images/icon_beian.png" alt="">京ICP备17039911号</a>
+              <p>CopyRight © 2024 Copyright by NiMition</p>
+              <a href="https://beian.mps.gov.cn/#/query/webSearch?code=32011602010374" rel="noreferrer" target="_blank"><img src="@/assets/images/icon_beian.png" alt="">Beijing ICP No. 17039911</a>
             </div>
           </div>
 

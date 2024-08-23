@@ -34,9 +34,9 @@ onMounted(() => getNewsList())
     <div class="Solution-panel-nav-bread">
         <div class="container">
             <div class="nav-bread">
-                <a href="">首页</a>
+                <a href="">Home</a>
                 <span> > </span>
-                <a href="/news">公司新闻</a>
+                <a href="/news">News</a>
             </div>
         </div>
     </div>
@@ -57,7 +57,7 @@ onMounted(() => getNewsList())
                             <!-- <a href="/solution/list" class="btn-face">查看更多</a> -->
                             <div class="sol-more">
                                 <!-- <a href="/news/detail" class="btn-face">查看详情</a> -->
-                                <RouterLink class="btn-face" :to="`/news/detail/${item.id}`">查看详情</RouterLink>
+                                <RouterLink class="btn-face" :to="`/news/detail/${item.id}`">Details</RouterLink>
                                 <span class="date">{{ item.update_time }}</span>
                             </div>
                         </div>

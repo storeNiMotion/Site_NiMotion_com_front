@@ -17,59 +17,59 @@ const activeNames = ref(['SpecNum'])     // 默认显示面板
 const numberHeadList = [                // 型号表头
     {
         "key": "number",
-        "label": "型号",
+        "label": "model",
         "fixed": true,
         "width":150
     },
     {
         "key": "bus",
-        "label": "通信",
+        "label": "bus",
         "fixed": false,
         "width":180
     },
     {
         "key": "Shaft_diameter",
-        "label": "轴径",
+        "label": "Shaft_diameter",
         "fixed": false
     },
     {
         "key": "Rated_voltage",
-        "label": "额定电压(VDC)",
+        "label": "Rated_voltage(VDC)",
         "fixed": false
     },
     {
         "key": "Rated_current",
-        "label": "额定电流(A)",
+        "label": "Rated_current(A)",
         "fixed": false
     },
     {
         "key": "Rated_speed",
-        "label": "额定转速(rpm)",
+        "label": "Rated_speed(rpm)",
         "fixed": false
     },
     {
         "key": "Rated_power",
-        "label": "额定功率(W)",
+        "label": "Rated_power(W)",
         "fixed": false
     },
     {
         "key": "encoder",
-        "label": "集成编码器",
+        "label": "encoder",
         "fixed": false
     },
     {
         "key": "torque",
-        "label": "额定扭矩(N·m)",
+        "label": "torque(N·m)",
         "fixed": false
     },
     {
         "key": "Brake",
-        "label": "制动器",
+        "label": "Brake",
         "fixed": false
     },
     {
         "key": "length",
-        "label": "机身长度(mm)",
+        "label": "length(mm)",
         "fixed": false
     },
     // {
@@ -95,7 +95,7 @@ const numberHeadList = [                // 型号表头
             <div class="Product-spec">
                 <el-collapse v-model="activeNames" @change="handleChange">
 
-                    <el-collapse-item title="型号规格" name="SpecNum">
+                    <el-collapse-item title="Model Specifications" name="SpecNum">
                         <el-table :data="ContentSpecNum.numberSpecData" border="true" style="width: 100%" >
                             <el-table-column 
                             :fixed="item.fixed" 

@@ -9,55 +9,55 @@ import { useTransition } from '@vueuse/core'
 const tableData = [
   {
     date: '2023-04',
-    content: '荣获北京“专精特新”企业认证',
+    content: 'Won the Beijing "Specialized, Refined and Innovative" enterprise certification',
   },
   {
     date: '2023-03',
-    content: 'SCARA机器人上市发布',
+    content: 'SCARA robot launched',
   },
   {
     date: '2022-06',
-    content: 'DELTA机器人上市发布',
+    content: 'DELTA robot is launched',
   },
   {
     date: '2021',
-    content: '立迈胜深圳办事处正式成立',
+    content: 'Limaison Shenzhen Office was officially established',
   },
   {
     date: '2020-01',
-    content: '获得“知识产权试点单位”称号',
+    content: 'Won the title of "Intellectual Property Pilot Unit"',
   },
   {
     date: '2019',
-    content: '电机矩阵系统上市发布',
+    content: 'Motor matrix system launched',
   },
   {
     date: '2018-05',
-    content: '获得中关村高新技术企业认证',
+    content: 'Obtained Zhongguancun High-tech Enterprise Certification',
   },
   {
     date: '2018',
-    content: '国内首创EtherCAT通信一体化伺服电机',
+    content: 'The first domestic EtherCAT communication integrated servo motor',
   },
   {
     date: '2017-12',
-    content: '立迈胜南京分公司正式成立',
+    content: 'Limaison Nanjing Branch was officially established',
   },
   {
     date: '2017-08',
-    content: '获得“NiMotion” 注册商标',
+    content: 'Obtained "NiMotion" registered trademark',
   },
   {
     date: '2017',
-    content: '立迈胜登录北京新四板市场',
+    content: 'Limaisheng is listed on Beijing New Fourth Board Market',
   },
   {
     date: '2017-07',
-    content: '获得国家高新技术企业认定',
+    content: 'Obtained national high-tech enterprise certification',
   },
   {
     date: '2015-11',
-    content: '立迈胜公司注册成立',
+    content: 'Limaisheng Company was registered and established',
   },
 ]
 const id = ref(0)
@@ -72,7 +72,7 @@ const handleEdit = (index) => {
 
   <div class="item-process" id="item-delop">
 
-    <h2>发展历程</h2>
+    <h2>Development History</h2>
     <div class="process">
         <div class="timebox">
           <el-scrollbar height="300px">

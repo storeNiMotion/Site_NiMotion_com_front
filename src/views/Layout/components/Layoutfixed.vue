@@ -145,23 +145,23 @@ watch(() => screenWidth.value, (val) => {
             </ul> -->
             <ul class="nav">
               <li class="home"  @click="select">
-                <RouterLink to="/product/">产品中心</RouterLink>
+                <RouterLink to="/product/">Product</RouterLink>
                 <!-- <RouterLink>产品中心</RouterLink> -->
               </li>
               <li class="home" >
-                <RouterLink to="/solution">解决方案</RouterLink>
+                <RouterLink to="/solution">Solution</RouterLink>
               </li>
               <li class="home" >
-                <RouterLink to="/support">服务支持</RouterLink>
+                <RouterLink to="/support">Service</RouterLink>
               </li>
               <li class="home" >
-                <RouterLink to="/news">新闻资讯</RouterLink>
+                <RouterLink to="/news">News</RouterLink>
               </li>
               <li class="home" >
-                <RouterLink to="/download">下载中心</RouterLink>
+                <RouterLink to="/download">Download</RouterLink>
               </li>
               <li class="home" >
-                <RouterLink to="/about">关于我们</RouterLink>
+                <RouterLink to="/about">About</RouterLink>
               </li>
             </ul>
           </div>
@@ -169,12 +169,12 @@ watch(() => screenWidth.value, (val) => {
           <div class="header-search">
             <div class="search">
               <i class="iconfont icon-search" @click="search"></i>
-              <input type="text" placeholder="搜一搜" @keyup.enter="search" v-model="inputSearch">
+              <input type="text" placeholder="Search" @keyup.enter="search" v-model="inputSearch">
             </div>
           </div>
           <!-- 2.3联系我们 -->
           <div class="header-contact">
-            <RouterLink to="/contact" class="btn-face">联系我们</RouterLink>
+            <RouterLink to="/contact" class="btn-face">Contact Us</RouterLink>
           </div>
         </div>
         <!-- 3.手机端导航 -->

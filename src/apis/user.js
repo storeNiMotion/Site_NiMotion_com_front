@@ -10,7 +10,7 @@ import httpInstance from "@/utils/http"
  */
 export const resigterAPI = ({username, password, phone, code}) => {
     return httpInstance({
-        url: '/api/v1/register/',
+        url: '/api/v2/register/',
         method: 'POST',
         data: {
             username,
@@ -29,7 +29,7 @@ export const resigterAPI = ({username, password, phone, code}) => {
  */
 export const forgetAPI = ({phone, password, code}) => {
     return httpInstance({
-        url: '/api/v1/forget/',
+        url: '/api/v2/forget/',
         method: 'POST',
         data: {
             password,
@@ -47,7 +47,7 @@ export const forgetAPI = ({phone, password, code}) => {
  */
 export const isUsenameResigterAPI = ({username}) => {
     return httpInstance({
-        url: '/api/v1/isusenameregister/',
+        url: '/api/v2/isusenameregister/',
         method: 'POST',
         data: {
             username
@@ -63,7 +63,7 @@ export const isUsenameResigterAPI = ({username}) => {
  */
 export const isresigterAPI = ({phone}) => {
     return httpInstance({
-        url: '/api/v1/isregister/',
+        url: '/api/v2/isregister/',
         method: 'POST',
         data: {
             phone
@@ -79,7 +79,7 @@ export const isresigterAPI = ({phone}) => {
  */
 export const sendCodeAPI = ({phone}) => {
     return httpInstance({
-        url: '/api/v1/sendsms/',
+        url: '/api/v2/sendsms/',
         method: 'POST',
         data: {
             phone
@@ -95,7 +95,7 @@ export const sendCodeAPI = ({phone}) => {
  */
 export const loginAPI = ({username, password, code}) => {
     return httpInstance({
-        url: '/api/v1/login/',
+        url: '/api/v2/login/',
         method: 'POST',
         data: {
             username,
@@ -113,7 +113,7 @@ export const loginAPI = ({username, password, code}) => {
  */
 export const smsloginAPI = ({phone, code}) => {
     return httpInstance({
-        url: '/api/v1/smslogin/',
+        url: '/api/v2/smslogin/',
         method: 'POST',
         data: {
             phone,

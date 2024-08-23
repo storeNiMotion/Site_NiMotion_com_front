@@ -30,25 +30,25 @@ const loadfile = () => {
 const relatedFileHeadList = [
     {
         "key": "name",
-        "label": "文件名称",
+        "label": "name",
         "fixed": true,
         "width": 280
     },
     {
         "key": "category",
-        "label": "类别",
+        "label": "category",
         "fixed": false,
         "width": ''
     },
     {
         "key": "type",
-        "label": "类型",
+        "label": "type",
         "fixed": false,
         "width": ''
     },
     {
         "key": "update_time",
-        "label": "更新时间",
+        "label": "update_time",
         "fixed": false,
         "width": ''
     },

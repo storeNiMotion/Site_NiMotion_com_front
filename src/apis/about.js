@@ -9,6 +9,6 @@ import httpInstance from "@/utils/http";
  */
 export function getActivityListAPI(){
   return httpInstance({
-      url: '/api/v1/about/activity/',
+      url: '/api/v2/about/activity/',
   })
 }

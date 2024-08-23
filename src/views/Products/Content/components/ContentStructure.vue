@@ -33,7 +33,7 @@ const handleChange = () => {
             <div class="Product-spec">
                 <el-collapse v-model="activeNames" @change="handleChange">
 
-                    <el-collapse-item title="结构示意图" name="spec-0">
+                    <el-collapse-item title="Structural diagram" name="spec-0">
                         <div class="spec-img">
                             <img
                                 :src="ContentStructure"

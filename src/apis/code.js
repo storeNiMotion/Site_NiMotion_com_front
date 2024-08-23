@@ -8,6 +8,6 @@ import httpInstance from "@/utils/http";
  */
 export function getCodeAPI(){
     return httpInstance({
-        url: '/api/v1/sendcode/'
+        url: '/api/v2/sendcode/'
     })
 }

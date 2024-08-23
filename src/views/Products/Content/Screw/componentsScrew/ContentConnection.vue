@@ -28,7 +28,7 @@ const handleChange = () => {
             <!-- 02.产品规格 -->
             <div class="Product-spec">
                 <el-collapse v-model="activeNames" @change="handleChange">
-                    <el-collapse-item title="接线示意图" name="spec-6">
+                    <el-collapse-item title="Wiring Diagram" name="spec-6">
                         <div class="spec-img">
                             <img
                                 :src="ContentWiring"

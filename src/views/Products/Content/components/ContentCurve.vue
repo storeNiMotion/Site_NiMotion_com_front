@@ -31,7 +31,7 @@ const handleChange = () => {
             <div class="Product-spec">
                 <el-collapse v-model="activeNames" @change="handleChange">
 
-                    <el-collapse-item title="矩频曲线" name="spec-4">
+                    <el-collapse-item title="Moment-frequency curve" name="spec-4">
                         <div class="spec-img">
                             <img
                                 :src="ContentCurve"

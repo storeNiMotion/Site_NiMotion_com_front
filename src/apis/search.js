@@ -11,7 +11,7 @@ import httpInstance from "@/utils/http"
  */
 export const allsearchAPI = (key) => {
     return httpInstance({
-        url: '/api/v1/allsearch/',
+        url: '/api/v2/allsearch/',
         params: {
             key
           }
@@ -27,7 +27,7 @@ export const allsearchAPI = (key) => {
  */
 export const searchAPI = (key) => {
     return httpInstance({
-        url: '/api/v1/search/',
+        url: '/api/v2/search/',
         params: {
             key
           }
@@ -43,7 +43,7 @@ export const searchAPI = (key) => {
  */
 export const solutionSearchAPI = (key) => {
     return httpInstance({
-        url: '/api/v1/solution/search/',
+        url: '/api/v2/solution/search/',
         params: {
             key
           }

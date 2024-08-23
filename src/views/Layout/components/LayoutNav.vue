@@ -31,12 +31,12 @@ const dropdown = (ce) => {
         <!-- 多模板渲染 区分登录与非登录 -->
         <!-- 是否有token -->
         <template v-if="userStore.userInfo.token">
-          <li><a href="#">为用户提供专业的运动控制平台和自动化解决方案</a></li>
+          <li><a href="#">Provide users with professional motion control platforms and automation solutions</a></li>
           <li><a href="javascript:;"><i class="iconfont icon-user"></i>{{ userStore.userInfo.data.username }}</a></li>
           <li>
-            <el-popconfirm @confirm="confirm" title="确认退出吗?" confirm-button-text="确认" cancel-button-text="取消">
+            <el-popconfirm @confirm="confirm" title="Are you sure to exit?" confirm-button-text="yes" cancel-button-text="Cancel">
               <template #reference>
-                <a href="javascript:;">退出登录</a>
+                <a href="javascript:;">Log out</a>
               </template>
             </el-popconfirm>
           </li>
@@ -46,7 +46,7 @@ const dropdown = (ce) => {
             </a> -->
             <el-dropdown trigger="click" @visible-change="dropdown">
               <span class="el-dropdown-link">
-                ZH
+                EN
                 <el-icon class="el-icon--right" :class="{ isclick: isclick }">
                   <arrow-down />
                 </el-icon>
@@ -54,23 +54,23 @@ const dropdown = (ce) => {
               <template #dropdown>
                 <el-dropdown-menu>
                   <el-dropdown-item><a href="https://www.nimotion.cn">ZH</a></el-dropdown-item>
-                  <el-dropdown-item><a href="https://www.nimotion.com/index.php?siteid=2">EN</a></el-dropdown-item>
+                  <el-dropdown-item><a href="https://www.nimotion.com">EN</a></el-dropdown-item>
                 </el-dropdown-menu>
               </template>
             </el-dropdown>
           </li>
         </template>
         <template v-else>
-          <li><a href="#">为用户提供专业的运动控制平台和自动化解决方案</a></li>
-          <li><a href="javascript:;" class="login" @click="$router.push('/login')">请先登录</a></li>
-          <li><a href="javascript:;" @click="$router.push('/resigter')">免费注册</a></li>
+          <li><a href="#">Provide users with professional motion control platforms and automation solutions</a></li>
+          <li><a href="javascript:;" class="login" @click="$router.push('/login')">log in</a></li>
+          <li><a href="javascript:;" @click="$router.push('/resigter')">register</a></li>
           <li>
             <!-- <a href="https://www.nimotion.com/index.php?siteid=2">
               ZH<span class="iconfont">&#xe627;</span>
             </a> -->
             <el-dropdown trigger="click" @visible-change="dropdown">
               <span class="el-dropdown-link">
-                ZH
+                EN
                 <el-icon class="el-icon--right" :class="{ isclick: isclick }">
                   <arrow-down />
                 </el-icon>
@@ -78,7 +78,7 @@ const dropdown = (ce) => {
               <template #dropdown>
                 <el-dropdown-menu>
                   <el-dropdown-item><a href="https://www.nimotion.cn">ZH</a></el-dropdown-item>
-                  <el-dropdown-item><a href="https://www.nimotion.com/index.php?siteid=2">EN</a></el-dropdown-item>
+                  <el-dropdown-item><a href="https://www.nimotion.com">EN</a></el-dropdown-item>
                 </el-dropdown-menu>
               </template>
             </el-dropdown>

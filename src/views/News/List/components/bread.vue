@@ -29,9 +29,9 @@ onMounted(() => getNewsList())
     <div class="Solution-panel-nav-bread">
         <div class="container">
             <div class="nav-bread">
-                <a href="">首页</a>
+                <a href="">Home</a>
                 <span> > </span>
-                <a href="/news">公司新闻</a>
+                <a href="/news">News</a>
             </div>
         </div>
     </div>

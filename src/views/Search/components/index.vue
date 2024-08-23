@@ -109,7 +109,7 @@ onMounted(() => {
                         :prefix-icon="Search"
                         @keyup.enter="clicksearch"
                         />
-                    <el-button type="primary" @click="clicksearch">搜索</el-button>
+                    <el-button type="primary" @click="clicksearch">search</el-button>
                 </div>
             </div>
 
@@ -119,9 +119,9 @@ onMounted(() => {
     <div class="search-panel">
         <div class="container">
             <div class="display-result">
-                <h3>搜索结果</h3>
+                <h3>Search Results</h3>
             </div>
-            <el-empty :image-size="200" description="没有搜索到相关内容" v-if="isempty" />
+            <el-empty :image-size="200" description="No relevant content was found" v-if="isempty" />
         </div>
     </div>
 
@@ -131,11 +131,11 @@ onMounted(() => {
             <el-tabs tab-position="left" class="tabs-item">
                 <el-tab-pane>
                     <template #label>
-                        <span class="tabs-label">产品</span>
+                        <span class="tabs-label">product</span>
                     </template>
                     <div class="container">
                         <div class="search-result">
-                            <h4>产品</h4>
+                            <h4>product</h4>
                             <!-- <el-empty :image-size="200" description="没有搜索到相关内容" v-if="isempty" /> -->
                             <div class="result-item" v-for="item in SearchResult" :key="item.id">
                                 <RouterLink :to="`/product/detail/${item.id}`"><h5>{{ item.name }}</h5></RouterLink>

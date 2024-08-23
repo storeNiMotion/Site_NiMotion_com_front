@@ -8,7 +8,7 @@ import httpInstance from "@/utils/http";
  */
 export function getSupportVideosChannelAPI() {
   return httpInstance({
-    url: '/api/v1/videos/all/'
+    url: '/api/v2/videos/all/'
   })
 }
 
@@ -20,7 +20,7 @@ export function getSupportVideosChannelAPI() {
  */
 export function getSupportVideosListAPI(id) {
   return httpInstance({
-    url: '/api/v1/videos/list/',
+    url: '/api/v2/videos/list/',
     params: {
       id
     }
@@ -35,7 +35,7 @@ export function getSupportVideosListAPI(id) {
  */
 export const getSupportVideosDetailAPI = (id) => {
   return httpInstance({
-    url: '/api/v1/videos/detail/',
+    url: '/api/v2/videos/detail/',
     params: {
       id
     }
@@ -50,7 +50,7 @@ export const getSupportVideosDetailAPI = (id) => {
  */
 export const getSupportVideosURLAPI = (url) => {
   return httpInstance({
-    url: '/api/v1/videos/detail/url/',
+    url: '/api/v2/videos/detail/url/',
     params: {
       url
     }
@@ -65,7 +65,7 @@ export const getSupportVideosURLAPI = (url) => {
  */
 export const getSupportVideoSearchAPI = (key) => {
   return httpInstance({
-      url: '/api/v1/videos/search/',
+      url: '/api/v2/videos/search/',
       params: {
           key
         }

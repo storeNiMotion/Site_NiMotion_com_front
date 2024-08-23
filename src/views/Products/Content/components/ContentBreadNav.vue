@@ -15,9 +15,9 @@ const ContentBread = useContentStore()                // 实例化
     <div class="product-panel-nav-bread">
         <div class="container">
             <div class="nav-bread">
-                <RouterLink to="/">首页</RouterLink>
+                <RouterLink to="/">Home</RouterLink>
                 <span> > </span>
-                <RouterLink to="/product/1">产品中心</RouterLink>
+                <RouterLink to="/product/1">Product</RouterLink>
                 <span> > </span>
                 <RouterLink :to="`/product/list/${ ContentBread.productDetail.category }`">{{ ContentBread.productDetail.category_name }}</RouterLink>
                 <span> > </span>

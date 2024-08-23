@@ -44,7 +44,7 @@ const specHeadList = [
             <div class="Product-spec">
                 <el-collapse v-model="activeNames" @change="handleChange">
 
-                    <el-collapse-item title="技术规格" name="SpecTxt">
+                    <el-collapse-item title="Technical specifications" name="SpecTxt">
                         <!-- 这里使用文本域content -->
                         <!-- <div v-html="productDetail.content"></div> -->
                         <el-table class="specList" :data="ContentSpecTxt.specScrewListData" border="true" style="width: 100%" :height="{ 480: ContentSpecTxt.specScrewListData.length > 8 }">

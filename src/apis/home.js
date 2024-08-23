@@ -8,7 +8,7 @@ import httpInstance from "@/utils/http";
  */
 export function getBannerAPI(){
     return httpInstance({
-        url: '/api/v1/home/banner/'
+        url: '/api/v2/home/banner/'
     })
 }
 
@@ -21,7 +21,7 @@ export function getBannerAPI(){
  */
 export const comproductAPI = () => {
     return httpInstance({
-      url:'/api/v1/home/commproduct/'
+      url:'/api/v2/home/commproduct/'
     })
   }
 
@@ -34,7 +34,7 @@ export const comproductAPI = () => {
  */
 export const solutionAPI = () => {
   return httpInstance({
-    url:'/api/v1/home/commsol/'
+    url:'/api/v2/home/commsol/'
   })
 }
 
@@ -46,6 +46,6 @@ export const solutionAPI = () => {
  */
 export const newsAPI = () => {
   return httpInstance({
-    url:'/api/v1/home/commnews/'
+    url:'/api/v2/home/commnews/'
   })
 }

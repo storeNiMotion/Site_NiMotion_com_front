@@ -14,12 +14,12 @@ import { useTransition } from '@vueuse/core'
   <div class="item-mission">
     <div class="mission">
         <div class="info-box">
-            <h2>企业使命</h2>
+            <h2>Corporate Mission</h2>
             <p>
-              为用户提供专业的运动控制平台和自动化解决方案。
+              Provide users with professional motion control platforms and automation solutions.
             </p>
             <p>
-              NiMotion团队在工业自动化领域耕耘多年，是一支专业、年轻、创新的团队，具有丰富的产品开发和行业应用经验，团队致力于开发灵巧、精制、高效的自动化智能产品，为用户提供专业的运动控制平台和自动化解决方案。
+              The NiMotion team has been working in the field of industrial automation for many years. It is a professional, young and innovative team with rich experience in product development and industry applications. The team is committed to developing smart, refined and efficient automated intelligent products to provide users with professional motion control platforms and automation solutions.
             </p>
         </div>
         <div class="picbox">

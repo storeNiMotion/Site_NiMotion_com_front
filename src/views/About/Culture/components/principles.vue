@@ -14,7 +14,7 @@ import { useTransition } from '@vueuse/core'
   <div class="item-principles">
     <div class="principles">
         <div class="info-box">
-            <h2>工作方针</h2>
+            <h2>Working principles</h2>
         </div>
         <div class="picbox">
           <div class="picbox_wrap">
@@ -22,8 +22,8 @@ import { useTransition } from '@vueuse/core'
                 <div class="flex_wrap">
                     <div>
                         <span class="iconfont icon-hezuoguanxi"  ></span>
-                        <h3>用户至上</h3>
-                        <p>User First</p>
+                        <h3>User First</h3>
+                        <!-- <p>User First</p> -->
                     </div>
                 </div>
             </div>
@@ -31,8 +31,8 @@ import { useTransition } from '@vueuse/core'
                 <div class="flex_wrap">
                     <div>
                         <span class="iconfont icon-kejichuangxin"  ></span>
-                        <h3>不断创新</h3>
-                        <p>Innovation</p>
+                        <h3>Innovation</h3>
+                        <!-- <p>Innovation</p> -->
                     </div>
                 </div>
             </div>
@@ -40,8 +40,8 @@ import { useTransition } from '@vueuse/core'
                 <div class="flex_wrap">
                     <div>
                         <span class="iconfont icon-xingneng1"  ></span>
-                        <h3>追求卓越</h3>
-                        <p>Pursuit of Excellence</p>
+                        <h3>Pursuit of Excellence</h3>
+                        <!-- <p>Pursuit of Excellence</p> -->
                     </div>
                 </div>
             </div>
@@ -49,8 +49,8 @@ import { useTransition } from '@vueuse/core'
                 <div class="flex_wrap">
                     <div>
                         <span class="iconfont icon-linian"  ></span>
-                        <h3>精益求精</h3>
-                        <p>Strive for excellence</p>
+                        <h3>Strive for excellence</h3>
+                        <!-- <p>Strive for excellence</p> -->
                     </div>
                 </div>
             </div>

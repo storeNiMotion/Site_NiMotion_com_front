@@ -7,14 +7,14 @@ import httpInstance from "@/utils/http"
  */
 export const downAPI = () => {
     return httpInstance({
-      url:'/api/v1/download/list/'
+      url:'/api/v2/download/list/'
     })
   }
 
 
 export const downloadAPI = ({ category, type, keyword }) => {
     return httpInstance({
-        url: '/api/v1/download/list/',
+        url: '/api/v2/download/list/',
         method: 'POST',
         data: {
             category,

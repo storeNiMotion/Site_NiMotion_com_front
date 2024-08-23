@@ -16,7 +16,7 @@ import { useTransition } from '@vueuse/core'
         <div class="info-box">
             <!-- <h2>角色定位</h2> -->
             <p>
-                面对广泛而多样化的工业自动化设备客户，立迈胜业务涉及医疗、半导体制造、移动机器人、现代物流、智能仓储、智能制造等领域，公司产品远销全球13个国家，已为全国2000余家企业提供了专业的服务，深受各行各业客户的信赖和好评。
+              Facing a wide range of diverse industrial automation equipment customers, Limaisheng's business covers medical, semiconductor manufacturing, mobile robots, modern logistics, smart warehousing, smart manufacturing and other fields. The company's products are exported to 13 countries around the world and have provided professional services to more than 2,000 companies across the country. It is deeply trusted and praised by customers from all walks of life.
             </p>
         </div>
         <div class="picbox">

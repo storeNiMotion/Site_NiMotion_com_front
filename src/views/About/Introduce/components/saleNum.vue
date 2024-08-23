@@ -31,14 +31,14 @@ project.value = 5000
 <template>
   <!-- 2.实力展示 -->
   <div class="support-power">
-    <h2>客户服务</h2>
+    <h2>Customer Service</h2>
     <div class="power-container">
       <div class="power-box">
         <div class="h2">
           <el-statistic :value="outputValue" />
         </div>
         <div class="info-power">
-          <h4>个国家销售</h4>
+          <h4>Sales in countries</h4>
         </div>
       </div>
       <div class="power-box">
@@ -46,7 +46,7 @@ project.value = 5000
           <el-statistic :value="customValue" />
         </div>
         <div class="info-power">
-          <h4>+核心客户</h4>
+          <h4>+Core customers</h4>
         </div>
       </div>
       <div class="power-box">
@@ -54,7 +54,7 @@ project.value = 5000
           <el-statistic :value="proValue" />
         </div>
         <div class="info-power">
-          <h4>+合作项目</h4>
+          <h4>+Collaborative Projects</h4>
         </div>
       </div>
     </div>

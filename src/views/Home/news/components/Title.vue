@@ -33,7 +33,7 @@ onMounted(() => getnewsList())
                     <p>{{ content }}</p>
                 </div>
                 <div class="right">
-                    <RouterLink to="/news" class="more">查看全部<span class="iconfont icon-arrow-right-bold"></span></RouterLink>
+                    <RouterLink to="/news" class="more">View All<span class="iconfont icon-arrow-right-bold"></span></RouterLink>
                     <!-- <a href="#" class="more">查看全部<span class="iconfont icon-arrow-right-bold"></span></a> -->
                 </div>
             </div>

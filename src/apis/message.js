@@ -3,7 +3,7 @@ import httpInstance from "@/utils/http"
 
 export const messageAPI = ({ name, phone, email, content }) => {
     return httpInstance({
-        url: '/api/v1/message/list/',
+        url: '/api/v2/message/list/',
         method: 'POST',
         data: {
             company,

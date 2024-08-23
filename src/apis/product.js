@@ -8,7 +8,7 @@ import httpInstance from "@/utils/http";
  */
 export function getProductChannelAPI(){
     return httpInstance({
-        url: '/api/v1/product/channel/'
+        url: '/api/v2/product/channel/'
     })
 }
 
@@ -20,7 +20,7 @@ export function getProductChannelAPI(){
  */
 export function getProductListAPI(id){
   return httpInstance({
-      url: '/api/v1/product/category/',
+      url: '/api/v2/product/category/',
       params: {
         id
       }
@@ -35,7 +35,7 @@ export function getProductListAPI(id){
  */
 export function getAllProductListAPI(){
   return httpInstance({
-      url: '/api/v1/product/allcategory/',
+      url: '/api/v2/product/allcategory/',
   })
 }
 
@@ -49,7 +49,7 @@ export function getAllProductListAPI(){
  */
 export function getProductSKUListAPI(id){
   return httpInstance({
-      url: '/api/v1/product/list/',
+      url: '/api/v2/product/list/',
       params: {
         id
       }
@@ -64,7 +64,7 @@ export function getProductSKUListAPI(id){
  */
 export const filterProductAPI = () => {
   return httpInstance({
-    url:'/api/v1/product/filter/'
+    url:'/api/v2/product/filter/'
   })
 }  
 
@@ -76,7 +76,7 @@ export const filterProductAPI = () => {
  */
 export const getProductDetailAPI = (id) => {
   return httpInstance({
-    url:'/api/v1/product/detail/',
+    url:'/api/v2/product/detail/',
     params: {
       id
     }
@@ -91,7 +91,7 @@ export const getProductDetailAPI = (id) => {
  */
 export const getProductScrewDetailAPI = (id) => {
   return httpInstance({
-    url:'/api/v1/product/screwdetail/',
+    url:'/api/v2/product/screwdetail/',
     params: {
       id
     }

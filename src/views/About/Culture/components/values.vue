@@ -13,7 +13,7 @@ import { useTransition } from '@vueuse/core'
   <div class="item-values">
     <div class="values">
         <div class="info-box">
-            <h2>企业价值观</h2>
+            <h2>Corporate Values</h2>
         </div>
         <div class="picbox">
           <div class="picbox_wrap">
@@ -21,8 +21,8 @@ import { useTransition } from '@vueuse/core'
                 <div class="flex_wrap">
                     <div>
                         <span class="iconfont icon-zhuanyedui"  ></span>
-                        <h3>专业、高效、诚信</h3>
-                        <p>Professional, efficient and honest</p>
+                        <h3>Professional, efficient and honest</h3>
+                        <!-- <p>Professional, efficient and honest</p> -->
                     </div>
                 </div>
                 <div class="line"></div>
@@ -31,8 +31,8 @@ import { useTransition } from '@vueuse/core'
                 <div class="flex_wrap">
                     <div>
                         <span class="iconfont icon-kejichuangxin"  ></span>
-                        <h3>敬业、创新、成长</h3>
-                        <p>Dedication, innovation and growth</p>
+                        <h3>Dedication, innovation and growth</h3>
+                        <!-- <p>Dedication, innovation and growth</p> -->
                     </div>
                 </div>
                 <div class="line"></div>
@@ -41,8 +41,8 @@ import { useTransition } from '@vueuse/core'
                 <div class="flex_wrap">
                     <div>
                         <span class="iconfont icon-hezuoguanxi"  ></span>
-                        <h3>求实、合作、共赢</h3>
-                        <p>Realism, cooperation and win-win</p>
+                        <h3>Realism, cooperation and win-win</h3>
+                        <!-- <p>Realism, cooperation and win-win</p> -->
                     </div>
                 </div>
                 <div class="line"></div>

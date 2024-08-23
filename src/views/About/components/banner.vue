@@ -18,7 +18,7 @@ import { useTransition } from '@vueuse/core'
   <div class="About-panel-banner">
     <div class="banner-pro">
       <div class="">
-        <img src="http://www.nimotion.cn/static/images/banner/banner_about.webp" alt="">
+        <img src="http://www.nimotion.cn/static/images/banner/banner_aboute.webp" alt="">
       </div>
     </div>
   </div>

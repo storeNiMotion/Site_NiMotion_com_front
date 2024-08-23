@@ -27,7 +27,7 @@ const ContentDrawImgs = useContentStore()                // 实例化
             <div class="Product-spec">
                 <el-collapse v-model="activeNames" @change="handleChange">
 
-                    <el-collapse-item title="外形尺寸" name="spec-3">
+                    <el-collapse-item title="Dimensions" name="spec-3">
                         <div class="spec-img"  v-for="item in ContentDrawImgs.drawImgListData" :key="item.id">
                             <img
                                 v-img-lazy="item.image"

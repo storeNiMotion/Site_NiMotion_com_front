@@ -14,9 +14,9 @@ import { useTransition } from '@vueuse/core'
   <div class="item-quality" id="item-us">
     <div class="role">
         <div class="info-box">
-            <h2>客户价值</h2>
+            <h2>Customer Value</h2>
             <p>
-                打造全产品线一站式采购及服务、助力企业智能升级。
+                Create one-stop procurement and services for the entire product line to help enterprises upgrade to intelligence.
             </p>
         </div>
         <div class="picbox">
@@ -25,8 +25,8 @@ import { useTransition } from '@vueuse/core'
                 <div class="flex_wrap">
                     <div>
                         <span class="iconfont icon-icon"  ></span>
-                        <h3>高智能</h3>
-                        <p>专注智能自适应研发，实现产品自诊断，提高易用性</p>
+                        <h3>High intelligence</h3>
+                        <p>Focus on intelligent adaptive research and development to achieve product self-diagnosis and improve usability</p>
                     </div>
                 </div>
             </div>
@@ -34,8 +34,8 @@ import { useTransition } from '@vueuse/core'
                 <div class="flex_wrap">
                     <div>
                         <span class="iconfont icon-xingneng"  ></span>
-                        <h3>高性能</h3>
-                        <p>高响应，高精度，适应3C行业要求超越行业标准，引领未来</p>
+                        <h3>high performance</h3>
+                        <p>High response, high precision, adapt to the requirements of 3C industry, surpass industry standards, and lead the future来</p>
                     </div>
                 </div>
             </div>
@@ -43,8 +43,8 @@ import { useTransition } from '@vueuse/core'
                 <div class="flex_wrap">
                     <div>
                         <span class="iconfont icon-shujujicheng"  ></span>
-                        <h3>高集成</h3>
-                        <p>驱控一体，机电一体，显控一体，更小体积，更强功能</p>
+                        <h3>High Integration</h3>
+                        <p>Drive and control integrated, mechatronics integrated, display and control integrated, smaller size, more powerful functions</p>
                     </div>
                 </div>
             </div>
@@ -52,8 +52,8 @@ import { useTransition } from '@vueuse/core'
                 <div class="flex_wrap">
                     <div>
                         <span class="iconfont icon-chengbenguanli"  ></span>
-                        <h3>低成本</h3>
-                        <p>为用户节省成本，降低用户使用门槛</p>
+                        <h3>low cost</h3>
+                        <p>Save costs for users and lower the threshold for users to use</p>
                     </div>
                 </div>
             </div>

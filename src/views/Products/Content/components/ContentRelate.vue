@@ -81,7 +81,7 @@ watch(() => screenWidth.value, (val) => {
         <div class="container">
             <!-- 03.相关产品 -->
             <div class="Product-related">
-                <h2>相关产品</h2>
+                <h2>Related Products</h2>
                 <el-carousel indicator-position="none" arrow="always" trigger="click" :autoplay="false" loop="false" 
                 class="card-bd" height="340px" @change="slideChange">
                     <el-carousel-item class="card-item" v-for="(item, index) in page" :key="item.id">

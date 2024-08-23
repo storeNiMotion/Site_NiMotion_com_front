@@ -61,7 +61,7 @@ onMounted(() => {
     <!-- 结果 -->
     <el-tab-pane>
         <template #label>
-            <span class="tabs-label">产品</span>
+            <span class="tabs-label">product</span>
         </template>
         <div class="">
             <div class="result">
@@ -79,7 +79,7 @@ onMounted(() => {
                 </div>
             </div>
         </div>
-        <el-empty :image-size="200" description="没有搜索到相关内容" v-if="isempty1" />
+        <el-empty :image-size="200" description="No relevant content was found" v-if="isempty1" />
     </el-tab-pane>
 
 </template>

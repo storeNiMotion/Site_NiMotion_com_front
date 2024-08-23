@@ -25,7 +25,7 @@ const activeNames = ref(['spec-SpecImg'])     // 默认显示面板
 
             <div class="Product-spec">
                 <el-collapse v-model="activeNames" @change="handleChange">
-                    <el-collapse-item title="技术规格" name="spec-SpecImg">
+                    <el-collapse-item title="Technical specifications" name="spec-SpecImg">
                         <div class="spec-img"  v-for="item in ContentSpecImg.specImgListData" :key="item.id">
                             <img
                                 v-img-lazy="item.image"

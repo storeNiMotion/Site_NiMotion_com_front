@@ -8,7 +8,7 @@ import httpInstance from "@/utils/http";
  */
 export function getSupportChannelAPI() {
   return httpInstance({
-    url: '/api/v1/support/category/'
+    url: '/api/v2/support/category/'
   })
 }
 
@@ -20,7 +20,7 @@ export function getSupportChannelAPI() {
  */
 export function getSupportProblemsListAPI() {
   return httpInstance({
-    url: '/api/v1/support/list/',
+    url: '/api/v2/support/list/',
   })
 }
 
@@ -32,7 +32,7 @@ export function getSupportProblemsListAPI() {
  */
 export const getSupportProblemsDetailAPI = (id) => {
   return httpInstance({
-    url: '/api/v1/support/detail/',
+    url: '/api/v2/support/detail/',
     params: {
       id
     }
@@ -47,7 +47,7 @@ export const getSupportProblemsDetailAPI = (id) => {
  */
 export const getSupportProblemSearchAPI = (key) => {
   return httpInstance({
-      url: '/api/v1/technology/search/',
+      url: '/api/v2/technology/search/',
       params: {
           key
         }
@@ -62,6 +62,6 @@ export const getSupportProblemSearchAPI = (key) => {
  */
 export const getAftersalesDetailAPI = () => {
   return httpInstance({
-    url: '/api/v1/support/aftersaledetail/',
+    url: '/api/v2/support/aftersaledetail/',
   })
 }

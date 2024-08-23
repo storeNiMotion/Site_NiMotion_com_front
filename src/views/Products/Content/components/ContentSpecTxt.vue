@@ -17,13 +17,13 @@ const activeNames = ref(['spec-SpecTxt'])     // 默认显示面板
 const specHeadList = [
     {
         "key": "name",
-        "label": "规格",
+        "label": "Specification",
         "fixed": false,
         "width": 180
     },
     {
         "key": "value",
-        "label": "内容",
+        "label": "content",
         "fixed": false,
         "width": ''
     },
@@ -44,7 +44,7 @@ const specHeadList = [
             <div class="Product-spec">
                 <el-collapse v-model="activeNames" @change="handleChange">
 
-                    <el-collapse-item title="技术规格" name="spec-SpecTxt">
+                    <el-collapse-item title="Technical specifications" name="spec-SpecTxt">
                         <!-- 这里使用文本域content -->
                         <!-- <div v-html="productDetail.content"></div> -->
                         <el-table class="specList" :data="ContentSpecTxt.specListData"  border="true" style="width: 100%" :height="{ 480: ContentSpecTxt.specListData.length > 8 }">
@@ -58,7 +58,6 @@ const specHeadList = [
                              />
                         </el-table>
                     </el-collapse-item>
-
                 </el-collapse>
             </div>
 

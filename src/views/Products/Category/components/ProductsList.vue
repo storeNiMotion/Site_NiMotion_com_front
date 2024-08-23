@@ -23,7 +23,7 @@ const categoryStoreList = useCategoryStore()
                     <h4>{{ item.name }}</h4>
                 </RouterLink>
                 <p>{{ item.content }}</p>
-                <RouterLink :to="`/product/list/${item.id}`" class="btn-face">查看更多</RouterLink>
+                <RouterLink :to="`/product/list/${item.id}`" class="btn-face">More</RouterLink>
             </div>
         </div>
     </div>

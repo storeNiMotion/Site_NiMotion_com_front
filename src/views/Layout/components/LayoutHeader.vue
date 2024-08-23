@@ -135,26 +135,26 @@ watch(() => screenWidth.value, (val) => {
             </ul> -->
             <ul class="nav">
               <li class="home"  @click="select">
-                <RouterLink to="/product/">产品中心</RouterLink>
+                <RouterLink to="/product/">Product</RouterLink>
                 <!-- <RouterLink>产品中心</RouterLink> -->
               </li>
               <li class="home" @click="clicked">
-                <RouterLink to="/solution">解决方案</RouterLink>
+                <RouterLink to="/solution">Solution</RouterLink>
                 <!-- <a href="/solution" target="_blank" rel="noopener noreferrer">解决方案</a> -->
               </li>
               <li class="home" @click="clicked">
-                <RouterLink to="/support">服务支持</RouterLink>
+                <RouterLink to="/support">Service</RouterLink>
                 <!-- <a href="https://www.nimotion.com/supports/11.html" target="_blank" rel="noopener noreferrer">服务支持</a> -->
               </li>
               <li class="home" @click="clicked">
-                <RouterLink to="/news">新闻资讯</RouterLink>
+                <RouterLink to="/news">News</RouterLink>
                 <!-- <a href="https://www.nimotion.com/news/12_1.html" target="_blank" rel="noopener noreferrer">新闻资讯</a> -->
               </li>
               <li class="home" @click="clicked">
-                <RouterLink to="/download">下载中心</RouterLink>
+                <RouterLink to="/download">Download</RouterLink>
               </li>
               <li class="home" @click="clicked">
-                <RouterLink to="/about">关于我们</RouterLink>
+                <RouterLink to="/about">About Us</RouterLink>
               </li>
             </ul>
           </div>
@@ -162,7 +162,7 @@ watch(() => screenWidth.value, (val) => {
           <div class="header-search" @click="searchclick">
             <div class="search">
               <i class="iconfont icon-search" @click="search"></i>
-              <input type="text" v-model="inputSearch" placeholder="搜一搜"  @keyup.enter="search" :class="{ show: ishidden }">
+              <input type="text" v-model="inputSearch" placeholder="Search"  @keyup.enter="search" :class="{ show: ishidden }">
               <!-- <el-input
                 v-model="inputSearch"
                 style="width: 240px"
@@ -173,7 +173,7 @@ watch(() => screenWidth.value, (val) => {
           </div>
           <!-- 2.3联系我们 -->
           <div class="header-contact">
-            <RouterLink to="/contact" class="btn-face">联系我们</RouterLink>
+            <RouterLink to="/contact" class="btn-face">Contact Us</RouterLink>
           </div>
         </div>
         <!-- 3.手机端导航 -->

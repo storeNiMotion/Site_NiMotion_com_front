@@ -10,7 +10,7 @@ import httpInstance from "@/utils/http";
  */
 export function getNewsListAPI(){
   return httpInstance({
-      url: '/api/v1/news/list/',
+      url: '/api/v2/news/list/',
 
   })
 }
@@ -24,7 +24,7 @@ export function getNewsListAPI(){
  */
 export const getNewDetailAPI = (id) => {
   return httpInstance({
-    url:'/api/v1/news/detail/',
+    url:'/api/v2/news/detail/',
     params: {
       id
     }

@@ -69,7 +69,7 @@ onMounted(() => getsolutionList())
                                         </div>
                                     </RouterLink>
                                     <div class="button-detail">
-                                        <RouterLink :to="`/solution/detail/${i.id}`">了解详情<span> > </span></RouterLink>
+                                        <RouterLink :to="`/solution/detail/${i.id}`">Details<span> > </span></RouterLink>
                                     </div>
                                 </li>
                             </ul>
@@ -83,7 +83,7 @@ onMounted(() => getsolutionList())
                             <span class="custom-tabs-label">
                                 <!-- <el-icon><calendar /></el-icon> -->
                                 <span class="iconfont icon-menu" ></span>
-                                <span>更多</span>
+                                <span>more</span>
                             </span>
                         </RouterLink>
 

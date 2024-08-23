@@ -14,9 +14,9 @@ import { useTransition } from '@vueuse/core'
   <div class="item-quality" id="item-us">
     <div class="role">
         <div class="info-box">
-            <h2>行业价值</h2>
+            <h2>Industry Value</h2>
             <p>
-                助力工业自动化行业升级、实现高新技术国产化转型。
+                Help the industrial automation industry upgrade and realize the localization transformation of high-tech.
             </p>
         </div>
         <div class="picbox">
@@ -25,15 +25,15 @@ import { useTransition } from '@vueuse/core'
                 <div class="flex_wrap">
                     <span class="iconfont icon-tishi11"  ></span>
                     <div>
-                        <h3>创新</h3>
-                        <p>不断加大研发投入，推动自主创新，推动实现国产化转型</p>
+                        <h3>Innovation</h3>
+                        <p>Continue to increase R&D investment, promote independent innovation, and promote localization transformation</p>
                     </div>
                 </div>
                 <div class="flex_wrap">
                     <span class="iconfont icon-zhuanyedui"  ></span>
                     <div>
-                        <h3>专业</h3>
-                        <p>提供专业的运动控制平台，助力工业自动化设备智能升级服务：秉承用户至上的服务</p>
+                        <h3>major</h3>
+                        <p>Provide professional motion control platform to help industrial automation equipment intelligent upgrade services: adhering to user-oriented service</p>
                     </div>
                 </div>
             </div>
@@ -47,15 +47,15 @@ import { useTransition } from '@vueuse/core'
                 <div class="flex_wrap">
                     <span class="iconfont icon-linian"  ></span>
                     <div>
-                        <h3>理念</h3>
-                        <p>提供提供全方位的支持与解决方案</p>
+                        <h3>idea</h3>
+                        <p>Provide comprehensive support and solutions</p>
                     </div>
                 </div>
                 <div class="flex_wrap">
                     <span class="iconfont icon-hezuoguanxi"  ></span>
                     <div>
-                        <h3>合作</h3>
-                        <p>致力与各个企业共同开拓工业自动化领域新篇章</p>
+                        <h3>cooperate</h3>
+                        <p>Committed to jointly open up a new chapter in the field of industrial automation with various companies</p>
                     </div>
                 </div>
             </div>

@@ -8,7 +8,7 @@ import httpInstance from "@/utils/http";
  */
 export function getCategoryAPI(){
     return httpInstance({
-        url: '/api/v1/category/headnav/'
+        url: '/api/v2/category/headnav/'
     })
 }
 
@@ -21,7 +21,7 @@ export function getCategoryAPI(){
  */
 export function getOneNavAPI(){
     return httpInstance({
-        url: '/api/v1/category/nav/'
+        url: '/api/v2/category/nav/'
     })
 }
 
@@ -34,7 +34,7 @@ export function getOneNavAPI(){
  */
 export function getSelectNavAPI(){
     return httpInstance({
-        url: '/api/v1/category/selectproductnav/'
+        url: '/api/v2/category/selectproductnav/'
     })
 }
 
@@ -47,6 +47,6 @@ export function getSelectNavAPI(){
  */
 export function getProductNavAPI(){
     return httpInstance({
-        url: '/api/v1/category/productnav/'
+        url: '/api/v2/category/productnav/'
     })
 }

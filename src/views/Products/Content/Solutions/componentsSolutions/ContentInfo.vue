@@ -30,7 +30,7 @@ const ContentInfo = useContentStore()                // 实例化
             <div class="Product-spec">
                 <el-collapse v-model="activeNames" @change="handleChange">
 
-                    <el-collapse-item title="方案简介" name="spec-2">
+                    <el-collapse-item title="Solution Overview" name="spec-2">
                         <!-- 这里使用文本域content -->
                         <div v-html="ContentInfo.productDetail.content"></div>
                     </el-collapse-item>

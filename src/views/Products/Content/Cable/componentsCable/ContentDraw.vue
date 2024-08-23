@@ -27,7 +27,7 @@ const ContentDraw = useContentStore()                // 实例化
             <div class="Product-spec">
                 <el-collapse v-model="activeNames" @change="handleChange">
 
-                    <el-collapse-item title="外形尺寸" name="spec-3">
+                    <el-collapse-item title="Dimensions" name="spec-3">
                         <div class="spec-img">
                             <img 
                                 v-img-lazy="ContentDraw.productDetail.drawing_image" 

@@ -14,15 +14,15 @@ import { useTransition } from '@vueuse/core'
   <div class="item-vision">
     <div class="vision">
         <div class="info-box">
-            <h2>企业愿景</h2>
+            <h2>Corporate Vision</h2>
             <p>
-              让机器更有灵性，更好地为全人类服务。
+              Make machines more intelligent and better serve all mankind.
             </p>
             <p>
-              在当今科技高速发展的时代，智能设备已经成为人类生活中不可或缺的一部分。
+              In today's era of rapid technological development, smart devices have become an indispensable part of human life.
             </p>
             <p>
-              随着人们对于便利和效率的追求，对于机器的要求也越来越高，立迈胜将秉承这一企业愿景，不断创新，开拓进取。
+              As people pursue convenience and efficiency, their requirements for machines are getting higher and higher. Limaisheng will adhere to this corporate vision, continue to innovate, and forge ahead.
             </p>
         </div>
         <div class="picbox">

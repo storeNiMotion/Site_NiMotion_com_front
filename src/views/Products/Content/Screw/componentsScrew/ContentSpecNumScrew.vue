@@ -17,69 +17,69 @@ const activeNames = ref(['SpecNum'])     // 默认显示面板
 const numberHeadList = [                // 型号表头
     {
         "key": "number",
-        "label": "型号",
+        "label": "model",
         "fixed": true,
         "width": 180
     },
     {
         "key": "bus",
-        "label": "通信",
+        "label": "bus",
         "fixed": false,
         "width": 160
     },
     {
         "key": "Rated_voltage",
-        "label": "额定电压(VDC)",
+        "label": "Rated_voltage(VDC)",
         "fixed": false
     },
     {
         "key": "Screw_diameter",
-        "label": "丝杆直径(mm)",
+        "label": "Screw_diameter(mm)",
         "fixed": false
     },
     {
         "key": "thrust",
-        "label": "推力(N)",
+        "label": "thrust(N)",
         "fixed": false
     },
     {
         "key": "load",
-        "label": "负载(N)",
+        "label": "load(N)",
         "fixed": false
     },
     {
         "key": "Thread_lead",
-        "label": "螺纹导程(mm)",
+        "label": "Thread_lead(mm)",
         "fixed": false
     },
     {
         "key": "Step_Length",
-        "label": "步长@1.8°(mm)",
+        "label": "Step_Length@1.8°(mm)",
         "fixed": false
     },
     {
         "key": "Self_locking_force",
-        "label": "自锁力(N)",
+        "label": "Self_locking_force(N)",
         "fixed": false
     },
     {
         "key": "encoder",
-        "label": "集成编码器",
+        "label": "encoder",
         "fixed": false
     },
     {
         "key": "torque",
-        "label": "保持力矩(N·m)",
+        "label": "torque(N·m)",
         "fixed": false
     },
     {
         "key": "Brake",
-        "label": "制动器",
+        "label": "Brake",
         "fixed": false
     },
     {
         "key": "length",
-        "label": "机身长度(mm)",
+        "label": "length(mm)",
         "fixed": false
     },
 
@@ -100,7 +100,7 @@ const numberHeadList = [                // 型号表头
             <div class="Product-spec">
                 <el-collapse v-model="activeNames" @change="handleChange">
 
-                    <el-collapse-item title="型号规格" name="SpecNum">
+                    <el-collapse-item title="Model Specifications" name="SpecNum">
                         <el-table :data="ContentSpecNum.numberScrewSpecData" border="true" style="width: 100%" >
                             <el-table-column 
                             :fixed="item.fixed" 

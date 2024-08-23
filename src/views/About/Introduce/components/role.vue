@@ -14,12 +14,12 @@ import { useTransition } from '@vueuse/core'
   <div class="item-role" id="item-us">
     <div class="role">
         <div class="info-box">
-            <h2>角色定位</h2>
+            <h2>Role Positioning</h2>
             <p>
-                专业的运动控制平台、自动化解决方案提供商。
+                Professional motion control platform and automation solution provider.
             </p>
             <p>
-                立迈胜是提供一体化电机、控制设备、运动模组、机器人等运动控制产品及服务的一站式采购服务平台。
+                Limax is a one-stop purchasing service platform that provides integrated motors, control equipment, motion modules, robots and other motion control products and services.
             </p>
             <!-- <p>目前公司业务涉及医疗自动化、半导体制造、移动机器人、现代物流、智能仓储、新能源、新零售、智能制造</p> -->
         </div>
@@ -29,8 +29,8 @@ import { useTransition } from '@vueuse/core'
                 <div class="flex_wrap">
                     <div>
                         <span class="iconfont icon-tubiao_-"  ></span>
-                        <h3>医疗设备</h3>
-                        <p>立迈胜为医疗应用开发了各种各样的运动控制解决方案。从电动轮椅到手术机器人等复杂的自动化医疗设备，都能提供针对特定应用需求而设计的一体化电动解决方案。</p>
+                        <h3>Medical Devices</h3>
+                        <p>Limax has developed a wide range of motion control solutions for medical applications. From electric wheelchairs to complex automated medical equipment such as surgical robots, we can provide integrated electric solutions designed for specific application needs.</p>
                     </div>
                 </div>
             </div>
@@ -38,8 +38,8 @@ import { useTransition } from '@vueuse/core'
                 <div class="flex_wrap">
                     <div>
                         <span class="iconfont icon-scooter_traffic_line"  ></span>
-                        <h3>现代运输</h3>
-                        <p>立迈胜一体化电机在主要物流运输市场有丰富的运动控制经验，集成了各种用于负载功能的电机，其性能、精度、可靠性和定制能力均有出色的表现。</p>
+                        <h3>Modern transportation</h3>
+                        <p>Limax integrated motors have extensive experience in motion control in major logistics and transportation markets, integrating a variety of motors for load functions with outstanding performance, precision, reliability and customization capabilities.</p>
                     </div>
                 </div>
             </div>
@@ -47,8 +47,8 @@ import { useTransition } from '@vueuse/core'
                 <div class="flex_wrap">
                     <div>
                         <span class="iconfont icon-zhinengzhizao"  ></span>
-                        <h3>智能制造</h3>
-                        <p>立迈胜一体化电机在主要物流运输市场有丰富的运动控制经验，集成了各种用于负载功能的电机，其性能、精度、可靠性和定制能力均有出色的表现。</p>
+                        <h3>Smart Manufacturing</h3>
+                        <p>Limax integrated motors have extensive experience in motion control in major logistics and transportation markets, integrating a variety of motors for load functions with outstanding performance, precision, reliability and customization capabilities.</p>
                     </div>
                 </div>
             </div>
@@ -56,8 +56,8 @@ import { useTransition } from '@vueuse/core'
                 <div class="flex_wrap">
                     <div>
                         <span class="iconfont icon-baozhuang"  ></span>
-                        <h3>包装印刷</h3>
-                        <p>立迈胜一体化电机主要用于食品、医药、化工等行业和植物种子的物料自动包装机应用中具有出色表现，能自动完成计量、充料、制袋、封合、切断、输送、打印生产批号、增加易切口、无料示警、搅拌等功能。</p>
+                        <h3>Packaging and printing</h3>
+                        <p>Limax integrated motors are mainly used in food, medicine, chemical and other industries and plant seed material automatic packaging machine applications, and have outstanding performance. They can automatically complete metering, filling, bag making, sealing, cutting, conveying, printing production batch numbers, adding easy-to-cut edges, no-material warning, stirring and other functions.</p>
                     </div>
                 </div>
             </div>
@@ -65,8 +65,8 @@ import { useTransition } from '@vueuse/core'
                 <div class="flex_wrap">
                     <div>
                         <span class="iconfont icon-cailiaoyunengyuan"  ></span>
-                        <h3>新能源</h3>
-                        <p>针对精密松式络筒机的工艺特点，立迈胜在自身多年一体化电机和运动控制技术积累的基础上，在国内开发出高速精密松式络筒机电气控制方案。整个方案具有良好的性价比，大大提升了国产松式络筒机的自动化水平，主要技术指标达到了国际同类设备的水平。</p>
+                        <h3>New Energy Sources</h3>
+                        <p>In view of the process characteristics of precision loose-type winders, Limaisheng has developed a high-speed precision loose-type winder electrical control solution in China based on its own years of integrated motor and motion control technology accumulation. The entire solution has a good cost-effectiveness, greatly improving the automation level of domestic loose-type winders, and the main technical indicators have reached the level of similar international equipment.</p>
                     </div>
                 </div>
             </div>

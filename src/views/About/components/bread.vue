@@ -17,9 +17,9 @@ import { useTransition } from '@vueuse/core'
   <div class="About-panel-nav">
     <div class="container">
       <div class="nav-bread">
-        <a href="">首页</a>
+        <a href="">Home</a>
         <span>></span>
-        <a href="">关于我们</a>
+        <a href="">about Us</a>
       </div>
     </div>
   </div>

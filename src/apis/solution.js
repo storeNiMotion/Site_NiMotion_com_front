@@ -8,7 +8,7 @@ import httpInstance from "@/utils/http";
  */
 export function getSolutionChannelAPI(){
     return httpInstance({
-        url: '/api/v1/solution/category/'
+        url: '/api/v2/solution/category/'
     })
 }
 
@@ -20,7 +20,7 @@ export function getSolutionChannelAPI(){
  */
 export function getSolutionListAPI(id){
   return httpInstance({
-      url: '/api/v1/solution/list/',
+      url: '/api/v2/solution/list/',
       params: {
         id
       }
@@ -36,7 +36,7 @@ export function getSolutionListAPI(id){
  */
 export const getSolutionDetailAPI = (id) => {
   return httpInstance({
-    url:'/api/v1/solution/detail/',
+    url:'/api/v2/solution/detail/',
     params: {
       id
     }

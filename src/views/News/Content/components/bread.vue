@@ -28,11 +28,11 @@ onMounted(() => getNewDetail())
             <div class="bread">
                 <div class="bread-box">
                     <div class="bread-item">
-                        <RouterLink to="/">首页</RouterLink>
+                        <RouterLink to="/">Home</RouterLink>
                     </div>
                     <div class="bread-item">
                         <span> > </span>
-                        <RouterLink to="/news/">新闻资讯</RouterLink>
+                        <RouterLink to="/news/">News</RouterLink>
                     </div>
 
                     <div class="bread-item">

@@ -16,11 +16,11 @@ import { useTransition } from '@vueuse/core'
   <!-- nav-bread -->
   <div class="About-display-left">
     <ul>
-      <li><RouterLink to="/about">企业介绍</RouterLink></li>
-      <li><RouterLink to="/culture">文化理念</RouterLink></li>
-      <li><RouterLink to="/honor">企业荣誉</RouterLink></li>
-      <li><RouterLink to="/styles">企业风采</RouterLink></li>
-      <li><RouterLink to="/factory">厂房厂貌</RouterLink></li>
+      <li><RouterLink to="/about">Company Introduction</RouterLink></li>
+      <li><RouterLink to="/culture">Cultural Concept</RouterLink></li>
+      <li><RouterLink to="/honor">Corporate Honors</RouterLink></li>
+      <li><RouterLink to="/styles">Corporate Style</RouterLink></li>
+      <li><RouterLink to="/factory">Factory appearance</RouterLink></li>
     </ul>
     
 
