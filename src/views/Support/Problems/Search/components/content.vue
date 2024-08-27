@@ -53,7 +53,7 @@ onMounted(() => getsupportList())
                     </div>
                 </el-card>
             </div>
-            <el-empty :image-size="200" description="没有搜索到相关内容" v-if="isempty" />
+            <el-empty :image-size="200" description="No relevant content was found" v-if="isempty" />
         </div>
     </div>
 </template>

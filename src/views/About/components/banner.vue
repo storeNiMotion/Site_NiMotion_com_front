@@ -1,14 +1,21 @@
 <script setup>
 // import { TabsPaneContext } from 'element-plus'
 // import { Calendar } from '@element-plus/icons-vue'
-import { solutionAPI } from "@/apis/home"
+import { getInfoAboutAPI } from "@/apis/about"
 import { onMounted, ref } from "vue"
 import { useTransition } from '@vueuse/core'
 
-//获取数据
+const InfoAbout = ref([])
+
+const getInfoAbout = async () => {
+  const res = await getInfoAboutAPI()
+  InfoAbout.value = res.data[0]
+// console.log(InfoAbout.value);
+}
 
 
-//切换标签customValue
+
+onMounted(() => getInfoAbout())
 
 
 </script>
@@ -18,7 +25,7 @@ import { useTransition } from '@vueuse/core'
   <div class="About-panel-banner">
     <div class="banner-pro">
       <div class="">
-        <img src="http://www.nimotion.cn/static/images/banner/banner_aboute.webp" alt="">
+        <img :src="InfoAbout.banner_url" alt="">
       </div>
     </div>
   </div>

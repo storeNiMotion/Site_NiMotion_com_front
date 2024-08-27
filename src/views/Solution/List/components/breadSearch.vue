@@ -35,12 +35,12 @@ onMounted(() => getsolutionList())
             <div class="bread">
                 <div class="bread-box">
                     <div class="bread-item">
-                        <RouterLink to="/">首页</RouterLink>
+                        <RouterLink to="/">Home</RouterLink>
                     </div>
                     <div class="bread-item" >
                         <span> > </span>
                         
-                        <RouterLink to="/solution/">解决方案</RouterLink>
+                        <RouterLink to="/solution/">Solution</RouterLink>
                     </div>
                     <div class="bread-item">
                         <span> > </span>
@@ -52,11 +52,11 @@ onMounted(() => getsolutionList())
                         <el-input
                             v-model="searchinput"
                             class="input"
-                            placeholder="请输入关键词"
+                            placeholder="Keyword"
                             :prefix-icon="Search"
                             @keyup.enter="clicksearch"
                             />
-                        <el-button type="primary" @click="clicksearch">搜索</el-button>
+                        <el-button type="primary" @click="clicksearch">Search</el-button>
                     </div>
                 </div>
             </div>

@@ -18,7 +18,7 @@ onMounted(() => getVideosChannel())
         <div class="container">
             <div class="video-nav">
                 <div class="nav-item">
-                    <RouterLink active-class="active" to="">全部</RouterLink>
+                    <RouterLink active-class="active" to="">ALL</RouterLink>
                 </div>
                 <div class="nav-item" v-for="i in VideosNav" :key="i.id">
                     <RouterLink active-class="active" :to="`/video/${i.id}`">{{ i.name }}</RouterLink>

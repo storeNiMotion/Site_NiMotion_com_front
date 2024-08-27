@@ -19,17 +19,16 @@ import quality from './components/quality.vue'
 import customs from './components/custom.vue'
 
 //获取数据
-const solutionList = ref([])
+// const solutionList = ref([])
 
-const getsolutionList = async () => {
-  const res = await solutionAPI()
-  solutionList.value = res.data
+// const getsolutionList = async () => {
+//   const res = await solutionAPI()
+//   solutionList.value = res.data
 
-}
+// }
 
-//切换标签customValue
 
-onMounted(() => getsolutionList())
+// onMounted(() => getsolutionList())
 </script>
 
 <template>

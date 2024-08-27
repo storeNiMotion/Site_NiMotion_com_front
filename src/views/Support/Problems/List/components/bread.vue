@@ -8,11 +8,11 @@
     <div class="Support-panel-nav-bread">
         <div class="container">
             <div class="nav-bread">
-                <a href="">首页</a>
+                <a href="">Home</a>
                 <span> > </span>
-                <a href="/support">服务支持</a>
+                <a href="/support">Support</a>
                 <span> > </span>
-                <a href="/problems" class="active">技术问答</a>
+                <a href="/problems" class="active">Technical FAQ</a>
             </div>
         </div>
     </div>

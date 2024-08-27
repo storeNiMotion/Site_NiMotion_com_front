@@ -9,9 +9,9 @@
     <div class="Solution-panel-nav-bread">
         <div class="container">
             <div class="nav-bread">
-                <a href="">首页</a>
+                <a href="">Home</a>
                 <span> > </span>
-                <a href="">解决方案</a>
+                <a href="">Solution</a>
             </div>
         </div>
     </div>

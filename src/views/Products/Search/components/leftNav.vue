@@ -20,9 +20,9 @@ onBeforeRouteUpdate((to) => {
 
     <div class="Product-display-left">
         <div class="Product-select">
-            <h2>产品中心</h2>
+            <h2>Products</h2>
             <div class="Product-select-btn">
-                <a href="" class="btn-line">产品选型</a>
+                <a href="" class="btn-line">Product Selection</a>
             </div>
         </div>
 
@@ -72,7 +72,7 @@ onBeforeRouteUpdate((to) => {
             /* padding-left: 8.2rem; */
             a {
                 display: block;
-                width: 100px;
+                width: 180px;
                 height: 34px;
                 font-size: 15px;
                 color: #003abd;

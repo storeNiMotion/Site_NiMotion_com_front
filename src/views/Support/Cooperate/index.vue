@@ -21,11 +21,11 @@ import { ref, reactive } from "vue"
     <!-- 面包屑区域 -->
     <div class="nav-bread">
         <div class="container">
-            <a href="">首页</a>
+            <a href="">Home</a>
             <span>></span>
-            <a href="/support">服务支持</a>
+            <a href="/support">Support</a>
             <span>></span>
-            <a href="">经销合作</a>
+            <a href="">Cooperate</a>
         </div>
     </div>
     <!-- 主体 -->

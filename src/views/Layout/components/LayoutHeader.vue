@@ -135,11 +135,11 @@ watch(() => screenWidth.value, (val) => {
             </ul> -->
             <ul class="nav">
               <li class="home"  @click="select">
-                <RouterLink to="/product/">Product</RouterLink>
+                <RouterLink to="/product/">Products</RouterLink>
                 <!-- <RouterLink>产品中心</RouterLink> -->
               </li>
               <li class="home" @click="clicked">
-                <RouterLink to="/solution">Solution</RouterLink>
+                <RouterLink to="/solution">Solutions</RouterLink>
                 <!-- <a href="/solution" target="_blank" rel="noopener noreferrer">解决方案</a> -->
               </li>
               <li class="home" @click="clicked">
@@ -151,7 +151,7 @@ watch(() => screenWidth.value, (val) => {
                 <!-- <a href="https://www.nimotion.com/news/12_1.html" target="_blank" rel="noopener noreferrer">新闻资讯</a> -->
               </li>
               <li class="home" @click="clicked">
-                <RouterLink to="/download">Download</RouterLink>
+                <RouterLink to="/download">Downloads</RouterLink>
               </li>
               <li class="home" @click="clicked">
                 <RouterLink to="/about">About Us</RouterLink>
@@ -306,6 +306,7 @@ watch(() => screenWidth.value, (val) => {
           li {
             margin-right: 40px;
             text-align: center;
+            text-transform: uppercase;
         
             a {
               font-size: 16px;

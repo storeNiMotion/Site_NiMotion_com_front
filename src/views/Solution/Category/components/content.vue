@@ -29,7 +29,7 @@ onMounted(() => getsolutionList())
                         <RouterLink :to="`/solution/${item.id}`"><h4>{{ item.name }}</h4></RouterLink>
                         <p>{{ item.content }}</p>
                         <!-- <a href="/solution/list" class="btn-face">查看更多</a> -->
-                        <RouterLink :to="`/solution/${item.id}`" class="btn-face">查看更多</RouterLink>
+                        <RouterLink :to="`/solution/${item.id}`" class="btn-face">Read more</RouterLink>
                     </div>
                 </el-card>
             </div>

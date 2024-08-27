@@ -43,7 +43,7 @@ onMounted(() => getsolutionList())
                             <!-- <a href="/solution/list" class="btn-face">查看更多</a> -->
                             <div class="sol-more">
                                 <!-- <a href="/solution/detail" class="btn-face">查看更多</a> -->
-                                <RouterLink class="btn-face" :to="`/solution/detail/${item.id}`">查看详情</RouterLink>
+                                <RouterLink class="btn-face" :to="`/solution/detail/${item.id}`">Read More</RouterLink>
                                 <span class="date">{{ item.release_time }}</span>
                             </div>
                         </div>

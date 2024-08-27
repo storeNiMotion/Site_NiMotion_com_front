@@ -23,9 +23,9 @@ import { useOffsetPagination } from '@vueuse/core'
 router.beforeEach((to, from, next) => {
     // console.log(to)
     if (to.meta.title) {
-        document.title = to.meta.title + ' - 立迈胜(NiMotion)官方网站 - 专业的运动控制服务平台'
+        document.title = to.meta.title + ' - NiMotion - Professional motion control service platform'
     } else {
-        document.title = '立迈胜(NiMotion)官方网站 - 专业的运动控制服务平台'
+        document.title = 'NiMotion - Professional motion control service platform'
     }
     next()
 })

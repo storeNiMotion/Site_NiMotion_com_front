@@ -61,7 +61,7 @@ onMounted(() => {
     <!-- 结果 -->
     <el-tab-pane>
         <template #label>
-            <span class="tabs-label">product</span>
+            <span class="tabs-label">Product</span>
         </template>
         <div class="">
             <div class="result">

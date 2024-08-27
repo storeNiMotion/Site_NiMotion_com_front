@@ -8,15 +8,21 @@ const categoryStore = useCategoryStore()
 
 const icon = [
   {
-    "value": "facebook", 
-    "imgsrc": "http://www.nimotion.cn/static/images/icon/icon_facebook.png",        // /src/assets/images/icon_tao.png
-    "href": "https://www.facebook.com/profile.php?id=100064082113096"
+    "value": "Alibaba", 
+    "imgsrc": "http://www.nimotion.cn/static/images/icon/icon_a2.webp", 
+    "href": "https://nimotion.en.alibaba.com/?spm=a2700.icbuShop.0.0.2732773a6KCGWa"
   },
   {
     "value": "youtube", 
     "imgsrc": "http://www.nimotion.cn/static/images/icon/icon_youtube.png", 
     "href": "https://studio.youtube.com/channel/UCLjINSmccbbtVgx7f9W3GrA/videos/upload?filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D"
   },
+  {
+    "value": "facebook", 
+    "imgsrc": "http://www.nimotion.cn/static/images/icon/icon_facebook.png",        // /src/assets/images/icon_tao.png
+    "href": "https://www.facebook.com/profile.php?id=100064082113096"
+  },
+
 ]
 
 
@@ -44,9 +50,9 @@ const icon = [
                         <h5>Beijing NiMotion Control Technology Co.,Ltd.</h5>
                         <!-- <p>Beijing NiMotion Control Technology Co.,Ltd.</p -->
                       </li>
-                      <li><h5>cell phone：15652093730</h5></li>
-                      <li><h5>Mail：nimotion@nimotion.com</h5></li>
-                      <li><h5>Website：www.nimotion.cn</h5></li>
+                      <!-- <li><h5>cell phone：15652093730</h5></li> -->
+                      <li><h5>Mail：nimotion-al@nimotion.com</h5></li>
+                      <li><h5>Website：www.nimotion.com</h5></li>
                     </ul>
                   </li>
                 </ul>
@@ -79,11 +85,11 @@ const icon = [
               <ul>
                 <li>
                   <div class="pic"><img src="../../../assets/images/img_wei.jpg" alt=""></div>
-                  <p>WeChat Official Account</p>
+                  <p>Official Account</p>
                 </li>
                 <li>
                   <div class="pic"><img src="../../../assets/images/img_video.jpg" alt=""></div>
-                  <p>Video Number</p>
+                  <p>Video platform</p>
                 </li>
               </ul>
             </div>
@@ -227,8 +233,9 @@ const icon = [
           dt{
             margin-bottom: 20px;
             a {
-              font-size: 16px;
+              font-size: 15px;
               font-weight: 500;
+              text-transform: uppercase;
               color: #efefef;
             }
             &:hover {
@@ -304,9 +311,16 @@ const icon = [
             display: flex;
             margin-top: 10px;
             li{
-              margin-right: 4px;
+              margin-right: 6px;
+              a {
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
               img {
-                width: 30px;
+                // width: 30px;
+                height: 30px;
               }
             }
           }

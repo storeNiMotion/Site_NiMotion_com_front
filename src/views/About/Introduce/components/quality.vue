@@ -76,6 +76,7 @@ import { useTransition } from '@vueuse/core'
       $info-p: 13px;
       h2 {
         font-size: 35px;
+        text-transform: uppercase;
         color: #000;
         line-height: 40px;
         margin: 0 0 28px 0;

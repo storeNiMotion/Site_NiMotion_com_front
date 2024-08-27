@@ -54,9 +54,9 @@ onMounted(() => {
             
             <div class="head">
                 <div class="display-result">
-                    <h3>搜索结果</h3>
+                    <h3>Search Results</h3>
                 </div>
-                <el-empty :image-size="200" description="没有搜索到相关内容" v-if="isempty" />
+                <el-empty :image-size="200" description="No relevant content was found" v-if="isempty" />
             </div>
 
             <div class="search-result"  v-if="!isempty" v-loading="loading">

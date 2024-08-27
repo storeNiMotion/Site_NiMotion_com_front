@@ -106,6 +106,7 @@ const handleEdit = (index) => {
   
   h2 {
     font-size: 33px;
+    text-transform: uppercase;
     color: #000;
     line-height: 40px;
     margin: 0 0 28px 0;

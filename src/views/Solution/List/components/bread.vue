@@ -13,7 +13,7 @@ const getsolutionList = async (id = route.params.id) => {
     const res = await getSolutionListAPI(id)
     // solutionList.value = res.data
     SelfData.value = res.category[0]
-    document.title = SelfData.value.name + ' - 立迈胜NiMotion - "智能控制 驱动未来"！'
+    document.title = SelfData.value.name + ' - NiMotion - Professional motion control service platform'
 }
 
 onMounted(() => getsolutionList())
@@ -24,9 +24,9 @@ onMounted(() => getsolutionList())
     <div class="Solution-panel-nav-bread">
         <div class="container">
             <div class="nav-bread">
-                <a href="">首页</a>
+                <a href="">Home</a>
                 <span> > </span>
-                <a href="/solution/">解决方案</a>
+                <a href="/solution/">Solution</a>
                 <span> > </span>
                 <!-- <a href="">{{ SelfData.name }}</a> -->
                 <RouterLink :to="`/solution/${SelfData.id}`">{{ SelfData.name }}</RouterLink>

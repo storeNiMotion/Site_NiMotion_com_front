@@ -14,15 +14,15 @@ import { useRoute, useRouter, onBeforeRouteUpdate } from "vue-router"           
             <div class="bread">
                 <div class="bread-box">
                     <div class="bread-item">
-                        <RouterLink to="/">首页</RouterLink>
+                        <RouterLink to="/">Home</RouterLink>
                     </div>
                     <div class="bread-item">
                         <span> > </span>
-                        <RouterLink to="/solution/">解决方案</RouterLink>
+                        <RouterLink to="/solution/">Solution</RouterLink>
                     </div>
                     <div class="bread-item">
                         <span> > </span>
-                        <RouterLink class="active" to="/solution/search/">搜索</RouterLink>
+                        <RouterLink class="active" to="/solution/search/">Search</RouterLink>
                     </div>
                 </div>
 

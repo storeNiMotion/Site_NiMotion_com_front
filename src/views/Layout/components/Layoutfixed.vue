@@ -145,11 +145,11 @@ watch(() => screenWidth.value, (val) => {
             </ul> -->
             <ul class="nav">
               <li class="home"  @click="select">
-                <RouterLink to="/product/">Product</RouterLink>
+                <RouterLink to="/product/">Products</RouterLink>
                 <!-- <RouterLink>产品中心</RouterLink> -->
               </li>
               <li class="home" >
-                <RouterLink to="/solution">Solution</RouterLink>
+                <RouterLink to="/solution">Solutions</RouterLink>
               </li>
               <li class="home" >
                 <RouterLink to="/support">Service</RouterLink>
@@ -158,7 +158,7 @@ watch(() => screenWidth.value, (val) => {
                 <RouterLink to="/news">News</RouterLink>
               </li>
               <li class="home" >
-                <RouterLink to="/download">Download</RouterLink>
+                <RouterLink to="/download">Downloads</RouterLink>
               </li>
               <li class="home" >
                 <RouterLink to="/about">About</RouterLink>
@@ -327,6 +327,7 @@ watch(() => screenWidth.value, (val) => {
           li {
             margin-right: 40px;
             text-align: center;
+            text-transform: uppercase;
         
             a {
               font-size: 16px;

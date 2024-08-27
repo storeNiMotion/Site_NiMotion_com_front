@@ -42,7 +42,7 @@ onMounted(() => display())
                     <el-input
                         v-model="searchinput"
                         class="input"
-                        placeholder="请输入关键词"
+                        placeholder="Keyword"
                         :prefix-icon="Search"
                         @keyup.enter="clicksearch"
                     >
@@ -50,7 +50,7 @@ onMounted(() => display())
                             <el-icon class="el-input__icon" v-if="searchinput" @click="clear"><CircleClose /></el-icon>
                         </template>
                     </el-input>
-                    <el-button class="button-search" type="primary" @click="clicksearch">搜索</el-button>
+                    <el-button class="button-search" type="primary" @click="clicksearch">Search</el-button>
                 </div>
             </div>
         </div>

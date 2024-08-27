@@ -29,9 +29,9 @@ onMounted(() => getAftersalesDetail())
     <div class="support-panel-nav-bread">
         <div class="container">
             <div class="nav-bread">
-                <a href="">首页</a>
+                <a href="">Home</a>
                 <span> > </span>
-                <a href="/support/">服务支持</a>
+                <a href="/support/">Support</a>
                 <span> > </span>
                 <span>{{ AftersalesDetail.name }}</span>
             </div>

@@ -22,11 +22,11 @@ const clicksearch = () => {
             <div class="bread">
                 <div class="bread-box">
                     <div class="bread-item">
-                        <RouterLink to="/">首页</RouterLink>
+                        <RouterLink to="/">Home</RouterLink>
                     </div>
                     <div class="bread-item" v-if="categoryStoreBread.SelfData.id != 1">
                         <span> > </span>
-                        <RouterLink to="/product/1/">产品中心</RouterLink>
+                        <RouterLink to="/product/1/">Products</RouterLink>
                     </div>
                     <div class="bread-item">
                         <span> > </span>
@@ -38,11 +38,11 @@ const clicksearch = () => {
                         <el-input
                             v-model="searchinput"
                             class="input"
-                            placeholder="请输入产品关键词"
+                            placeholder="Keywords"
                             :prefix-icon="Search"
                             @keyup.enter="clicksearch"
                             />
-                        <el-button type="primary" @click="clicksearch">搜索</el-button>
+                        <el-button type="primary" @click="clicksearch">Search</el-button>
                     </div>
                 </div>
             </div>

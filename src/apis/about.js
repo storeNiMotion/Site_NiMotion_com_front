@@ -12,3 +12,15 @@ export function getActivityListAPI(){
       url: '/api/v2/about/activity/',
   })
 }
+
+//封装关于我们信息
+/**
+ * @description: 获取产品列表
+ * @param {*}
+ * @return {*}
+ */
+export function getInfoAboutAPI(){
+  return httpInstance({
+      url: '/api/v2/about/info/',
+  })
+}

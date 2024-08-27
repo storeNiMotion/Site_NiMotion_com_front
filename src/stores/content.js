@@ -23,7 +23,7 @@ export const useContentStore = defineStore('content', () => {
         specImgListData.value = productDetail.value.images.filter((ele) => ele.tag === '规格参数')
         drawImgListData.value = productDetail.value.images.filter((ele) => ele.tag === '图纸尺寸')
 
-        document.title = productDetail.value.name + ' - 立迈胜NiMotion - "智能控制 驱动未来"！'
+        document.title = productDetail.value.name + ' - NiMotion - Professional motion control service platform'
     }
 
 
@@ -44,7 +44,7 @@ export const useContentStore = defineStore('content', () => {
         specScrewListData.value = productScrewDetail.value.product_Detailspec
         specScrewImgListData.value = productScrewDetail.value.images.filter((ele) => ele.tag === '规格参数')
 
-        document.title = productScrewDetail.value.name + ' - 立迈胜NiMotion - "智能控制 驱动未来"！'
+        document.title = productScrewDetail.value.name + ' - NiMotion - Professional motion control service platform'
     }
 
     return {

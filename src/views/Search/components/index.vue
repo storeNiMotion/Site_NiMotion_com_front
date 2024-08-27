@@ -105,11 +105,11 @@ onMounted(() => {
                     <el-input
                         v-model="searchinput"
                         class="search-input"
-                        placeholder="请输入关键词"
+                        placeholder="Keywords"
                         :prefix-icon="Search"
                         @keyup.enter="clicksearch"
                         />
-                    <el-button type="primary" @click="clicksearch">search</el-button>
+                    <el-button type="primary" @click="clicksearch">Search</el-button>
                 </div>
             </div>
 
@@ -131,7 +131,7 @@ onMounted(() => {
             <el-tabs tab-position="left" class="tabs-item">
                 <el-tab-pane>
                     <template #label>
-                        <span class="tabs-label">product</span>
+                        <span class="tabs-label">Products</span>
                     </template>
                     <div class="container">
                         <div class="search-result">

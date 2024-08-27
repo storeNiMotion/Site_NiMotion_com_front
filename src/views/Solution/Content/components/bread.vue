@@ -27,12 +27,12 @@ onMounted(() => getsolutionDetail())
             <div class="bread">
                 <div class="bread-box">
                     <div class="bread-item">
-                        <RouterLink to="/">首页</RouterLink>
+                        <RouterLink to="/">Home</RouterLink>
                     </div>
 
                     <div class="bread-item">
                         <span> > </span>
-                        <RouterLink to="/solution/">解决方案</RouterLink>
+                        <RouterLink to="/solution/">Solution</RouterLink>
                     </div>
                     <div class="bread-item">
                         <span> > </span>
