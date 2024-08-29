@@ -10,12 +10,12 @@ const icon = [
   {
     "value": "Alibaba", 
     "imgsrc": "http://www.nimotion.cn/static/images/icon/icon_a2.webp", 
-    "href": "https://nimotion.en.alibaba.com/?spm=a2700.icbuShop.0.0.2732773a6KCGWa"
+    "href": "https://nimotion.en.alibaba.com/productlist.html?spm=a2700.shop_index.88.13.6c17773aXmPGCh"
   },
   {
     "value": "youtube", 
     "imgsrc": "http://www.nimotion.cn/static/images/icon/icon_youtube.png", 
-    "href": "https://studio.youtube.com/channel/UCLjINSmccbbtVgx7f9W3GrA/videos/upload?filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D"
+    "href": "https://www.youtube.com/@NiMotion2015"
   },
   {
     "value": "facebook", 

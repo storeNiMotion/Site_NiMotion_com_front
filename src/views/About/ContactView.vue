@@ -26,10 +26,10 @@ const ruleForm = ref({
 //2.准备规则对象
 const rules = reactive({
     name: [
-        { required: true, message: '不能为空', trigger: 'blur' }
+        { required: true, message: 'Cannot be empty', trigger: 'blur' }
     ],
     phone: [
-        { required: true, message: '不能为空', trigger: 'blur' },
+        { required: true, message: 'Cannot be empty', trigger: 'blur' },
     ]
 
 })
@@ -50,16 +50,16 @@ const onSubmit = async () => {
             //  1.提示用户
             //  ElMessage({type: 'success', message: '登录成功'})
             ElMessageBox.confirm(
-                '请检查信息，是否确认提交',
-                '是否提交',
+                'Please check the information and confirm submission',
+                'Submit',
                 {
-                    confirmButtonText: '确认',
-                    cancelButtonText: '取消',
+                    confirmButtonText: 'Yes',
+                    cancelButtonText: 'Cancel',
                     type: 'warning',
                     center: true,
                     beforeClose: (action, instance, done) => {
                         if (action === 'confirm') {
-                            console.log('点击确认')
+                            console.log('Click Yes')
                             getmessage(),   //调用接口提交数据
                                 done()
                         } else {
@@ -73,14 +73,14 @@ const onSubmit = async () => {
 
                     ElMessage({
                         type: 'success',
-                        message: '提交成功',
+                        message: 'Submit successfully',
 
                     })
                 })
                 .catch(() => {
                     ElMessage({
                         type: 'info',
-                        message: '已取消',
+                        message: 'Cancelled',
                     })
                 })
         }
@@ -99,9 +99,9 @@ const onSubmit = async () => {
     <!-- 面包屑区域 -->
     <div class="nav-bread">
         <div class="container">
-            <a href="">首页</a>
+            <a href="">Home</a>
             <span>></span>
-            <a href="">联系我们</a>
+            <a href="">Contact Us</a>
         </div>
     </div>
     <!-- 主体 -->
@@ -114,27 +114,27 @@ const onSubmit = async () => {
                         <div class="info-item">
 
                             <div class="info-box">
-                                <h4>北京立迈胜控制技术有限责任公司</h4>
-                                <p>地 址： 北京市大兴区金星路12号院3号楼</p>
-                                <p>电 话： 010-60213882</p>
-                                <p>董经理： 18600669435</p>
-                                <p>闫经理： 15652093735</p>
-                                <p>邮 箱： nimotion@nimotion.com</p>
+                                <h4>Beijing NiMotion Control Technology Co.,Ltd.</h4>
+                                <p>Address: Building 3, No. 12, Jinxing Road, Daxing District, Beijing</p>
+                                <p>Telephone: 010-60213882</p>
+                                <p>Mr. Dong: 18600669435</p>
+                                <p>Mrs. Yan: 15652093735</p>
+                                <p>Mail: nimotion@nimotion.com</p>
                             </div>
                             <div class="info-box">
-                                <h4>南京立迈胜机器人有限公司</h4>
-                                <p>地 址： 南京市六合区虎跃东路8号科创园B6栋</p>
-                                <p>电 话： 025-57569916</p>
-                                <p>欧经理： 18994060133</p>
+                                <h4>Nanjing NiMotion Robotics Co., Ltd.</h4>
+                                <p>Address: Building B6, No. 8, Huyue East Road, Liuhe District, Nanjing</p>
+                                <p>Telephone: 025-57569916</p>
+                                <p>Mr. Ou: 18994060133</p>
                                 <!-- <p>闫经理： 15652093735</p> -->
-                                <p>邮 箱： salesNJ@nimotion.com</p>
+                                <p>Mail: salesNJ@nimotion.com</p>
                             </div>
                             <div class="info-box">
-                                <h4>立迈胜深圳办事处</h4>
-                                <p>地 址： 深圳市南山区留仙大道4019号15栋403室</p>
+                                <h4>NiMotion Group Shenzhen Office</h4>
+                                <p>Address: Room 403, Building 15, No. 4019, Liuxian Avenue, Nanshan District, Shenzhen</p>
                                 <!-- <p>电 话： 010-60213882</p> -->
-                                <p>许经理： 19926697610</p>
-                                <p>高经理： 13302955158</p>
+                                <p>Mr. Xu: 19926697610</p>
+                                <p>Mr. Gao: 13302955158</p>
 
                             </div>
                         </div>
@@ -144,24 +144,24 @@ const onSubmit = async () => {
                 <div class="item-input" id="item-us">
                     <el-form ref="formRef" :rules="rules" label-width="auto" :model="ruleForm" class="demo-ruleForm"
                         :size="formSize" status-icon>
-                        <el-form-item label="公司名称">
+                        <el-form-item label="Company Name">
                             <el-input v-model="ruleForm.company" />
                         </el-form-item>
-                        <el-form-item prop="name" label="姓名">
+                        <el-form-item prop="name" label="Name">
                             <el-input v-model="ruleForm.name" />
                         </el-form-item>
-                        <el-form-item prop="phone" label="电话">
+                        <el-form-item prop="phone" label="Telephone">
                             <el-input v-model="ruleForm.phone" />
                         </el-form-item>
-                        <el-form-item label="邮箱">
+                        <el-form-item label="Mail">
                             <el-input v-model="ruleForm.email" />
                         </el-form-item>
 
-                        <el-form-item label="详细内容">
+                        <el-form-item label="Details">
                             <el-input v-model="ruleForm.content" type="textarea" />
                         </el-form-item>
                         <el-form-item>
-                            <el-button type="primary" @click="onSubmit" style="">提交</el-button>
+                            <el-button type="primary" @click="onSubmit" style="">Submit</el-button>
                             <!-- <el-button>取消</el-button> -->
                         </el-form-item>
                     </el-form>
