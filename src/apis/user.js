@@ -8,14 +8,14 @@ import httpInstance from "@/utils/http"
  * @param {*}
  * @return {*}
  */
-export const resigterAPI = ({username, password, phone, code}) => {
+export const resigterAPI = ({username, password, email, code}) => {
     return httpInstance({
         url: '/api/v2/register/',
         method: 'POST',
         data: {
             username,
             password,
-            phone,
+            email,
             code
         }
     })
@@ -27,13 +27,13 @@ export const resigterAPI = ({username, password, phone, code}) => {
  * @param {*}
  * @return {*}
  */
-export const forgetAPI = ({phone, password, code}) => {
+export const forgetAPI = ({email, password, code}) => {
     return httpInstance({
         url: '/api/v2/forget/',
         method: 'POST',
         data: {
             password,
-            phone,
+            email,
             code
         }
     })
@@ -55,34 +55,34 @@ export const isUsenameResigterAPI = ({username}) => {
     })
 }
 
-//校验手机号存在
+//校验邮箱存在
 /**
  * @description: 
  * @param {*}
  * @return {*}
  */
-export const isresigterAPI = ({phone}) => {
+export const isresigterAPI = ({email}) => {
     return httpInstance({
         url: '/api/v2/isregister/',
         method: 'POST',
         data: {
-            phone
+            email
         }
     })
 }
 
-//发送手机短信
+//发送邮件
 /**
  * @description: 
  * @param {*}
  * @return {*}
  */
-export const sendCodeAPI = ({phone}) => {
+export const sendCodeAPI = ({email}) => {
     return httpInstance({
-        url: '/api/v2/sendsms/',
+        url: '/api/v2/sendmail/',
         method: 'POST',
         data: {
-            phone
+            email
         }
     })
 }

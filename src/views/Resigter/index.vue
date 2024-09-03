@@ -13,10 +13,10 @@ import { loginAPI, isresigterAPI, isUsenameResigterAPI, sendCodeAPI } from "@/ap
 
 const userStore = useUserStore()
 
-const userPhone = ref({})
-const getUserPhone = async({phone})=> {               // 2.定义获取接口数据的action函数   => 手机号是否存在
-        const res = await isresigterAPI({phone})
-        userPhone.value = res
+const userMail = ref({})
+const getUserMail = async({email})=> {               // 2.定义获取接口数据的action函数   => 邮箱是否存在
+        const res = await isresigterAPI({email})
+        userMail.value = res
 }
 
 const user_Name = ref({})
@@ -26,8 +26,8 @@ const postUserName = async({username})=> {               // 2.定义获取接口
 }
 
 const send_code = ref({})
-const postCode = async({phone})=> {               // 2.定义获取接口数据的action函数   => 发送短信
-        const res = await sendCodeAPI({phone})
+const postCode = async({email})=> {               // 2.定义获取接口数据的action函数   => 发送邮件
+        const res = await sendCodeAPI({email})
         send_code.value = res
 }
 
@@ -41,7 +41,7 @@ const sendCode = async({phone})=> {               // 2.定义获取接口数据�
 const form = ref({
   username:"",
   password:"",
-  phone: "",
+  email: "",
   code: "",
   agree:true
 })
@@ -49,47 +49,48 @@ const form = ref({
 //2.准备规则对象
 const rules = {
   username: [
-    { required: true, message: '用户名不能为空', trigger:'blur' },
-    { min: 2, max: 15, message: '密码长度为 2~15 位', trigger: 'blur' },
-    {
-      validator: (rule, value, callback) => {
-        //自定义校验逻辑
-        // console.log(value);
-        postUserName(form.value)
-        console.log(user_Name.value);
-        console.log(value);
-        if (user_Name.value.code === 200) {
-          callback()
-        } else {
-          callback(new Error('用户名已被占用'))
-        }
-      }
-    }
+    { required: true, message: 'Username cannot be empty', trigger:'blur' },
+    { min: 2, max: 15, message: 'Password length is 2~15 characters', trigger: 'blur' },
+    // {
+    //   validator: (rule, value, callback) => {
+    //     //自定义校验逻辑 用户名重复 暂忽略
+    //     // console.log(value);
+    //     postUserName(form.value)
+    //     // console.log(user_Name.value);
+    //     // console.log(value);
+    //     if (user_Name.value.code === 200) {
+    //       callback()
+    //     } else {
+    //       callback(new Error('Username is already taken'))
+    //     }
+    //   }
+    // }
   ],
   password: [
-    { required: true, message: '密码不能为空', trigger: 'blur' },
-    { min: 6, max: 15, message: '密码长度为 6~15 位', trigger: 'blur' },
-    { pattern: /^\S/, message: '密码不能包含空格', trigger: 'blur' },
-    { pattern: /^(?=.*\d)(?=.*[A-Za-z]).{5,17}$/, message: '请至少输入字母数字两种组合', trigger: 'blur' }
+    { required: true, message: 'Cannot be empty', trigger: 'blur' },
+    { min: 6, max: 15, message: 'length is 6~15 characters', trigger: 'blur' },
+    { pattern: /^\S/, message: 'The password cannot contain spaces', trigger: 'blur' },
+    { pattern: /^(?=.*\d)(?=.*[A-Za-z]).{5,17}$/, message: 'At least two combinations of letters and numbers', trigger: 'blur' }
   ],
-  phone: [
-    { required: true, message: '请输入手机号', trigger: 'blur' },
-    { pattern: /^\S/, message: '密码不能包含空格', trigger: 'blur' },
-    { pattern: /^(1)\d{10}$/, message: '请输入 11 位手机号码', trigger: 'blur' },
-    {
-      validator: (rule, value, callback) => {
-        //自定义校验逻辑
-        // console.log(value);
-        getUserPhone(form.value)
-        // console.log(userPhone.value);
-        // console.log(value);
-        if (userPhone.value.code == 200) {
-          callback()
-        } else {
-          callback(new Error('手机号已注册'))
-        }
-      }
-    }
+  email: [
+    { required: true, message: 'Please enter your email address', trigger: 'blur' },
+    { pattern: /^\S/, message: 'Cannot contain spaces', trigger: 'blur' },
+    // { pattern: /^(1)\d{10}$/, message: '请输入 11 位手机号码', trigger: 'blur' },
+    // {
+    //   validator: (rule, value, callback) => {
+    //     //自定义校验逻辑 
+    //     // 判断重复 暂忽略
+    //     // console.log(value);
+    //     getUserMail(form.value)
+    //     // console.log(userPhone.value);
+    //     // console.log(value);
+    //     if (userMail.value.code == 200) {
+    //       callback()
+    //     } else {
+    //       callback(new Error('Email already registered'))
+    //     }
+    //   }
+    // }
   ],
   // code: [
   //   { required: true, message: '请输入验证码', trigger: 'blur' },
@@ -104,7 +105,7 @@ const rules = {
         if (value) {
           callback()
         } else {
-          callback(new Error('请勾选'))
+          callback(new Error('Please check'))
         }
       }
     }
@@ -118,17 +119,17 @@ const router = useRouter()
 //注册
 const doLogin = () => {
   // 解构用户名和密码
-  const {username, password, phone, code} = form.value
+  const {username, password, email, code} = form.value
   //调用实例
   formRef.value.validate(async (valid)=>{
     //valid:所有表单都通过校验 才为true
-    console.log(valid)
+    // console.log(valid)
     //以valid作为判断条件 如果通过执行
     if (valid) {
       //todo login
-      await userStore.postUserInfo({username, password, phone, code})  // 提交注册信息 状态200才会成功
+      await userStore.postUserInfo({username, password, email, code})  // 提交注册信息 状态200才会成功
       //1.提示用户
-      ElMessage({type: 'success', message: '注册成功'})
+      ElMessage({type: 'success', message: 'Successful registration'})
       
       router.replace({path: '/'})                       //2.跳转首页
     }
@@ -180,10 +181,10 @@ const sendcode = () => {
     <div class="container">
       <div class="register">
         <nav>
-          <a href="javascript:;">欢迎注册</a>
+          <a href="javascript:;">Welcome to register</a>
             <div>
-              <span>已有账户 ？</span>
-              <RouterLink to="/login">登录</RouterLink>
+              <span>Already have an account ?</span>
+              <RouterLink to="/login">Log in</RouterLink>
             </div>
         </nav>
 
@@ -192,32 +193,32 @@ const sendcode = () => {
             <el-form ref="formRef" :model="form"  :rules="rules" label-position="right" label-width="80px"
               status-icon>
               
-              <el-form-item prop="username" label="账户">
-                <el-tooltip content="用户名在2个字符以上,且不能为纯数字" placement="top">
-                  <el-input placeholder="请输入用户名" v-model="form.username" />
+              <el-form-item prop="username" label="Account">
+                <el-tooltip content="More than 2 characters" placement="top">
+                  <el-input placeholder="Enter Username" v-model="form.username" />
                 </el-tooltip>
                 
               </el-form-item>
-              <el-form-item prop="password" label="密码">
-                <el-tooltip content="字母/数字组合且最少6个字符以上" placement="top">
-                  <el-input placeholder="请输入密码" v-model="form.password" />
+              <el-form-item prop="password" label="Password">
+                <el-tooltip content="Letter/number combination" placement="top">
+                  <el-input placeholder="Enter password" v-model="form.password" />
                 </el-tooltip>
                 
               </el-form-item >
-              <el-form-item prop="phone" label="手机号">
-                <el-tooltip content="请输入11位手机号码" placement="top">
-                  <el-input ref="phoneref" placeholder="请输入手机号" v-model="form.phone" />
+              <el-form-item prop="email" label="Email">
+                <el-tooltip content="Enter your email address" placement="top">
+                  <el-input ref="phoneref" placeholder="Enter your email address" v-model="form.email" />
                 </el-tooltip>
                 
               </el-form-item >
               <div class="verification">
-                    <el-form-item prop="code" label="验证" style="margin-top: 20px;width: 100%;">
-                      <el-input placeholder="验证码" v-model="form.code" />
+                    <el-form-item prop="code" label="Verify" style="margin-top: 20px;width: 100%;">
+                      <el-input placeholder="Verification Code" v-model="form.code" />
                       
                     </el-form-item>
                     <div>
                       <el-button type="primary" @click="sendcode" :disabled="isSendingCode || countdown > 0" class="send">
-                        {{ countdown > 0 ? `重新发送(${countdown})` : '发送验证码' }}
+                        {{ countdown > 0 ? `Resend(${countdown})` : 'send' }}
                       </el-button>
                       <!-- <a href="" class="send" @click="sendcode" >发送验证码</a> -->
                     </div>
@@ -225,10 +226,10 @@ const sendcode = () => {
                   </div>
               <el-form-item  prop="agree" label-width="22px">
                 <el-checkbox  size="large" v-model="form.agree">
-                  我已同意隐私条款和服务条款
+                  I agree to the Privacy Policy and Terms of Service
                 </el-checkbox>
               </el-form-item>
-              <el-button size="large" class="subBtn" @click="doLogin">点击注册</el-button>
+              <el-button size="large" class="subBtn" @click="doLogin">Click to register</el-button>
             </el-form>
           </div>
         </div>

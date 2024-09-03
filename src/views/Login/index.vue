@@ -1,18 +1,13 @@
 <script setup>
 // 登录页面
 
-// import { loginAPI } from "@/apis/user"
-// import 'element-plus/es/components/message/style/css'
-// import type { TabsPaneContext } from 'element-plus'
-// import { TabsPaneContext } from 'element-plus'
-
 import Vcode from "vue3-puzzle-vcode"
 import { ref, onMounted } from 'vue'
 import { ElMessage } from "element-plus"          // 导入提示
 import 'element-plus/theme-chalk/el-message.css'  // 导入提示样式 这个更精确 防止影响其他组件
 import { useRouter } from "vue-router"            //调用路由 => “方法”
 import { useUserStore } from "@/stores/user"      // 导入pinia
-import { loginAPI, isresigterAPI, isUsenameResigterAPI, sendCodeAPI } from "@/apis/user"
+import { loginAPI, isresigterAPI, isUsenameResigterAPI } from "@/apis/user"
 import httpInstance from "@/utils/http";
 import { getCodeAPI } from "@/apis/code"
 
@@ -31,12 +26,6 @@ const getUserPhone = async({phone})=> {               // 2.定义获取接口数
         userPhone.value = res
 }
 
-const send_code = ref({})
-const postCode = async({phone})=> {               // 2.定义获取接口数据的action函数   => 发送短信
-        const res = await sendCodeAPI({phone})
-        send_code.value = res
-}
-
 
 //一、账号密码登录
 //1.准备表单对象
@@ -50,29 +39,18 @@ const form = ref({
 // 2.准备规则对象
 const rules1 = {
   username: [
-    { required: true, message: '用户名不能为空', trigger:'blur' },
-    { min: 2, max: 15, message: '用户名在 2~15 个字符之内', trigger: 'blur' },
-    // {
-    //   validator: (rule, value, callback) => {
-    //     postUserName(form.value)
-    //     console.log(user_Name.value);
-    //     console.log(value);
-    //     if (user_Name.value.code === 400) {
-    //       callback()
-    //     } else {
-    //       callback(new Error('用户名不存在'))
-    //     }
-    //   }
-    // }
+    { required: true, message: 'Cannot be empty', trigger:'blur' },
+    { min: 2, max: 15, message: 'Between 2 and 15 characters', trigger: 'blur' },
+
   ],
   password: [
-    { required: true, message: '密码不能为空', trigger: 'blur' },
-    { min: 6, max: 15, message: '密码长度为 6~15 位', trigger: 'blur' },
-    { pattern: /^\S{6,15}/, message: '密码不能包含空格', trigger: 'blur' },
-    { pattern: /^(?=.*\d)(?=.*[A-Za-z]).{5,17}$/, message: '请至少输入字母数字两种组合', trigger: 'blur' }
+    { required: true, message: 'Cannot be empty', trigger: 'blur' },
+    { min: 6, max: 15, message: '6~15 digits', trigger: 'blur' },
+    { pattern: /^\S{6,15}/, message: 'Cannot contain spaces', trigger: 'blur' },
+    { pattern: /^(?=.*\d)(?=.*[A-Za-z]).{5,17}$/, message: 'Two combinations of letters and numbers', trigger: 'blur' }
   ],
   code: [
-    { required: true, message: '不能为空', trigger: 'blur' }
+    { required: true, message: 'Cannot be empty', trigger: 'blur' }
   ],
   agree: [
     {
@@ -81,7 +59,7 @@ const rules1 = {
         if (value) {                    //自定义校验逻辑
           callback()
         } else {
-          callback(new Error('请勾选'))
+          callback(new Error('Please check'))
         }
       }
     }
@@ -122,124 +100,6 @@ const clickcode = () => {
   Code()
 }
 
-// 二、短信登录
-//1.准备表单对象
-const form2 = ref({
-  phone:"",
-  code:"",
-  agree:true
-})
-
-// 2.准备规则对象
-const rules2 = {
-  phone: [
-    { required: true, message: '请输入手机号', trigger: 'blur' },
-    { pattern: /^\S/, message: '密码不能包含空格', trigger: 'blur' },
-    { pattern: /^(1)\d{10}$/, message: '请输入 11 位手机号码', trigger: 'blur' },
-  ],
-  agree: [
-    {
-      validator: (rule, value, callback) => {
-        
-        if (value) {                    //自定义校验逻辑
-          callback()
-        } else {
-          callback(new Error('请勾选'))
-        }
-      }
-    }
-  ]
-}
-
-// 3.获取form实例做统一校验
-const formRef2 = ref(null)
-const router2 = useRouter()                                    // 调用路由方法
-//调用实例
-const verify = () => {
-  formRef2.value.validate(async (valid)=>{
-  //valid:所有表单都通过校验 才为true
-  // console.log(valid)
-  //以valid作为判断条件 如果通过执行
-  if (valid) {
-    //todo login
-    postCode(form2.value)  // 提交信息
-    //1.提示用户
-    //ElMessage({type: 'success', message: '登录成功'})
-    
-    //router.replace({path: '/'})                       //2.跳转首页
-    isSendingCode.value = true                          // disabled 属性置为真  禁用点击
-    countdown.value = 60                                // 设置倒计时时间，这里假设为10秒
-    const countdownInterval = setInterval(() => {       // 倒计时效果
-      countdown.value --
-      if (countdown.value <= 0) {
-        clearInterval(countdownInterval)
-        isSendingCode.value = false                     // disabled 属性置为假  恢复点击
-      }
-    }, 1000)
-  }
-  })
-}
-
-// 4.滑动验证码
-const isShow = ref(false)
-import img1 from "@/assets/codeimgs/img1.jpg"
-import img2 from "@/assets/codeimgs/img2.jpg"
-import img3 from "@/assets/codeimgs/img3.jpg"
-import img4 from "@/assets/codeimgs/img4.jpg"
-import img5 from "@/assets/codeimgs/img5.jpg"
-import img6 from "@/assets/codeimgs/img6.jpg"
-import img7 from "@/assets/codeimgs/img7.jpg"
-import img8 from "@/assets/codeimgs/img8.jpg"
-const codebackgroundimgs = ref([])
-codebackgroundimgs.value = [
-  "@/assets/codeimgs/img1.jpg",
-  "@/assets/codeimgs/img2.jpg",
-  "@/assets/codeimgs/img3.jpg",
-  "@/assets/codeimgs/img4.jpg",
-  "@/assets/codeimgs/img5.jpg",
-  "@/assets/codeimgs/img6.jpg",
-  "@/assets/codeimgs/img7.jpg",
-  "@/assets/codeimgs/img8.jpg",
-]
-const success = () => {
-  isShow.value = false
-  verify()
-}
-
-const close = () => {
-  isShow.value = false
-}
-
-const fail = () => {
-  console.log('验证失败')
-}
-// 4.发送短信验证
-const isSendingCode = ref(false)
-const countdown = ref(0)
-
-const sendcode = () => {
-  //调用验证码
-  isShow.value = true                                   //展现验证码模态框
-
-
-}
-
-// 4.点击登录事件
-const doLogin2 = () => {
-  
-  const {phone, code} = form2.value                     // 解构用户名和密码
-  
-  formRef2.value.validate(async (valid)=>{                     //调用实例
-    //valid:所有表单都通过校验 才为true
-    // console.log(valid)
-    //以valid作为判断条件 如果通过执行
-    if (valid) {
-      await userStore.getSmsUserInfo({phone, code})       //todo login 调用接口 传入username, password
-      ElMessage({type: 'success', message: '登录成功'})        // 1.提示用户
-      router2.replace({path: '/'})                             // 2.跳转首页 用replace防止用户重复返回登录
-    }
-  })
-}
 
 // 钩子函数
 onMounted(()=>Code())
@@ -252,37 +112,37 @@ onMounted(()=>Code())
       <div class="account-box">
         <!-- 账号登录 -->
         <el-tabs v-model="activeName" class="demo-tabs" @tab-click="handleClick">
-          <el-tab-pane label="账号登录" name="first">
+          <el-tab-pane label="Account Login" name="first">
 
             <div class="form">
               <el-form ref="formRef" :model="form"  :rules="rules1" label-position="right"
                 status-icon>
                 
                 <el-form-item prop="username">
-                  <el-tooltip content="用户名在2个字符以上,且不能为纯数字" placement="top">
-                    <el-input placeholder="请输入用户名或手机号" v-model="form.username" />
+                  <el-tooltip content="More than 2 characters" placement="top">
+                    <el-input placeholder="Enter Username" v-model="form.username" />
                   </el-tooltip>
                   
                 </el-form-item>
                 <el-form-item prop="password" style="margin-top: 40px;">
-                  <el-tooltip content="字母/数字组合且最少6个字符以上" placement="top">
-                    <el-input placeholder="请输入密码" v-model="form.password" />
+                  <el-tooltip content="Letter/number combination" placement="top">
+                    <el-input placeholder="请Enter password" v-model="form.password" />
                   </el-tooltip>
                 </el-form-item>
                 <!-- 图形验证码 -->
                 <el-form-item prop="code" style="margin-top: 40px;">
-                    <el-input placeholder="请输入验证码" v-model="form.code" />
+                    <el-input placeholder="enter confirmation code" v-model="form.code" />
                     <div class="code"  @click="clickcode">
-                      <img :src="`data:image/png;base64,${verificationCodeurl}`" alt="验证码">
+                      <img :src="`data:image/png;base64,${verificationCodeurl}`" alt="Verification Code">
                       <!-- <img :src="verificationCodeurl" alt=""> -->
-                      <span class="tooltiptext">点击刷新</span>
+                      <span class="tooltiptext">refresh</span>
                     </div>
                 </el-form-item>
 
-                <el-button size="large" class="subBtn" @click="doLogin">点击登录</el-button>
+                <el-button size="large" class="subBtn" @click="doLogin">Log in</el-button>
                 <el-form-item  prop="agree" label-width="22px">
                   <el-checkbox  size="large" v-model="form.agree">
-                    我已同意隐私条款和服务条款
+                    I agree to the Privacy Policy and Terms of Service
                   </el-checkbox>
                 </el-form-item>
                 
@@ -292,32 +152,23 @@ onMounted(()=>Code())
           </el-tab-pane>
 
           <!-- 短信登录  -->
-          <el-tab-pane label="短信登录" name="second">
+          <!-- <el-tab-pane label="短信登录" name="second">
             <div class="form">
               <el-form ref="formRef2" :model="form2"  :rules="rules2" label-position="right"
                 status-icon>
-                
                 <el-form-item prop="phone" >
                   <el-input placeholder="请输入手机号" v-model="form2.phone" />
-                  
                 </el-form-item>
                 <div class="verification">
                   <el-form-item prop="code" style="margin-top: 20px;width: 100%;">
                     <el-input placeholder="验证码" v-model="form2.code" />
-                    
                   </el-form-item>
                   <div>
                     <el-button type="primary" @click="sendcode" :disabled="isSendingCode || countdown > 0" class="send">
                       {{ countdown > 0 ? `重新发送(${countdown})` : '发送验证码' }}
                     </el-button>
-                    <!-- <a href="" class="send" @click="sendcode" >发送验证码</a> -->
                   </div>
-                  <!-- <div>
-                      <a href="" class="send">点击发送验证码</a>
-                    </div> -->
-                  
                 </div>
-                <!-- <Vcode :show="isShow" @success="success" @close="close" />:imgs="codebackgroundimgs" -->
                 <Vcode
                   :show="isShow"
                   @success="success"
@@ -326,27 +177,27 @@ onMounted(()=>Code())
                   :imgs="[img1, img2, img3, img4, img5, img6, img7, img8]"
                   >
                 </Vcode>
-                <el-button size="large" class="subBtn" @click="doLogin2"  @keyup.enter="doLogin2">点击登录</el-button>
+                <el-button size="large" class="subBtn" @click="doLogin2"  @keyup.enter="doLogin2">Click to log in</el-button>
                 <el-form-item  prop="agree" label-width="22px">
                   <el-checkbox  size="large" v-model="form.agree">
-                    我已同意隐私条款和服务条款
+                    I agree to the Privacy Policy and Terms of Service
                   </el-checkbox>
                 </el-form-item>
                 
               </el-form>
             </div>
 
-          </el-tab-pane>
+          </el-tab-pane> -->
         </el-tabs>
 
         <nav>
           <div>
-            <span>没有账户 ？</span>
-            <RouterLink to="/resigter">注册</RouterLink>
+            <span>No account?</span>
+            <RouterLink to="/resigter">register</RouterLink>
           </div>
           <div>
             <!-- <span>没有账户 ？</span> -->
-            <RouterLink to="/forget">忘记密码</RouterLink>
+            <RouterLink to="/forget">forget the password</RouterLink>
           </div>
         </nav>
 

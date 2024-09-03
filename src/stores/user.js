@@ -23,14 +23,14 @@ export const useUserStore = defineStore('user', ()=>{
         userInfo.value = res
     }
 
-
-    const postUserInfo = async({username, password, phone, code})=> {      // 2.定义获取接口数据的action函数  => 注册
-        const res = await resigterAPI({username, password, phone, code})
+    // 注册
+    const postUserInfo = async({username, password, email, code})=> {      // 2.定义获取接口数据的action函数  => 注册
+        const res = await resigterAPI({username, password, email, code})
         userInfo.value = res
     }
 
-    const forgetUserInfo = async({password, phone, code})=> {      // 2.定义获取接口数据的action函数  => 忘记密码
-        const res = await forgetAPI({password, phone, code})
+    const forgetUserInfo = async({password, email, code})=> {      // 2.定义获取接口数据的action函数  => 忘记密码
+        const res = await forgetAPI({password, email, code})
         userInfo.value = res
     }
 

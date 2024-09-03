@@ -8,39 +8,22 @@ import 'element-plus/theme-chalk/el-message.css'
 import { useRouter } from "vue-router"                      //调用方法
 
 import { useUserStore } from "@/stores/user"                // 导入pinia
-import { loginAPI, isresigterAPI, isUsenameResigterAPI, sendCodeAPI } from "@/apis/user"       // 导入登录接口
+import { sendCodeAPI } from "@/apis/user"       // 导入登录接口
 //import { sendCodeAPI } from "@/apis/sendsms"                // 导入发短信接口
 
 const userStore = useUserStore()
 
-const userPhone = ref({})
-const getUserPhone = async({phone})=> {               // 2.定义获取接口数据的action函数   => 手机号是否存在
-        const res = await isresigterAPI({phone})
-        userPhone.value = res
-}
-
-const user_Name = ref({})
-const postUserName = async({username})=> {               // 2.定义获取接口数据的action函数   => 用户名是否存在
-        const res = await isUsenameResigterAPI({username})
-        user_Name.value = res
-}
-
 const send_code = ref({})
-const postCode = async({phone})=> {               // 2.定义获取接口数据的action函数   => 发送短信
-        const res = await sendCodeAPI({phone})
+const postCode = async({email})=> {               // 2.定义获取接口数据的action函数   => 发送短信
+        const res = await sendCodeAPI({email})
         send_code.value = res
 }
-
-const sendCode = async({phone})=> {               // 2.定义获取接口数据的action函数   => 登录
-        const res = await sendCodeAPI({phone})
-        userPhone.value = res
-    }
 
 //表单校验
 //1.准备表单对象
 const form = ref({
   password:"",
-  phone: "",
+  email: "",
   code: "",
   agree:true
 })
@@ -48,31 +31,17 @@ const form = ref({
 //2.准备规则对象
 const rules = {
   password: [
-    { required: true, message: '密码不能为空', trigger: 'blur' },
-    { min: 6, max: 15, message: '密码长度为 6~15 位', trigger: 'blur' },
-    { pattern: /^\S/, message: '密码不能包含空格', trigger: 'blur' },
-    { pattern: /^(?=.*\d)(?=.*[A-Za-z]).{5,17}$/, message: '请至少输入字母数字两种组合', trigger: 'blur' }
+    { required: true, message: 'Cannot be empty', trigger: 'blur' },
+    { min: 6, max: 15, message: '6~15 digits', trigger: 'blur' },
+    { pattern: /^\S/, message: 'Cannot contain spaces', trigger: 'blur' },
+    { pattern: /^(?=.*\d)(?=.*[A-Za-z]).{5,17}$/, message: 'Alphanumeric combination', trigger: 'blur' }
   ],
-  phone: [
-    { required: true, message: '请输入手机号', trigger: 'blur' },
-    { pattern: /^\S/, message: '密码不能包含空格', trigger: 'blur' },
-    { pattern: /^(1)\d{10}$/, message: '请输入 11 位手机号码', trigger: 'blur' },
-    // {
-    //   validator: (rule, value, callback) => {
-    //     getUserPhone(form.value)
-    //     if (userPhone.value.code == 200) {
-    //       callback()
-    //     } else {
-    //       callback(new Error('手机号已注册'))
-    //     }
-    //   }
-    // }
+  email: [
+    { required: true, message: 'Enter your email address', trigger: 'blur' },
+    { pattern: /^\S/, message: 'Cannot contain spaces', trigger: 'blur' },
+    // { pattern: /^(1)\d{10}$/, message: '请输入 11 位手机号码', trigger: 'blur' },
+
   ],
-  // code: [
-  //   { required: true, message: '请输入验证码', trigger: 'blur' },
-  //   { pattern: /^\S/, message: '验证码不能包含空格', trigger: 'blur' },
-  //   { pattern: /^\d{6}$/, message: '请输入6位验证码', trigger: 'blur' }
-  // ],
 
   agree: [
     {
@@ -81,7 +50,7 @@ const rules = {
         if (value) {
           callback()
         } else {
-          callback(new Error('请勾选'))
+          callback(new Error('Please check'))
         }
       }
     }
@@ -95,7 +64,7 @@ const router = useRouter()
 //注册
 const doLogin = () => {
   // 解构用户名和密码
-  const { password, phone, code} = form.value
+  const { password, email, code} = form.value
   //调用实例
   formRef.value.validate(async (valid)=>{
     //valid:所有表单都通过校验 才为true
@@ -103,9 +72,9 @@ const doLogin = () => {
     //以valid作为判断条件 如果通过执行
     if (valid) {
       //todo login
-      await userStore.forgetUserInfo({ password, phone, code})  // 提交注册信息 状态200才会成功
+      await userStore.forgetUserInfo({ password, email, code})  // 提交注册信息 状态200才会成功
       //1.提示用户
-      ElMessage({type: 'success', message: '注册成功'})
+      ElMessage({type: 'success', message: 'Reset Successfully'})
       
       router.replace({path: '/'})                       //2.跳转首页
     }
@@ -118,19 +87,15 @@ const countdown = ref(0)
 const phoneref = ref(null)
 const sendcode = () => {
 
-  console.log('发送验证码')
-  console.log(formRef.value)
   //调用实例
   formRef.value.validate(async (valid)=>{
   //valid:所有表单都通过校验 才为true
-  console.log(valid)
   //以valid作为判断条件 如果通过执行
   if (valid) {
     //todo login
     postCode(form.value)  // 提交信息
     //1.提示用户
     //ElMessage({type: 'success', message: '登录成功'})
-    
     //router.replace({path: '/'})                       //2.跳转首页
     isSendingCode.value = true                          // disabled 属性置为真  禁用点击
     countdown.value = 5                                // 设置倒计时时间，这里假设为10秒
@@ -143,10 +108,7 @@ const sendcode = () => {
     }, 1000)
   }
   })
-
 }
-
-
 
 
 
@@ -157,10 +119,10 @@ const sendcode = () => {
     <div class="container">
       <div class="register">
         <nav>
-          <a href="javascript:;">密码重置</a>
+          <a href="javascript:;">Password Reset</a>
             <div>
-              <span>已有账户 ？</span>
-              <RouterLink to="/login">登录</RouterLink>
+              <span>Already have an account?</span>
+              <RouterLink to="/login">Log in</RouterLink>
             </div>
         </nav>
 
@@ -168,27 +130,27 @@ const sendcode = () => {
           <div class="form">
             <el-form ref="formRef" :model="form"  :rules="rules" label-position="right" label-width="80px"
               status-icon>
-              <el-form-item prop="phone" label="手机号">
-                <el-tooltip content="请输入11位手机号码" placement="top">
-                  <el-input ref="phoneref" placeholder="请输入手机号" v-model="form.phone" />
+              <el-form-item prop="email" label="Email">
+                <el-tooltip content="Enter your email address" placement="top">
+                  <el-input ref="phoneref" placeholder="Enter your email address" v-model="form.email" />
                 </el-tooltip>
                 
               </el-form-item >
-              <el-form-item prop="password" label="密码">
-                <el-tooltip content="字母/数字组合且最少6个字符以上" placement="top">
-                  <el-input placeholder="请输入新密码" v-model="form.password" />
+              <el-form-item prop="password" label="Password">
+                <el-tooltip content="Alphanumeric combination of more than 6 characters" placement="top">
+                  <el-input placeholder="Enter new password" v-model="form.password" />
                 </el-tooltip>
                 
               </el-form-item >
 
               <div class="verification">
-                    <el-form-item prop="code" label="验证" style="margin-top: 20px;width: 100%;">
-                      <el-input placeholder="验证码" v-model="form.code" />
+                    <el-form-item prop="code" label="Verify" style="margin-top: 20px;width: 100%;">
+                      <el-input placeholder="Verification Code" v-model="form.code" />
                       
                     </el-form-item>
                     <div>
                       <el-button type="primary" @click="sendcode" :disabled="isSendingCode || countdown > 0" class="send">
-                        {{ countdown > 0 ? `重新发送(${countdown})` : '发送验证码' }}
+                        {{ countdown > 0 ? `Resend(${countdown})` : 'Send' }}
                       </el-button>
                       <!-- <a href="" class="send" @click="sendcode" >发送验证码</a> -->
                     </div>
@@ -196,10 +158,10 @@ const sendcode = () => {
                   </div>
               <el-form-item  prop="agree" label-width="22px">
                 <el-checkbox  size="large" v-model="form.agree">
-                  我已同意隐私条款和服务条款
+                  I agree to the Privacy Policy and Terms of Service
                 </el-checkbox>
               </el-form-item>
-              <el-button size="large" class="subBtn" @click="doLogin">重置密码</el-button>
+              <el-button size="large" class="subBtn" @click="doLogin">Reset Password</el-button>
             </el-form>
           </div>
         </div>

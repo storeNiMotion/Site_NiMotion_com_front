@@ -93,7 +93,7 @@ const onSubmit = async () => {
     <!-- banner区域 -->
     <div class="banner-pro">
         <div class="">
-            <img src="https://www.nimotion.cn/static/images/banner/07c9d82ce42fdb94.webp" alt="">
+            <img src="https://www.nimotion.cn/static/images/banner/Contact Us.webp" alt="">
         </div>
     </div>
     <!-- 面包屑区域 -->
