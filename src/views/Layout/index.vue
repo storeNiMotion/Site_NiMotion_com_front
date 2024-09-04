@@ -50,7 +50,7 @@ onBeforeRouteUpdate((to) => {
     <div class="help-tool">
       <el-popover
         placement="left-start"
-        title="咨询热线"
+        title="Hotline"
         :width="auto"
         trigger="hover"
         content="010-60213882"
@@ -65,7 +65,7 @@ onBeforeRouteUpdate((to) => {
 
       <el-popover
         placement="left-start"
-        title="微信客服"
+        title="WeChat Service"
         :width="300"
         trigger="hover"
       >
@@ -74,7 +74,7 @@ onBeforeRouteUpdate((to) => {
               <a target="_blank" href="https://work.weixin.qq.com/kfid/kfc9d5c3834eaae18fc"><el-icon><ChatDotRound /></el-icon></a>
           </div>
         </template>
-        <el-image style="width: 100%;" src="https://www.nimotion.com/public_statics/css/nimotion/img/qr_wechataccount1.jpg" fit="contain" />
+        <el-image style="width: 100%;" src="https://www.nimotion.cn/static/images/general/qr_wechat_en.webp" fit="contain" />
       </el-popover>
     </div>
 
@@ -83,7 +83,7 @@ onBeforeRouteUpdate((to) => {
       <el-popover
         placement="left-start"
         title=""
-        content="返回顶部"
+        content="Back to top"
         :width="auto"
         trigger="hover"
       >

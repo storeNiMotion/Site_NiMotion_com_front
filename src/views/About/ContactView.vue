@@ -28,7 +28,7 @@ const rules = reactive({
     name: [
         { required: true, message: 'Cannot be empty', trigger: 'blur' }
     ],
-    phone: [
+    email: [
         { required: true, message: 'Cannot be empty', trigger: 'blur' },
     ]
 
@@ -150,11 +150,11 @@ const onSubmit = async () => {
                         <el-form-item prop="name" label="Name">
                             <el-input v-model="ruleForm.name" />
                         </el-form-item>
-                        <el-form-item prop="phone" label="Telephone">
-                            <el-input v-model="ruleForm.phone" />
-                        </el-form-item>
-                        <el-form-item label="Mail">
+                        <el-form-item prop="email" label="Mail">
                             <el-input v-model="ruleForm.email" />
+                        </el-form-item>
+                        <el-form-item label="Telephone">
+                            <el-input v-model="ruleForm.phone" />
                         </el-form-item>
 
                         <el-form-item label="Details">

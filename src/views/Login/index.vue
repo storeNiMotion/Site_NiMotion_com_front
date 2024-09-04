@@ -126,7 +126,7 @@ onMounted(()=>Code())
                 </el-form-item>
                 <el-form-item prop="password" style="margin-top: 40px;">
                   <el-tooltip content="Letter/number combination" placement="top">
-                    <el-input placeholder="请Enter password" v-model="form.password" />
+                    <el-input placeholder="Enter password" v-model="form.password" />
                   </el-tooltip>
                 </el-form-item>
                 <!-- 图形验证码 -->

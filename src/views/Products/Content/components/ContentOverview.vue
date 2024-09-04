@@ -66,7 +66,8 @@ onMounted(() => {
                     <div class="description">
                         <div v-html="ContentStoreOver.productDetail.description" class="description"></div>
                     </div>
-                    <a href="https://affim.baidu.com/unique_30577829/chat?siteId=15043094&userId=30577829&siteToken=8b9903f017898a80ab853887d15b9743" class="btn-face" target="_blank">consult</a>
+                    <a href="https://affim.baidu.com/unique_30577829/chat?siteId=15043094&userId=30577829&siteToken=8b9903f017898a80ab853887d15b9743" 
+                    class="btn-face" target="_blank">consult</a>
                     <!-- <div class="btn-face">立即咨询</div> -->
                 </div>
             </div>

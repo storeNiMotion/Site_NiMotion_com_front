@@ -62,7 +62,7 @@ import Download from '@/views/Download/DownChannel.vue'                         
 import NewsList from '@/views/News/List/index.vue'                                                // 新闻
 import NewsDetail from '@/views/News/Content/index.vue'
 
-import Contact from '@/views/About/ContactView.vue'
+import Contact from '@/views/About/ContactView.vue'                                               // 联系我们
 import About from '@/views/About/Introduce/AboutView.vue'                                         // 关于我们
 import Culture from '@/views/About/Culture/index.vue'                                             // 关于我们-文化
 import Honor from '@/views/About/Honor/index.vue'                                                 // 关于我们-荣誉
