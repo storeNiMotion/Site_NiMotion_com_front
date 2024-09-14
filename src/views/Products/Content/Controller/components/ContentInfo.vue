@@ -6,28 +6,14 @@ import { watch, onMounted, ref } from "vue"
 import { useContentStore } from '@/stores/content'
 
 //使用pinia中的数据
-const ContentSpecTxt = useContentStore()                // 实例化
+const ContentInfo = useContentStore()                // 实例化
 
 // 2.处理数据
 
 // 折叠面板
-const activeNames = ref(['SpecTxt'])     // 默认显示面板
+const activeNames = ref(['spec-info'])     // 默认显示面板
 
-// 2.3技术规格
-const specHeadList = [
-    {
-        "key": "name",
-        "label": "Specification",
-        "fixed": false,
-        "width": 180
-    },
-    {
-        "key": "value",
-        "label": "Content",
-        "fixed": false,
-        "width": ''
-    },
-]
+
 
 // 4.钩子生命周期函数
 
@@ -35,7 +21,7 @@ const specHeadList = [
 </script>
 
 <template>
-  
+
     <!-- 产品主体 -->
     <div class="product-panel-SpecTxt">
         <div class="container">
@@ -44,12 +30,9 @@ const specHeadList = [
             <div class="Product-spec">
                 <el-collapse v-model="activeNames" @change="handleChange">
 
-                    <el-collapse-item title="Technical specifications" name="SpecTxt">
+                    <el-collapse-item title="Technical specifications" name="spec-info">
                         <!-- 这里使用文本域content -->
-                        <!-- <div v-html="productDetail.content"></div> -->
-                        <el-table class="specList" :data="ContentSpecTxt.specScrewListData" border="true" style="width: 100%" :height="{ 480: ContentSpecTxt.specScrewListData.length > 8 }">
-                            <el-table-column :fixed="item.fixed" :prop="item.key" :label="item.label" v-for="item in specHeadList" :key="item.id" :width="item.width" />
-                        </el-table>
+                        <div v-html="ContentInfo.productDetail.content" class="info"></div>
                     </el-collapse-item>
 
                 </el-collapse>
@@ -61,7 +44,6 @@ const specHeadList = [
 </template>
 
 <style scoped lang='scss'>
-
 //产品内容
 .product-panel-SpecTxt {
     width: 100vw;
@@ -72,69 +54,82 @@ const specHeadList = [
     .Product-spec {
         // margin-bottom: 10px;
         padding: 0 15px;
+
         // 2.1 重新定义折叠面板el样式
         ::v-deep(.el-collapse) {
             border: none; // 去掉边框
+
             .el-collapse-item {
+
                 // 2.1.1 头部
-                .el-collapse-item__header { 
+                .el-collapse-item__header {
                     margin-top: 5px;
                     padding: 0 30px;
-                    background-color:#f2f3f4;
+                    background-color: #f2f3f4;
                     border: none;
                     font-weight: 600;
+
                     &:hover {
                         background-color: #b5c6ee;
                         color: #003abd;
                     }
                 }
+
                 // 2.1.2 激活状态
                 .is-active {
                     background-color: #b5c6ee;
                     color: #003abd;
                 }
+
                 // 2.1.3 内容区
                 .el-collapse-item__wrap {
                     border: none;
-                    padding: 10px;
-                    // 2.1.3.1 重新定义表格el
-                    .el-table {
-                        .el-table__header {
-                            th {
-                                .cell { //表头文字
-                                    text-align: center; 
-                                    font-weight: 500;
-                                }
-                            }
-                        }
-                        .el-table__body-wrapper {
-                            tbody {
-                                tr {
-                                    td:first-child {
-                                        .cell { //表内容文字
-                                            display: flex;
-                                            justify-content: center;
-                                            // text-align: center;
-                                            font-weight: 500;
-                                        }
-                                    }
-                                }
-                                .cell { //表内容文字
-                                    display: flex;
-                                    // justify-content: center;
-                                    // text-align: center;
-                                    font-weight: 500;
 
-                                }
+                    .info {
+                        padding: 10px;
+
+                        table,
+                        th,
+                        td {
+                            padding: 5px 10px;
+                            border: 1px solid #000;
+                            border-collapse: collapse;
+                        }
+
+                        thead {
+                            th {
+                                font-weight: 500;
                             }
                         }
+                    }
+
+                    //备注信息
+                    .note {
+                        position: relative;
+                        top: 0px;
+                        margin-top: 6px;
+                        padding: 0 14px;
+
+                        // margin: 10px 0;
+                        p {
+                            color: #333;
+                            font-size: 12px;
+                        }
+                    }
+
+                    // 2.1.3.2 通用图片
+                    .spec-img {
+                        margin: 0 auto;
+                        padding: 0 20px;
+                        text-align: center;
                     }
 
                     // 2.1.3.3 技术规格
                     .specList {
                         .el-table__body-wrapper {
                             tbody {
-                                .cell { //表内容文字
+                                .cell {
+                                    //表内容文字
                                     text-align: left;
                                     font-weight: 500;
                                 }
@@ -146,21 +141,27 @@ const specHeadList = [
 
         }
     }
+
     // 03.相关产品 暂去掉
     .Product-related {
         padding: 20px 15px;
+
         h2 {
             margin: 10px 0;
             color: #003abd;
             font-size: 32px;
         }
-        .card-bd{
+
+        .card-bd {
             padding: 0 5px;
         }
+
         // 3.1 重新定义跑马灯css
         ::v-deep(.el-carousel) {
+
             // 3.1.1 主体内容
-            .el-carousel__arrow {       //左右按钮
+            .el-carousel__arrow {
+                //左右按钮
                 background-color: #e4e4e4;
                 border-radius: 4px;
 
@@ -168,26 +169,32 @@ const specHeadList = [
                     background-color: #003abc;
                 }
             }
+
             .el-carousel__container {
                 // height: 320px;
                 height: auto;
+
                 .el-carousel__item {
                     width: 100%;
                     height: 100%;
                     display: flex;
                     flex: 1;
                     justify-content: space-between;
-                    margin:0 5px;
+                    margin: 0 5px;
+
                     .el-card {
                         width: 24%;
                         height: fit-content;
                         border: none; // 去掉边框
+
                         .el-card__body {
                             padding: 0;
+
                             a {
                                 display: block;
                                 height: 100%;
                             }
+
                             h3 {
                                 position: absolute;
                                 // top: 290px;
@@ -197,6 +204,7 @@ const specHeadList = [
                                 width: 100%;
                                 background-color: #fff;
                             }
+
                             img {
                                 display: block;
                                 height: 100%;
@@ -204,6 +212,7 @@ const specHeadList = [
                                 transition: all 0.3s;
                             }
                         }
+
                         .el-card__footer {
                             position: absolute;
                             display: block;
@@ -211,14 +220,17 @@ const specHeadList = [
                             padding: 8px 4px;
                             height: 40px;
                             border: none;
+
                             a {
                                 font-size: 14px;
                             }
                         }
+
                         &:hover {
                             img {
                                 transform: scale(1.05);
                             }
+
                             a {
                                 color: #003abd !important;
                             }
@@ -226,23 +238,27 @@ const specHeadList = [
                     }
                 }
             }
+
             // 3.1.2 左右箭头
             .el-carousel__arrow {
                 top: 40%;
             }
+
             // 3.1.3 指示器#B4B4B5
             .el-carousel__indicators {
                 margin-top: 20px;
+
                 .el-carousel__indicator {
                     .el-carousel__button {
-                        background-color:#B4B4B5;
+                        background-color: #B4B4B5;
                         width: 20px;
                     }
 
                 }
+
                 .is-active {
                     .el-carousel__button {
-                        background-color:#003abd;
+                        background-color: #003abd;
                         width: 30px;
                     }
                 }
@@ -252,18 +268,41 @@ const specHeadList = [
     }
 }
 
-@media (max-width: 960px) {
-    
-
-}
+@media (max-width: 960px) {}
 
 @media (max-width: 768px) {
+    .product-panel-SpecTxt {
+        // 02.产品规格
+        .Product-spec {
+            // 2.1 重新定义折叠面板el样式
+            ::v-deep(.el-collapse) {
+                .el-collapse-item {
+                    // 2.1.1 头部
+                    .el-collapse-item__header { 
+                        padding: 0 10px;
+                        font-size: 16px;
+                        font-weight: 650;
+                    }
+                    // 2.1.2 激活状态
 
+                    // 2.1.3 内容区
+                    .el-collapse-item__wrap {
+                        border: none;
+                        // 2.1.3.2 通用图片
+                        .spec-img {
+                            margin: 0 auto;
+                            padding: 5px;
+                            text-align: center;
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
 }
 
 
-@media (max-width: 575px) {
-
-}
-
+@media (max-width: 575px) {}
 </style>

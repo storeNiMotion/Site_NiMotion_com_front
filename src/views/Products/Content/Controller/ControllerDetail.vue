@@ -1,8 +1,10 @@
 <script setup>
 import BreadNav from '../components/ContentBreadNav.vue'
 import Overview from '../components/ContentOverview.vue'
-import SpecImg from '../components/ContentSpecImg.vue'
-import Draw from '../components/ContentDraw.vue'
+
+import ContentInfo from './components/ContentInfo.vue'
+import Draw from './components/ContentDraw.vue'
+
 import Downfile from '../components/ContentDownfile.vue'
 import Relate from '../components/ContentRelate.vue'
 
@@ -33,7 +35,7 @@ onMounted(() => {
     <!-- 产品主体 -->
     <div class="product-panel-detail">
         <Overview />
-        <SpecImg />
+        <ContentInfo />
         <Draw />
         <Downfile />
         <Relate />

@@ -65,13 +65,13 @@ const relatedFileHeadList = [
         <div class="container">
             <div class="Product-spec">
                 <el-collapse v-model="activeNames" @change="handleChange">
-                    <el-collapse-item title="相关资料下载" name="spec-5">
+                    <el-collapse-item title="Related information download" name="spec-5">
                         <el-table :data="ContentDownfile.productScrewDetail.related_file" style="width: 100%" height="auto" v-loading="loading" element-loading-text="Loading...">
                             <el-table-column :prop="item.key" :label="item.label" v-for="item in relatedFileHeadList" :key="item.id" :width="item.width" />
-                            <el-table-column label="操作" width="">
+                            <el-table-column label="operate" width="">
                                 <template #default="scope">
-                                    <a :href="scope.row.url" target="_blank" class="btn-face" rel="noopener noreferrer" v-if="userStore.userInfo.token">下载</a>
-                                    <span class="btn-face" @click="loadfile" v-else>下载</span>
+                                    <a :href="scope.row.url" target="_blank" class="btn-face" rel="noopener noreferrer" v-if="userStore.userInfo.token">download</a>
+                                    <span class="btn-face" @click="loadfile" v-else>download</span>
                                 </template>
                             </el-table-column>
                         </el-table>

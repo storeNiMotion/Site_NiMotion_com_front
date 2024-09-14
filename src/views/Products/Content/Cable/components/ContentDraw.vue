@@ -28,12 +28,8 @@ const ContentDraw = useContentStore()                // 实例化
                 <el-collapse v-model="activeNames" @change="handleChange">
 
                     <el-collapse-item title="Dimensions" name="spec-3">
-                        <div class="spec-img">
-                            <img 
-                                v-img-lazy="ContentDraw.productDetail.drawing_image" 
-                                style="width: 100%"
-                             />
-                        </div>
+                        <!-- 这里使用文本域content -->
+                        <div v-html="ContentDraw.productDetail.drawing_image" class="info"></div>
                     </el-collapse-item>
 
                 </el-collapse>
@@ -57,7 +53,7 @@ const ContentDraw = useContentStore()                // 实例化
         padding: 0 15px;
 
         // 2.1 重新定义折叠面板el样式
-        ::v-deep .el-collapse {
+        ::v-deep(.el-collapse) {
             border: none; // 去掉边框
 
             .el-collapse-item {

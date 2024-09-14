@@ -1,11 +1,13 @@
 <script setup>
-import BreadNav from '../components/ContentBreadNav.vue'
-import Overview from '../components/ContentOverview.vue'
+import BreadNav from '../../components/ContentBreadNav.vue'
+import Overview from '../../components/ContentOverview.vue'
 
-import ContentInfo from './components/ContentInfo.vue'
-import Draw from './components/ContentDraw.vue'
-import Downfile from '../components/ContentDownfile.vue'
-import Relate from '../components/ContentRelate.vue'
+// import SpecImg from '../../components/ContentSpecImg.vue'
+import Info from './components/ContentInfo.vue'     // 介绍
+import DrawImgs from './components/DrawImgs.vue'    // 图纸
+
+import Downfile from '../../components/ContentDownfile.vue'
+import Relate from '../../components/ContentRelate.vue'
 
 import { watch, onMounted, ref } from "vue"
 import { useRoute, useRouter } from "vue-router"   // 引入路由
@@ -33,9 +35,10 @@ onMounted(() => {
     <!-- 产品主体 -->
     <div class="product-panel-detail">
         <Overview />
-        <!-- 这里使用文本域content -->
-        <ContentInfo />
-        <Draw />
+
+        <Info />
+        <DrawImgs />
+
         <Downfile />
         <Relate />
     </div>

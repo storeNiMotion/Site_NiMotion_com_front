@@ -11,8 +11,8 @@ const httpInstance = axios.create({
     //示例深入理解行业工艺，丰富的综合工业自动化产品，我们提供的方案更加灵活可靠，更加贴近您的需求。https://api.nimotion.cn/
     // baseURL: 'http://pcapi-xiaotuxian-front-devtest.itheima.net',
     // baseURL: 'http://www.nimotion.cn:8000',
-    baseURL: 'https://api.nimotion.cn',
-    // baseURL: 'http://127.0.0.1:8000',
+    // baseURL: 'https://api.nimotion.cn',
+    baseURL: 'http://127.0.0.1:8000',
     // baseURL: 'http://47.94.152.160:8000/',
     timeout: 50000
 })

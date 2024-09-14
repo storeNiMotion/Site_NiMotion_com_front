@@ -44,7 +44,7 @@ export const useCategoryStore = defineStore('category', () => {
         SelfData.value = res.self_data[0]
         ProductList.value = res.data                // 产品列表数据
 
-        document.title = SelfData.value.name + ' - 立迈胜NiMotion - "智能控制 驱动未来"！'
+        document.title = SelfData.value.name + ' - NiMotion - "Professional motion control service platform"!'
     }
 
     // 5.获取产品SKU列表数据
@@ -55,7 +55,7 @@ export const useCategoryStore = defineStore('category', () => {
         SKUSelfData.value = res.category[0]
         SKUList.value = res.data                // 产品列表数据
 
-        document.title = SKUSelfData.value.name + ' - 立迈胜NiMotion - "智能控制 驱动未来"！'
+        document.title = SKUSelfData.value.name + ' - NiMotion - "Professional motion control service platform"!'
     }
 
 

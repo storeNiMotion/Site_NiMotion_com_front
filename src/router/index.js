@@ -27,7 +27,12 @@ import DriverDetail from '@/views/Products/Content/Driver/DriverDetail.vue'     
 import ScrewDetail from '@/views/Products/Content/Screw/ScrewDetail.vue'                          // 丝杆电机详情页
 import ServoDetail from '@/views/Products/Content/Servo/ServoDetail.vue'                          // 伺服电机详情页
 import BrushlessDetail from '@/views/Products/Content/Brushless/BrushlessDetail.vue'              // 无刷电机详情页
+
 import TransmissionDetail from '@/views/Products/Content/Transmission/TransmissionDetail.vue'     // 传动组件详情页
+import SlideDetail from '@/views/Products/Content/Transmission/Slide/index.vue'                   // 滑台详情页
+import ElectricCylinderDetail from '@/views/Products/Content/Transmission/ElectricCylinder/index.vue'               // 电缸详情页
+import TurntableDetail from '@/views/Products/Content/Transmission/Turntable/index.vue'               // 转台详情页
+import ReducerDetail from '@/views/Products/Content/Transmission/Reducer/index.vue'               // 减速机详情页
 import SoftwareDetail from '@/views/Products/Content/Soft/SoftwareDetail.vue'                     // 工业软件详情页
 import RobotDetail from '@/views/Products/Content/Robot/RobotDetail.vue'                          // 机器人详情页
 import IODetail from '@/views/Products/Content/IO/IODetail.vue'                                   // IO模块详情页
@@ -36,7 +41,7 @@ import CablesDetail from '@/views/Products/Content/Cable/CablesDetail.vue'      
 import SolutionsDetail from '@/views/Products/Content/Solutions/SolutionsDetail.vue'              // 定制方案详情页
 
 
-// import Productsfilter from '@/views/Filter/index.vue'
+import Productsfilter from '@/views/Filter/index.vue'                                             // 产品选型
 
 import SolutionChannel from '@/views/Solution/Category/SolutionChannel.vue'                       // 方案 SolutionSearch
 import SolutionList from '@/views/Solution/List/SolutionList.vue'
@@ -147,6 +152,26 @@ const router = createRouter({
           component: TransmissionDetail
         },
         {
+          meta: { title: 'Slide module details' },
+          path: '/product/Slide/detail/:id',              // 滑台详情页
+          component: SlideDetail
+        },
+        {
+          meta: { title: 'Electric cylinder details' },
+          path: '/product/ElectricCylinder/detail/:id',              // 电缸详情页
+          component: ElectricCylinderDetail
+        },
+        {
+          meta: { title: 'Turntable Details' },
+          path: '/product/Turntable/detail/:id',              // 转台详情页
+          component: TurntableDetail
+        },
+        {
+          meta: { title: 'Reducer Details' },
+          path: '/product/Reducer/detail/:id',              // 减速机详情页
+          component: ReducerDetail
+        },
+        {
           meta: { title: 'Industrial Software Details' },
           path: '/product/software/detail/:id',                  // 工业软件详情页
           component: SoftwareDetail
@@ -176,10 +201,10 @@ const router = createRouter({
           path: '/product/solutions/detail/:id',                 // 定制方案详情页
           component: SolutionsDetail
         },
-        // {
-        //   path: '/product/filter',                            // 产品选型
-        //   component: Productsfilter
-        // },
+        {
+          path: '/product/filter',                            // 产品选型
+          component: Productsfilter
+        },
         {
           //path: '/solution',  // 解决方案
           meta: { title: '解决方案分类' },

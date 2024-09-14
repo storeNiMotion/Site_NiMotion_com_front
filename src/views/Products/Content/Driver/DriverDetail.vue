@@ -3,7 +3,8 @@ import BreadNav from '../components/ContentBreadNav.vue'
 import Overview from '../components/ContentOverview.vue'
 
 import SpecTxt from '../components/ContentSpecTxt.vue'
-import Draw from '../components/ContentDraw.vue'
+// import Draw from '../components/ContentDraw.vue'
+import Draw from './components/DrawImgs.vue'    // 图纸
 
 import CableConnection from '../components/ContentConnection.vue'
 import Downfile from '../components/ContentDownfile.vue'
