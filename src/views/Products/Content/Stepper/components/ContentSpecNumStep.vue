@@ -58,8 +58,8 @@ const numberHeadList = [                // 型号表头
         "fixed": false
     },
     {
-        "key": "torque",
-        "label": "torque(N·m)",
+        "key": "Hold_torque",
+        "label": "Hold_torque(N·m)",
         "fixed": false
     },
     {
