@@ -1,11 +1,11 @@
 <script setup>
-// import { TabsPaneContext } from 'element-plus'
-import BreadNav from './components/ProductBreadNav.vue'
-import LeftNav from './components/ProductsLeftNav.vue'
-import List from './components/ProductsList.vue'
+import Banner from '../components/Banner.vue'                  // banner
+import BreadNav from './components/Bread.vue'
+import LeftNav from '../components/LeftNav.vue'
+import List from './components/Item.vue'
 
 import { onMounted, ref } from "vue"
-import { useRoute, useRouter, onBeforeRouteUpdate } from "vue-router"   // 引入路由
+import { useRoute } from "vue-router"   // 引入路由
 import { useCategoryStore } from '@/stores/catagory'         // 使用pinia中产品导航列表
 
 //使用pinia中的数据
@@ -21,17 +21,13 @@ onMounted(() => {
     categoryStore.getProductList(id.value = route.params.id)
 })
 
-const router = useRouter()                                              // 调用路由方法
-//导航守卫：路由参数变化接口重新发送
-onBeforeRouteUpdate((to) => {
 
-})
 
 </script>
 
 <template>
     <!-- banner区域 -->
-
+    <Banner />
     <!-- 面包屑区域 -->
     <BreadNav />
 

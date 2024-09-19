@@ -83,6 +83,9 @@ onMounted(() => getsupportList())
     }
 }
 // 2.面包屑
+.Support-panel-nav-bread {
+    margin-top: 10px;
+}
 .nav-bread {
     padding: 0 20px;
     height: 36px;

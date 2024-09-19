@@ -55,6 +55,7 @@ onMounted(() => getsolutionDetail())
 <style scoped lang='scss'>
 //面包屑
 .nav-bread {
+    margin-top: 10px;
     padding: 15px 0;
     width: 100vw;
 

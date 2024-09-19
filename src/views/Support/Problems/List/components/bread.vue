@@ -23,6 +23,7 @@
 
 // 2.面包屑
 .nav-bread {
+    margin-top: 10px;
     padding: 0 20px;
     height: 36px;
     // background-color: #f2f3f4;

@@ -15,10 +15,10 @@ import Home from '@/views/Home/index.vue'
 import error from '@/views/404.vue'
 import Search from '@/views/Search/index.vue'                                                     // 全局搜索
 
-import Products from '@/views/Products/Category/index.vue'                                        // 产品
-import ProductSearch from '@/views/Products/Search/index.vue'                                     // 产品搜索
-import ProductChannel from '@/views/Products/List/index.vue'                                      // 产品列表
-import ProductsList from '@/views/Products/Category/ProductsList.vue'                             // 产品分类列表
+import Products from '@/views/Products/Category/index.vue'                                        // 产品分类-全部列表
+import ProductsList from '@/views/Products/Category/Category/index.vue'                           // 产品分类列表
+import ProductChannel from '@/views/Products/Category/List/index.vue'                             // 产品列表-平铺
+import ProductSearch from '@/views/Products/Category/Search/index.vue'                            // 产品搜索
 
 // import ProductsDetail from '@/views/Products/ProductsDetail.vue'
 import ControllerDetail from '@/views/Products/Content/Controller/ControllerDetail.vue'           // 控制器详情页
@@ -55,9 +55,9 @@ import ProblemSearch from '@/views/Support/Problems/Search/index.vue'           
 import ProblemDetail from '@/views/Support/Problems/Content/index.vue'                            // 技术支持问答详情页
 import VideoChannel from '@/views/Support/Videos/Category/index.vue'                              // 技术支持视频频道
 import VideoList from '@/views/Support/Videos/List/index.vue'                                     // 技术支持视频列表
-import VideoSearch from '@/views/Support/Videos/Search/index.vue'                                     // 技术支持视频搜索
-import VideoDetail from '@/views/Support/Videos/Content/indexPush.vue'                                // 技术支持视频详情页
-import VideoDetailList from '@/views/Support/Videos/Content/index.vue'                                // 技术支持视频详情页
+import VideoSearch from '@/views/Support/Videos/Search/index.vue'                                 // 技术支持视频搜索
+import VideoDetail from '@/views/Support/Videos/Content/indexPush.vue'                            // 技术支持视频详情页
+import VideoDetailList from '@/views/Support/Videos/Content/index.vue'                            // 技术支持视频详情页
 import AftersalesDetail from '@/views/Support/Aftersales/index.vue'                               // 技术支持售后详情页
 import PactDetail from '@/views/Support/Pact/index.vue'                                           // 技术支持合同详情页
 import CooperateDetail from '@/views/Support/Cooperate/index.vue'                                 // 技术支持合作详情页

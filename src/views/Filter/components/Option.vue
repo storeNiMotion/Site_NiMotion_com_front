@@ -1,20 +1,13 @@
 <script setup>
-// import { TabsPaneContext } from 'element-plus'
-// import { Calendar } from '@element-plus/icons-vue'
+
 import { filterProductAPI } from "@/apis/product"
-import { ElMessage,  } from "element-plus"
-import { CircleClose, Right } from '@element-plus/icons-vue'
+import { CircleClose } from '@element-plus/icons-vue'
 import 'element-plus/theme-chalk/el-message.css'
 import { onMounted, ref } from "vue"
-// import { useFilterProductStore } from '@/stores/filter'    // 导入pinia
-// import { useRouter } from "vue-router"            //调用路由 => “方法”
 
 
 // 一、调用接口
-// 1.pinia方式 暂已弃用
-// const FilterProduct = useFilterProductStore()                // 实例化 有延迟 已弃用
-// const router = useRouter()                      // 调用路由方法
-// 2.直接调用
+
 // 1.产品列表数据
 const Num = ref(0)                  // 总数
 const getFilterProductList = ref([])                   // 结果对象
@@ -38,30 +31,30 @@ const productoptionFlange = ref('')                          //选项-法兰
 const categoryoptions = [
     {
         value: '',
-        label: '全部',
+        label: 'All',
     },
     {
-        value: '一体化伺服电机',
-        label: '一体化伺服电机',
+        value: 'integrated servo',
+        label: 'Integrated servo motor',
     },
     {
-        value: '无刷电机',
-        label: '一体化无刷电机',
+        value: 'integrated brushless',
+        label: 'Integrated brushless motor',
     },
     // {
     //     value: '步进伺服',
     //     label: '一体化步进伺服电机',
     // },
     {
-        value: '步进',
-        label: '一体化步进电机',
+        value: 'integrated stepper',
+        label: 'Tntegrated stepper motor',
     },
 ]
 // 1.2电压Voltage
 const optionVoltage = [
     {
         value: '',
-        label: '全部',
+        label: 'All',
     },
     {
         value: '24',
@@ -76,15 +69,15 @@ const optionVoltage = [
 const optioLoop = [
     {
         value: '',
-        label: '全部',
+        label: 'All',
         },
     {
-        value: '是',
-        label: '是',
+        value: 'Yes',
+        label: 'Yes',
     },
     {
-        value: '否',
-        label: '否',
+        value: 'No',
+        label: 'No',
     },
 ]
 
@@ -92,26 +85,22 @@ const optioLoop = [
 const optionBrake = [
     {
         value: '',
-        label: '全部',
+        label: 'All',
         },
     {
-        value: '是',
-        label: '有',
+        value: 'Yes',
+        label: 'Yes',
     },
     {
-        value: '否',
-        label: '无',
+        value: 'No',
+        label: 'No',
     },
 ]
 // 1.5通信
 const optionBus = [
     {
         value: '',
-        label: '全部',
-        },
-    {
-        value: 'RS485',
-        label: 'RS485',
+        label: 'All',
     },
     {
         value: 'CANopen',
@@ -119,11 +108,19 @@ const optionBus = [
     },
     {
         value: 'CAN',
-        label: 'CAN',
+        label: 'CAN Customization',
     },
     {
         value: 'EtherCAT',
         label: 'EtherCAT',
+    },
+    {
+        value: 'RS485',
+        label: 'RS485',
+    },
+    {
+        value: 'pulse',
+        label: 'Pulse',
     },
     {
         value: 'RS232',
@@ -134,7 +131,7 @@ const optionBus = [
 const optionFlange = [
     {
         value: '',
-        label: '全部',
+        label: 'All',
         },
     {
         value: '28',
@@ -158,15 +155,15 @@ const optionFlange = [
     },
     {
         value: '40',
-        label: '40mm(伺服)',
+        label: '40mm(Servo)',
     },
     {
         value: '60',
-        label: '60mm(伺服)',
+        label: '60mm(Servo)',
     },
     {
         value: '80',
-        label: '80mm(伺服)',
+        label: '80mm(Servo)',
     },
 ]
 
@@ -285,17 +282,13 @@ const getdata = async() => {
 const postdata = async() => {
     // loading.value = true    // 请求超时处理
     getFilterProduct(sendData.value)
-    // resdata.value = getFilterProductList
-    // Num.value = resdata.value.length
-    // loading.value = false
-    // console.log(getFilterProductList.value.length)
+
     
 }
 
 
 onMounted(() => {
-    // getdata()
-    // FilterProduct.getFilterProduct(sendData.value)
+
     postdata()
 })
 
@@ -307,10 +300,10 @@ onMounted(() => {
         <div class="container">
             <div class="display-require">
                 <div class="title">
-                    <h2>产品选型</h2>
+                    <h2>Product Selection</h2>
                     <div class="reset">
                         <el-button color="#626aef" :dark="isDark" @click="resetForm">
-                            重置
+                            Reset
                             <el-icon class="el-icon--right"><CircleClose /></el-icon>
                         </el-button>
                     </div>
@@ -320,13 +313,13 @@ onMounted(() => {
                 <div class="item-input" id="">
                     <div class="category">
                         <div class="input">
-                            <span>产品类别</span>
+                            <span>Product Categories</span>
                             <el-select
                             v-model="categoryvalue"
                             :empty-values="[null, undefined]"
                             :value-on-clear="null"
                             clearable
-                            placeholder="类别(必填)"
+                            placeholder="category"
                             class="inp"
                             @change="categoryselect"
                             @clear="handleClearCategory"
@@ -342,13 +335,13 @@ onMounted(() => {
                     </div>
                     <ul class="option">
                         <li class="input">
-                            <span>法兰尺寸</span>
+                            <span>Flange size</span>
                             <el-select
                                 v-model="productoptionFlange"
                                 :empty-values="[null, undefined]"
                                 :value-on-clear="null"
                                 clearable
-                                placeholder="全部"
+                                placeholder="All"
                                 @clear="handleClearFlange"
                                 @change="Flangeselect"
                             >
@@ -361,13 +354,13 @@ onMounted(() => {
                             </el-select> 
                         </li>
                         <li class="input">
-                            <span>额定电压</span>
+                            <span>Rated voltage</span>
                             <el-select
                                 v-model="productoptionVoltage"
                                 :empty-values="[null, undefined]"
                                 :value-on-clear="null"
                                 clearable
-                                placeholder="全部"
+                                placeholder="All"
                                 @clear="handleClearVoltage"
                                 @change="Voltageselect"
                             >
@@ -380,13 +373,13 @@ onMounted(() => {
                             </el-select> 
                         </li>
                         <li class="input">
-                            <span>通信方式</span>
+                            <span>Bus</span>
                             <el-select
                                 v-model="productoptionBus"
                                 :empty-values="[null, undefined]"
                                 :value-on-clear="null"
                                 clearable
-                                placeholder="全部"
+                                placeholder="All"
                                 @clear="handleClearBus"
                                 @change="busselect"
                             >
@@ -399,13 +392,13 @@ onMounted(() => {
                             </el-select> 
                         </li>
                         <li class="input">
-                            <span>制动器(抱闸)</span>
+                            <span>Brake (holding brake)</span>
                             <el-select
                                 v-model="productoptionBrake"
                                 :empty-values="[null, undefined]"
                                 :value-on-clear="null"
                                 clearable
-                                placeholder="全部"
+                                placeholder="All"
                                 @clear="handleClearBrake"
                                 @change="Brakeselect"
                             >
@@ -418,13 +411,13 @@ onMounted(() => {
                             </el-select> 
                         </li>
                         <li class="input">
-                            <span>集成编码器</span>
+                            <span>Integrated encoder</span>
                             <el-select
                                 v-model="productoptionLoop"
                                 :empty-values="[null, undefined]"
                                 :value-on-clear="null"
                                 clearable
-                                placeholder="全部"
+                                placeholder="All"
                                 @clear="handleClearEncoder"
                                 @change="encoderselect"
                             >
@@ -446,29 +439,27 @@ onMounted(() => {
         <div class="container">
             <div class="display-result">
                 
-                <h3> <span>{{ Num }}</span>条结果</h3>
+                <h3> <span>{{ Num }}</span> results</h3>
                 <div class="item-result" id="">
                   <el-card style="max-width: 100%" shadow="never">
                     <el-table :data="getFilterProductList" style="width: 100%" height="600"  >
-                        <el-table-column fixed prop="number" label="型号" width="" />
-                        <el-table-column prop="bus" label="通信" width="260" />
-                        <el-table-column prop="Rated_voltage" label="额定电压(V)" width="" />
-                        <el-table-column prop="Rated_speed" label="额定转速(rpm)" width="" />
-                        <el-table-column prop="Rated_power" label="额定功率(W)" width="" />
-                        <el-table-column prop="Hold_torque" label="保持力矩(N·m)" width="" />
-                        <el-table-column prop="torque" label="额定扭矩(N·m)" width="" />
-                        <!-- <el-table-column prop="Inertia" label="转子惯量" width="" /> -->
-                        <el-table-column prop="encoder" label="编码器" width="" />
-                        <el-table-column prop="Brake" label="制动器" width="" />
-                        <!-- <el-table-column prop="action" label="操作" width="" /> -->
-                        <el-table-column label="详情" width="" fixed="right">
+                        <el-table-column fixed prop="number" label="Model" width="" />
+                        <el-table-column prop="bus" label="Bus" width="260" />
+                        <el-table-column prop="Rated_voltage" label="Rated voltage(V)" width="" />
+                        <el-table-column prop="Rated_speed" label="Rated speed(rpm)" width="" />
+                        <el-table-column prop="Rated_power" label="Rated power(W)" width="" />
+                        <el-table-column prop="Hold_torque" label="Holding torque(N·m)" width="" />
+                        <el-table-column prop="torque" label="Rated torque(N·m)" width="" />
+
+                        <el-table-column prop="encoder" label="Encoder" width="" />
+                        <el-table-column prop="Brake" label="Brakes" width="" />
+
+                        <el-table-column label="More" width="" fixed="right">
                             <template #default="scope">
-                                <!-- <a :href="scope.row.category[0].router" target="_blank" class="btn-face" rel="noopener noreferrer">详情</a> -->
-                                <!-- <RouterLink to="/product/filter" target="_blank">产品选型</RouterLink> -->
+
                                 <RouterLink :to="`/product/${scope.row.category[0]?.router}/detail/${scope.row.category[0]?.id}`" target="_blank" class="btn-face">
-                                    <!-- <el-icon class="el-icon--right"><Right /></el-icon> -->
+
                                     <span class="iconfont icon-you" ></span>
-                                    <!-- 详情class="iconfont icon-xingneng1" -->
                                 </RouterLink>
                             </template>
                         </el-table-column>

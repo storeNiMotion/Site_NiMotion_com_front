@@ -1,8 +1,8 @@
 <script setup>
-
-import Bread from './components/bread.vue'
-import LeftNav from './components/leftNav.vue'
-import Content from './components/content.vue'
+import Banner from '../components/Banner.vue'                  // banner
+import Bread from './components/Bread.vue'
+import LeftNav from '../components/LeftNav.vue'
+import Content from './components/Item.vue'
 
 import { onMounted, ref } from "vue"
 import { useRoute, onBeforeRouteUpdate } from "vue-router"   // 引入路由
@@ -30,7 +30,7 @@ onMounted(() => {
 </script>
 
 <template>
-
+    <Banner />
     <!-- 面包屑区域 -->
     <Bread />
     <!-- 产品主体 -->

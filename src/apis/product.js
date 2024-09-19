@@ -62,11 +62,20 @@ export function getProductSKUListAPI(id){
  * @param {*}
  * @return {*}
  */
-export const filterProductAPI = () => {
+export const filterProductAPI = ({series, Rated_voltage, bus, encoder, Brake, size}) => {
   return httpInstance({
-    url:'/api/v2/product/filter/'
+    url:'/api/v2/product/filter/',
+    method: 'POST',
+    data: {
+      series,
+      Rated_voltage,
+      bus,
+      encoder,
+      Brake,
+      size
+    }
   })
-}  
+}
 
 //产品内容
 /**

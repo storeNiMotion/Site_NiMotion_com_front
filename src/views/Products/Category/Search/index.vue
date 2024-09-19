@@ -1,17 +1,17 @@
 <script setup>
-
-import BreadNav from './components/bread.vue'
-import LeftNav from './components/leftNav.vue'
-import List from './components/searchResult.vue'
+import Banner from '../components/Banner.vue'                  // banner
+import Bread from './components/Bread.vue'
+import LeftNav from '../components/LeftNav.vue'
+import List from './components/Result.vue'
 
 
 </script>
 
 <template>
     <!-- banner区域 -->
-
+    <Banner />
     <!-- 面包屑区域 -->
-    <BreadNav />
+    <Bread />
 
     <!-- 产品主体 -->
     <div class="Product-panel">

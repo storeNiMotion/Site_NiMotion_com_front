@@ -1,8 +1,9 @@
 <script setup>
 // import { TabsPaneContext } from 'element-plus'
-import BreadNav from './components/ProductBreadNavAll.vue'
-import LeftNav from './components/ProductsLeftNav.vue'
-import List from './components/ProductsAll.vue'
+import Banner from './components/Banner.vue'                  // banner
+import BreadNav from './components/Bread.vue'                 // 面包屑
+import LeftNav from './components/LeftNav.vue'                // 左侧导航
+import List from './components/Item.vue'                      // 右侧展示
 
 import { onMounted, ref } from "vue"
 import { useRoute, useRouter, onBeforeRouteUpdate } from "vue-router"   // 引入路由
@@ -31,7 +32,7 @@ onBeforeRouteUpdate((to) => {
 
 <template>
     <!-- banner区域 -->
-
+    <Banner />
     <!-- 面包屑区域 -->
     <BreadNav />
 

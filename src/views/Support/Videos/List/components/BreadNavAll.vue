@@ -64,6 +64,7 @@ const clear = () => {
 
 //面包屑
 .nav-bread {
+    margin-top: 10px;
     padding: 10px 0;
     width: 100vw;
     height: 36px;

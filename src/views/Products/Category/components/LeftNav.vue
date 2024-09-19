@@ -22,7 +22,8 @@ onBeforeRouteUpdate((to) => {
         <div class="Product-select">
             <h2>Product</h2>
             <div class="Product-select-btn">
-                <a href="" class="btn-line">Product Selection</a>
+                <!-- <a href="" class="btn-line">Product Selection</a> -->
+                <RouterLink to="/product/filter" target="_blank">Product Selection</RouterLink>
             </div>
         </div>
 

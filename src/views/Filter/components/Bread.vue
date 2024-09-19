@@ -7,11 +7,11 @@
     <div class="nav-bread">
         <div class="container">
             <div class="bread">
-                <a href="">首页</a>
+                <a href="">Home</a>
                 <span> > </span>
-                <RouterLink to="/product/product/">产品中心</RouterLink>
+                <RouterLink to="/product/product/">Product</RouterLink>
                 <span> > </span>
-                <RouterLink to="/product/filter/" class="active">产品选型</RouterLink>
+                <RouterLink to="/product/filter/" class="active">Product Selection</RouterLink>
             </div>
         </div>
     </div>
@@ -21,10 +21,6 @@
 
 //面包屑
 .nav-bread {
-    // padding: 10px 0;
-    // width: 100vw;
-    // height: 36px;
-
     .bread {
         // height: 100%;
         width: 100%;

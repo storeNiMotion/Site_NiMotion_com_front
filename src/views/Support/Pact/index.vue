@@ -25,7 +25,7 @@ import { ref, reactive } from "vue"
             <span>></span>
             <a href="/support">Support</a>
             <span>></span>
-            <a href="">在线合同</a>
+            <a href="">Online Contract</a>
         </div>
     </div>
     <!-- 主体 -->
@@ -38,12 +38,11 @@ import { ref, reactive } from "vue"
                       <div class="info-item">
 
                           <div class="info-box">
-                              <h4>业务开发中，敬请期待！</h4>
+                              <h4>Business is under development, please stay tuned!</h4>
                           </div>
                       </div>
                   </el-card>
                 </div>
-
             </div>
         </div>
     </div>
@@ -59,6 +58,7 @@ import { ref, reactive } from "vue"
 }
 //面包屑
 .nav-bread {
+    margin-top: 10px;
     padding: 0 20px;
     height: 36px;
     a {
