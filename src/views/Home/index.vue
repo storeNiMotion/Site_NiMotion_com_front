@@ -1,5 +1,5 @@
 <script setup>
-import HomeBanner from './components/HomeBanner.vue'
+import HomeBanner from './banner/index.vue'
 import HomeNews from './news/index.vue'
 import HomeProduct from './product/index.vue'
 import HomeSolution from './solution/index.vue'

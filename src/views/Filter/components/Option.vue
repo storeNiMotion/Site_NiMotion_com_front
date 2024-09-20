@@ -434,6 +434,14 @@ onMounted(() => {
             </div>
         </div>
     </div>
+    <!-- 2.型号说明 -->
+    <div class="explain-panel">
+        <div class="container">
+            <div class="illustrate">
+                <p>*Model description: STM*A/B (closed loop); STM-M (step servo series); STMP/PMMP (waterproof series); PSM*D (multi-turn encoder); -B (brake type), -S (with STO function), -LP (aviation plug interface)</p>
+            </div>
+        </div>
+    </div>
     <!-- 结果 -->
     <div class="result-panel">
         <div class="container">
@@ -475,7 +483,7 @@ onMounted(() => {
 <style scoped lang='scss'>
 
 //内容主体
-// 条件1
+// 1.条件
 .option-panel {
     padding: 20px 0;
     // margin: 0 10px;
@@ -567,7 +575,17 @@ onMounted(() => {
 
 }
 
-// 结果
+// 2.型号说明
+.explain-panel {
+    padding: 20px 0;
+    background-color: #fff;
+    width: 100vw;   //100视窗宽度
+    .illustrate {
+        padding: 0 10px;
+    }
+}
+
+// 3.结果
 .result-panel {
     padding: 20px 0;
     background-color: #fff;

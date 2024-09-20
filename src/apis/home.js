@@ -12,6 +12,17 @@ export function getBannerAPI(){
     })
 }
 
+//封装移动端banner
+/**
+ * @description: 获取首页banner推荐
+ * @param {*}
+ * @return {*}
+ */
+export function getBannerMBAPI(){
+  return httpInstance({
+      url: '/api/v2/home/bannermb/'
+  })
+}
 
 //产品推荐
 /**
