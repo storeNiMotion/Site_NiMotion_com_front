@@ -13,7 +13,7 @@ const httpInstance = axios.create({
     // baseURL: 'http://www.nimotion.cn:8000',
     baseURL: 'https://api.nimotion.cn',
     // baseURL: 'http://127.0.0.1:8000',
-    // baseURL: 'http://47.94.152.160:8000/',
+    // baseURL: 'http://47.94.152.160:8000',
     timeout: 50000
 })
 

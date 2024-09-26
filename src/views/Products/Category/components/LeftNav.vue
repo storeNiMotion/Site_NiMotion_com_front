@@ -81,6 +81,10 @@ onBeforeRouteUpdate((to) => {
                 line-height: 34px;
                 border: 1px solid #003abd;
                 border-radius: 10px;
+                &:hover {
+                    color: #fff;
+                    background-color: #003abd;
+                }
             }
         }
     }

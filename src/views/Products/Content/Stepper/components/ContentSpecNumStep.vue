@@ -17,15 +17,15 @@ const activeNames = ref(['spec-SpecNum'])     // 默认显示面板
 const numberHeadList = [                // 型号表头
     {
         "key": "number",
-        "label": "model",
+        "label": "Model",
         "fixed": true,
         "width":150
     },
     {
         "key": "bus",
-        "label": "bus",
+        "label": "Bus",
         "fixed": false,
-        "width":220
+        "width":160
     },
     {
         "key": "Shaft_diameter",
@@ -49,12 +49,12 @@ const numberHeadList = [                // 型号表头
     },
     {
         "key": "phases",
-        "label": "phases",
+        "label": "Phases",
         "fixed": false
     },
     {
         "key": "encoder",
-        "label": "encoder",
+        "label": "Encoder",
         "fixed": false
     },
     {
@@ -69,7 +69,7 @@ const numberHeadList = [                // 型号表头
     },
     {
         "key": "length",
-        "label": "length(mm)",
+        "label": "Length(mm)",
         "fixed": false
     },
     // {
@@ -131,7 +131,7 @@ const numberHeadList = [                // 型号表头
         // margin-bottom: 10px;
         padding: 0 15px;
         // 2.1 重新定义折叠面板el样式
-        ::v-deep .el-collapse {
+        ::v-deep(.el-collapse) {
             border: none; // 去掉边框
             .el-collapse-item {
                 // 2.1.1 头部
@@ -170,6 +170,7 @@ const numberHeadList = [                // 型号表头
                                 .cell { //表内容文字
                                     display: flex;
                                     justify-content: center;
+                                    padding: 0 5px;
                                     text-align: center;
                                     font-weight: 500;
                                     .btn-face {             // 按钮

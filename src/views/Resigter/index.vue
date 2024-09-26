@@ -1,40 +1,20 @@
 <script setup>
 //注册页面
 import { ref } from 'vue'
-// import { loginAPI } from "@/apis/user"
-// import 'element-plus/es/components/message/style/css'
 import { ElMessage } from "element-plus"
 import 'element-plus/theme-chalk/el-message.css'
 import { useRouter } from "vue-router"                      //调用方法
 
 import { useUserStore } from "@/stores/user"                // 导入pinia
-import { loginAPI, isresigterAPI, isUsenameResigterAPI, sendCodeAPI } from "@/apis/user"       // 导入登录接口
-//import { sendCodeAPI } from "@/apis/sendsms"                // 导入发短信接口
+import { sendCodeAPI } from "@/apis/user"                   // 导入登录接口
 
 const userStore = useUserStore()
-
-const userMail = ref({})
-const getUserMail = async({email})=> {               // 2.定义获取接口数据的action函数   => 邮箱是否存在
-        const res = await isresigterAPI({email})
-        userMail.value = res
-}
-
-const user_Name = ref({})
-const postUserName = async({username})=> {               // 2.定义获取接口数据的action函数   => 用户名是否存在
-        const res = await isUsenameResigterAPI({username})
-        user_Name.value = res
-}
 
 const send_code = ref({})
 const postCode = async({email})=> {               // 2.定义获取接口数据的action函数   => 发送邮件
         const res = await sendCodeAPI({email})
         send_code.value = res
 }
-
-const sendCode = async({phone})=> {               // 2.定义获取接口数据的action函数   => 登录
-        const res = await sendCodeAPI({phone})
-        userPhone.value = res
-    }
 
 //表单校验
 //1.准备表单对象
@@ -51,20 +31,7 @@ const rules = {
   username: [
     { required: true, message: 'Username cannot be empty', trigger:'blur' },
     { min: 2, max: 15, message: 'Password length is 2~15 characters', trigger: 'blur' },
-    // {
-    //   validator: (rule, value, callback) => {
-    //     //自定义校验逻辑 用户名重复 暂忽略
-    //     // console.log(value);
-    //     postUserName(form.value)
-    //     // console.log(user_Name.value);
-    //     // console.log(value);
-    //     if (user_Name.value.code === 200) {
-    //       callback()
-    //     } else {
-    //       callback(new Error('Username is already taken'))
-    //     }
-    //   }
-    // }
+
   ],
   password: [
     { required: true, message: 'Cannot be empty', trigger: 'blur' },
@@ -75,28 +42,9 @@ const rules = {
   email: [
     { required: true, message: 'Please enter your email address', trigger: 'blur' },
     { pattern: /^\S/, message: 'Cannot contain spaces', trigger: 'blur' },
-    // { pattern: /^(1)\d{10}$/, message: '请输入 11 位手机号码', trigger: 'blur' },
-    // {
-    //   validator: (rule, value, callback) => {
-    //     //自定义校验逻辑 
-    //     // 判断重复 暂忽略
-    //     // console.log(value);
-    //     getUserMail(form.value)
-    //     // console.log(userPhone.value);
-    //     // console.log(value);
-    //     if (userMail.value.code == 200) {
-    //       callback()
-    //     } else {
-    //       callback(new Error('Email already registered'))
-    //     }
-    //   }
-    // }
+
   ],
-  // code: [
-  //   { required: true, message: '请输入验证码', trigger: 'blur' },
-  //   { pattern: /^\S/, message: '验证码不能包含空格', trigger: 'blur' },
-  //   { pattern: /^\d{6}$/, message: '请输入6位验证码', trigger: 'blur' }
-  // ],
+
 
   agree: [
     {
@@ -169,8 +117,6 @@ const sendcode = () => {
   })
 
 }
-
-
 
 
 

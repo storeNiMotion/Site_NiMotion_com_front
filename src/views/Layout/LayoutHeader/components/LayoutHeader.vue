@@ -317,9 +317,10 @@ watch(() => screenWidth.value, (val) => {
   z-index: 2;
   padding: 30px;
   width: 100vw; //100%宽度
-  height: 60vh;
-  max-height: 600px;
-  overflow: hidden;
+  height: 46vh;
+  max-height: 800px;
+  // overflow: hidden;
+  overflow-y: scroll;
   background: #ffffff;
   border-bottom: 1px solid rgba(0,0,0,.08);
   box-shadow: 0 4px 10px 0 rgba(0,0,0,.08), 0 1px 4px 0 rgba(0,0,0,.04);
@@ -338,17 +339,18 @@ watch(() => screenWidth.value, (val) => {
   }
   .nav-area {
     display: flex;
-    // flex-direction: column;
+    flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
     height: 100%;
-    overflow: scroll;
+    // overflow: scroll;
     max-height: 650px;
 
     dl {
-      margin: 18px 10px;
+      margin: 18px 14px;
+      // margin: 18px 40px;
       margin-bottom: 25px;
-      width: 31%;
+      // width: 31%;
       dt {
         font-size: 16px;
         font-weight: 800;

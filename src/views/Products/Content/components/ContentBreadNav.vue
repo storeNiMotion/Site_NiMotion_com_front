@@ -12,9 +12,9 @@ const ContentBread = useContentStore()                // 实例化
 
 <template>
     <!-- 面包屑区域 -->
-    <div class="product-panel-nav-bread">
+    <div class="nav-bread">
         <div class="container">
-            <div class="nav-bread">
+            <div class="bread">
                 <RouterLink to="/">Home</RouterLink>
                 <span> > </span>
                 <RouterLink to="/product/1">Product</RouterLink>
@@ -32,20 +32,24 @@ const ContentBread = useContentStore()                // 实例化
 //面包屑
 .nav-bread {
     width: 100vw;
-    padding: 0 20px;
-    height: 36px;
+    padding: 10px 20px;
+    // height: 36px;
     // background-color: #f2f3f4;
-    a {
-        color: #1d1d1f;
-        font-size: 12px;
-        line-height: 36px;
-        &:hover {
+    .bread {
+        margin-top: 10px;
+        a {
+            color: #1d1d1f;
+            font-size: 12px;
+            // line-height: 36px;
+            &:hover {
+                color: #003abd;
+            }
+        }
+        .active {
             color: #003abd;
         }
     }
-    .active {
-        color: #003abd;
-    }
+
 }
 
 @media (max-width: 960px) {

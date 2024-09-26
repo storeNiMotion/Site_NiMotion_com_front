@@ -173,11 +173,13 @@ watch(() => screenWidth.value, (val) => {
                             }
                         }
                         .el-card__footer {
-                            position: absolute;
+                            // position: absolute;
                             display: block;
                             // margin-bottom: 2px;
                             padding: 8px 4px;
-                            height: 40px;
+                            width: 100%;
+                            // height: 40px;
+                            overflow: hidden;
                             border: none;
                             a {
                                 font-size: 14px;

@@ -16,7 +16,7 @@ const router = useRouter()                      // 调用路由方法
 
 // 0.用户登录
 const loadfile = () => {
-    ElMessage({type: 'error', message: '请先登录'})        // 1.提示用户
+    ElMessage({type: 'error', message: 'Please log in first'})        // 1.提示用户
 }
 
 
@@ -30,25 +30,19 @@ const loadfile = () => {
 const relatedFileHeadList = [
     {
         "key": "name",
-        "label": "name",
+        "label": "Name",
         "fixed": true,
         "width": 480
     },
     {
         "key": "category",
-        "label": "category",
+        "label": "Category",
         "fixed": false,
         "width": ''
     },
     {
         "key": "type",
-        "label": "type",
-        "fixed": false,
-        "width": ''
-    },
-    {
-        "key": "update_time",
-        "label": "update_time",
+        "label": "Type",
         "fixed": false,
         "width": ''
     },
@@ -68,9 +62,9 @@ const relatedFileHeadList = [
                     <el-collapse-item title="Related information download" name="spec-5">
                         <el-table :data="ContentDownfile.productDetail.related_file" style="width: 100%" height="auto" v-loading="loading" element-loading-text="Loading...">
                             <el-table-column :prop="item.key" :label="item.label" v-for="item in relatedFileHeadList" :key="item.id" :width="item.width" />
-                            <el-table-column label="operate" width="">
+                            <el-table-column label="Operate" width="">
                                 <template #default="scope">
-                                    <a :href="scope.row.url" target="_blank" class="btn-face" rel="noopener noreferrer" v-if="userStore.userInfo.token">下载</a>
+                                    <a :href="scope.row.url" target="_blank" class="btn-face" rel="noopener noreferrer" v-if="userStore.userInfo.token">download</a>
                                     <span class="btn-face" @click="loadfile" v-else>download</span>
                                 </template>
                             </el-table-column>
@@ -94,7 +88,7 @@ const relatedFileHeadList = [
         // margin-bottom: 10px;
         padding: 0 15px;
         // 2.1 重新定义折叠面板el样式
-        ::v-deep .el-collapse {
+        ::v-deep(.el-collapse) {
             border: none; // 去掉边框
             .el-collapse-item {
                 // 2.1.1 头部
@@ -137,8 +131,8 @@ const relatedFileHeadList = [
                                     .btn-face {             // 按钮
                                         display: block;
                                         // margin:0 15px 0 40px;
-                                        padding: 0 5px;
-                                        width: 40px;
+                                        padding: 0 12px;
+                                        // width: 40px;
                                         // height: 26px;
                                         border: 1px solid #003abd;
                                         border-radius: 8px;

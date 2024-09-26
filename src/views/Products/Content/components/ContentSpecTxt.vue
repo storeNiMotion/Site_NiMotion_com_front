@@ -23,7 +23,7 @@ const specHeadList = [
     },
     {
         "key": "value",
-        "label": "content",
+        "label": "Content",
         "fixed": false,
         "width": ''
     },
@@ -112,8 +112,8 @@ const specHeadList = [
                             th {
                                 .cell { //表头文字
                                     text-align: center; 
-                                    font-weight: 600;
-                                    color: #333;
+                                    font-weight: 500;
+                                    // color: #333;
                                 }
                             }
                         }

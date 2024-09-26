@@ -62,7 +62,7 @@ import AftersalesDetail from '@/views/Support/Aftersales/index.vue'             
 import PactDetail from '@/views/Support/Pact/index.vue'                                           // 技术支持合同详情页
 import CooperateDetail from '@/views/Support/Cooperate/index.vue'                                 // 技术支持合作详情页
 
-import Download from '@/views/Download/DownChannel.vue'                                           // 下载中心
+import Download from '@/views/Download/index.vue'                                                 // 下载中心
 
 import NewsList from '@/views/News/List/index.vue'                                                // 新闻
 import NewsDetail from '@/views/News/Content/index.vue'
