@@ -30,7 +30,7 @@ const activeNames = ref(['spec-Info'])     // 默认显示面板
             <div class="Product-spec">
                 <el-collapse v-model="activeNames" @change="handleChange">
 
-                    <el-collapse-item title="技术规格" name="spec-Info">
+                    <el-collapse-item title="Specifications" name="spec-Info">
                         <!-- 这里使用文本域content -->
                         <div v-html="ContentInfo.productDetail.content" class="io-info"></div>
                     </el-collapse-item>
@@ -92,8 +92,20 @@ const activeNames = ref(['spec-Info'])     // 默认显示面板
                         table,
                         th,
                         td {
+                            padding: 2px 0;
                             border: 1px solid #000;
                             border-collapse: collapse;
+                        }
+
+                        a {
+                            padding: 0 0 1px;
+                            border-bottom: 1px dashed #003abd;
+                            // color: #003abd !important;
+
+                            &:hover {
+                                color: #003abd !important;
+                                font-weight: 500;
+                            }
                         }
                     }
 

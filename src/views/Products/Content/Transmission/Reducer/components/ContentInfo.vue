@@ -30,7 +30,7 @@ const activeNames = ref(['spec-Info'])     // 默认显示面板
             <div class="Product-spec">
                 <el-collapse v-model="activeNames" @change="handleChange">
 
-                    <el-collapse-item title="Technical specifications" name="spec-Info">
+                    <el-collapse-item title="Specifications" name="spec-Info">
                         <!-- 这里使用文本域content -->
                         <div v-html="ContentInfo.productDetail.content" class="io-info"></div>
                     </el-collapse-item>
