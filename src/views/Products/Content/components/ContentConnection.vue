@@ -31,12 +31,7 @@ const handleChange = () => {
             <div class="Product-spec">
                 <el-collapse v-model="activeNames" @change="handleChange">
                     <el-collapse-item title="Wiring Diagram" name="spec-6">
-                        <div class="spec-img">
-                            <img
-                                :src="ContentStructure"
-                                style="width: 100%"
-                                />
-                        </div>
+                        <div v-html="ContentStructure" class="info"></div>
                     </el-collapse-item>
                 </el-collapse>
             </div>
@@ -57,7 +52,7 @@ const handleChange = () => {
         // margin-bottom: 10px;
         padding: 0 15px;
         // 2.1 重新定义折叠面板el样式
-        ::v-deep .el-collapse {
+        ::v-deep(.el-collapse) {
             border: none; // 去掉边框
             .el-collapse-item {
                 // 2.1.1 头部
@@ -85,6 +80,23 @@ const handleChange = () => {
                         margin: 0 auto;
                         padding: 0 20px;
                         text-align: center;
+                    }
+                    .info {
+                        padding: 10px;
+
+                        table,
+                        th,
+                        td {
+                            padding: 5px 10px;
+                            border: 1px solid #000;
+                            border-collapse: collapse;
+                        }
+
+                        thead {
+                            th {
+                                font-weight: 500;
+                            }
+                        }
                     }
 
                 }
