@@ -21,7 +21,7 @@ const tableData = [
   },
   {
     date: '2021',
-    content: 'Limaison Shenzhen Office was officially established',
+    content: 'NiMotion Shenzhen Office was officially established',
   },
   {
     date: '2020-01',
@@ -41,7 +41,7 @@ const tableData = [
   },
   {
     date: '2017-12',
-    content: 'Limaison Nanjing Branch was officially established',
+    content: 'NiMotion Nanjing Branch was officially established',
   },
   {
     date: '2017-08',
@@ -49,7 +49,7 @@ const tableData = [
   },
   {
     date: '2017',
-    content: 'Limaisheng is listed on Beijing New Fourth Board Market',
+    content: 'NiMotion is listed on Beijing New Fourth Board Market',
   },
   {
     date: '2017-07',
@@ -57,7 +57,7 @@ const tableData = [
   },
   {
     date: '2015-11',
-    content: 'Limaisheng Company was registered and established',
+    content: 'NiMotion Company was registered and established',
   },
 ]
 const id = ref(0)
@@ -166,11 +166,9 @@ const handleEdit = (index) => {
           margin-left: 25px;
         }
 
-
       }
 
     }
-
 
   }
 }

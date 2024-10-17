@@ -12,22 +12,26 @@ import { Service, ChatDotRound, Top } from '@element-plus/icons-vue'
   <!-- 返回顶部 -->
   <div class="tools">
     <!-- help组件 -->
-    <div class="help-tool">
+    <div class="WhatsAPP-tool">
       <!-- 电话 -->
       <el-popover
         placement="left-start"
-        title="Hotline"
+        title="WhatsAPP"
         :width="auto"
         trigger="hover"
-        content="010-60213882"
+        content="+86 13813020826"
       >
         <template #reference>
           <div class="service">
-              <a href="/contact" target="_blank"><el-icon><Service /></el-icon></a>
+              <a href="https://api.whatsapp.com/send?phone=%2B8613813020826" target="_blank"><img src="https://www.nimotion.cn/static/images/icon/icon_WhatsAPP.png" alt=""></a>
             <!-- <span class="iconfont icon-fangzhi" style="font-size: 34px;"></span> -->
           </div>
         </template>
       </el-popover>
+
+    </div>
+
+    <div class="WeChat-tool">
 
       <!-- 微信客服 -->
       <el-popover
@@ -35,60 +39,38 @@ import { Service, ChatDotRound, Top } from '@element-plus/icons-vue'
         title="WeChat Service"
         :width="auto"
         trigger="hover"
+        content="010-60213882"
       >
         <template #reference>
           <div class="ChatDotRound">
-              <a target="_blank" href="https://work.weixin.qq.com/kfid/kfc9d5c3834eaae18fc"><el-icon><ChatDotRound /></el-icon></a>
+              <a target="_blank" href="https://work.weixin.qq.com/"><img src="https://www.nimotion.cn/static/images/icon/icon_wechat.png" alt=""></a>
           </div>
         </template>
           <!-- 1.北京 -->
-         <div>
-          <el-popover
-            placement="left-start"
-            title="WeChat Service"
-            :width="auto"
-            trigger="hover"
-          >
-            <template #reference>
-              <div class="ChatDotRound">
-                  <a target="_blank" href="https://work.weixin.qq.com/kfid/kfc9d5c3834eaae18fc">【Beijing】</a>
-              </div>
-            </template>
-            <el-image style="width: 100%;" src="https://www.nimotion.cn/static/images/general/qr_wechat_cnbeijing.webp" fit="contain" />
-          </el-popover>
-         </div>
-          <!-- 2.南京 -->
-          <div>
-          <el-popover
-            placement="left-start"
-            title="WeChat Service"
-            :width="auto"
-            trigger="hover"
-          >
-            <template #reference>
-              <div class="ChatDotRound">
-                  <a target="_blank" href="https://work.weixin.qq.com/kfid/kfc9d5c3834eaae18fc">【Nanjing】</a>
-              </div>
-            </template>
-            <el-image style="width: 100%;" src="https://www.nimotion.cn/static/images/general/qr_wechat_cnnanjing.webp" fit="contain" />
-          </el-popover>
-         </div>
-          <!-- 3.深圳 -->
-          <div>
-          <el-popover
-            placement="left-start"
-            title="WeChat Service"
-            :width="auto"
-            trigger="hover"
-          >
-            <template #reference>
-              <div class="ChatDotRound">
-                  <a target="_blank" href="https://work.weixin.qq.com/kfid/kfc9d5c3834eaae18fc">【Shenzhen】</a>
-              </div>
-            </template>
-            <el-image style="width: 100%;" src="https://www.nimotion.cn/static/images/general/qr_wechat_cnshenzhen.webp" fit="contain" />
-          </el-popover>
-         </div>
+           <div>
+            <img src="https://www.nimotion.cn/static/images/icon/6c51b73f-bd13-4007-9a85-228c166658a8.jpg" alt="">
+           </div>
+
+      </el-popover>
+    </div>
+
+    <div class="WeChat-tool">
+
+      <!-- 邮箱 -->
+      <el-popover
+        placement="left-start"
+        title="E-mail:"
+        :width="220"
+        trigger="hover"
+        content="nimotion-al@nimotion.com"
+      >
+        <template #reference>
+          <div class="ChatDotRound">
+              <a href="#"><img src="https://www.nimotion.cn/static/images/icon/icon_mail.png" alt=""></a>
+          </div>
+        </template>
+          <!-- 1.北京 -->
+
       </el-popover>
     </div>
 
@@ -121,20 +103,22 @@ import { Service, ChatDotRound, Top } from '@element-plus/icons-vue'
   z-index: 999;
 }
 
-//右下角返回顶部
+
 .tools {
   z-index: 9900;
-  .help-tool {
-    position: fixed;
-    right: calc(100% - 100vw + 24px);
-    bottom: 30%;
-    z-index: 9900;
-    padding: 16px 5px;
-    background: #fff;
-    box-shadow: 0 2px 14px 0 rgba(0, 0, 0, .08);
+  position: fixed;
+  right: calc(100% - 100vw + 24px);
+  bottom: 40%;
+  width: 46px;
+  height: 46px;
+  .WhatsAPP-tool {
+    padding: 5px;
     width: 46px;
-    height: 97px;
-    border-radius: 72px 72px 72px 72px;
+    height: 46px;
+    border-radius: 5px;
+    box-shadow: 0 2px 14px 0 rgba(0, 0, 0, .08);
+    background: #003abd;
+    
     a {
       display: block;
       width: 100%;
@@ -150,6 +134,30 @@ import { Service, ChatDotRound, Top } from '@element-plus/icons-vue'
       width: 100%;
     }
   }
+
+  .WeChat-tool {
+    margin-top: 5px;
+    padding: 5px;
+    width: 46px;
+    height: 46px;
+    background: #003abd;
+    box-shadow: 0 2px 14px 0 rgba(0, 0, 0, .08);
+    border-radius: 5px;
+    a {
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-size: 24px;
+      color: #666;
+      &:hover {
+        color: #003abd;
+      }
+    }
+    .ChatDotRound {
+      margin-bottom: 8px;
+      width: 100%;
+    }
+  }
 }
 // 返回顶部
 .backtop-box {
@@ -157,11 +165,11 @@ import { Service, ChatDotRound, Top } from '@element-plus/icons-vue'
     z-index: 9900;
     line-height: 46px;
     text-align: center;
-    border-radius: 50%;
+    border-radius: 5px;
     width: 46px !important;
     height: 46px !important;
     right: calc(100% - 100vw + 24px) !important;
-    bottom: calc(30% - 56px) !important;
+    bottom: calc(40% - 156px) !important;
     box-shadow: 0 2px 14px 0 rgba(0, 0, 0, .08);
     .backtop {
       text-align: center;

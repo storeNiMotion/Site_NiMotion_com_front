@@ -21,7 +21,17 @@ const icon = [
   {
     "value": "facebook", 
     "imgsrc": "http://www.nimotion.cn/static/images/icon/icon_facebook.png",        // /src/assets/images/icon_tao.png
-    "href": "https://www.facebook.com/profile.php?id=100064082113096"
+    "href": "https://www.facebook.com/profile.php?id=61567187999099"
+  },
+  {
+    "value": "linkedin", 
+    "imgsrc": "http://www.nimotion.cn/static/images/icon/icon_linkedin.png",        // /src/assets/images/icon_tao.png
+    "href": "https://www.linkedin.com/company/nimotion%E7%AB%8B%E8%BF%88%E8%83%9C/"
+  },
+  {
+    "value": "X", 
+    "imgsrc": "http://www.nimotion.cn/static/images/icon/icon_X.png",        // /src/assets/images/icon_tao.png
+    "href": "https://x.com/nimotion2024"
   },
 
 ]
