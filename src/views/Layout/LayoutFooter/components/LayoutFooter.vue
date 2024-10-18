@@ -128,7 +128,7 @@ const icon = [
           <!-- 版权 -->
           <div class="footer-nav-three">
             <div class="copyright">
-              <p>CopyRight © 2024 Copyright by NiMition</p>
+              <p>CopyRight © 2024 Copyright by NiMotion</p>
               <a href="https://beian.mps.gov.cn/#/query/webSearch?code=32011602010374" rel="noreferrer" target="_blank"><img src="@/assets/images/icon_beian.png" alt="">Beijing ICP No. 17039911</a>
             </div>
           </div>

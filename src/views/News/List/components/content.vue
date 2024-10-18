@@ -11,7 +11,7 @@ const getNewsList = async () => {
     const res = await getNewsListAPI()
     NewsList.value = res.data
     console.log(NewsList.value);
-    document.title = ' 公司新闻 - 立迈胜NiMotion - "智能控制 驱动未来"！'
+    document.title = ' Company News - NiMotion - "Intelligent Control Drives the Future"!'
 }
 
 onMounted(() => getNewsList())

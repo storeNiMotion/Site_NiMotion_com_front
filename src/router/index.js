@@ -207,28 +207,28 @@ const router = createRouter({
         },
         {
           //path: '/solution',  // 解决方案
-          meta: { title: '解决方案分类' },
+          meta: { title: 'Solution Categories' },
           path: '/solution',                                     // 解决方案https://www.nimotion.com/list/127.html
           component: SolutionChannel
         },
         {
           path: '/solution/:id',
-          meta: { title: '解决方案列表' },
+          meta: { title: 'Solution List' },
           component: SolutionList
         },
         {
-          meta: { title: '解决方案详情' },
+          meta: { title: 'Solution Details' },
           path: '/solution/detail/:id',
           component: SolutionDetail
         },
         {
-          meta: { title: '解决方案搜索结果' },
+          meta: { title: 'Solution Search Results' },
           path: '/solution/search/:key',                          // 解决方案搜索
           component: SolutionSearch
         },
         {
           //path: '/support',  //技术支持
-          meta: { title: '服务支持' },
+          meta: { title: 'Service Support' },
           path: '/support',                                       // 技术支持
           component: TechChannel
         },
@@ -237,32 +237,32 @@ const router = createRouter({
         //   component: ProblemList
         // },
         {
-          meta: { title: '技术知识' },
+          meta: { title: 'Technical knowledge' },
           path: '/problems',                                      // 技术支持问答列表
           component: ProblemList
         },
         {
-          meta: { title: '技术知识搜索' },
+          meta: { title: 'Technical knowledge search' },
           path: '/problems/search/:key',                          // 技术支持问答 搜索
           component: ProblemSearch
         },
         {
-          meta: { title: '技术知识详情' },
+          meta: { title: 'Technical knowledge details' },
           path: '/support/problems/detail/:id',                   // 技术支持问答 详情
           component: ProblemDetail
         },
         {
-          meta: { title: '视频教程' },
+          meta: { title: 'Video Tutorial' },
           path: '/video',                                         // 技术支持视频 列表
           component: VideoChannel
         },
         {
-          meta: { title: '视频教程' },
+          meta: { title: 'Video Tutorial' },
           path: '/video/:id',                                     // 技术支持视频 列表
           component: VideoList
         },
         {
-          meta: { title: '视频教程搜索' },
+          meta: { title: 'Video Tutorial Search' },
           path: '/video/search/:key',                             // 技术支持视频 搜索
           component: VideoSearch
         },
@@ -275,17 +275,17 @@ const router = createRouter({
           component: VideoDetailList
         },
         {
-          meta: { title: '技术支持售后条款' },
+          meta: { title: 'Technical Support After-Sales Terms' },
           path: '/aftersales',                                   // 技术支持售后
           component: AftersalesDetail
         },
         {
-          meta: { title: '技术支持在线合同' },
+          meta: { title: 'Technical Support Online Contract' },
           path: '/pact',                                         // 技术支持在线合同
           component: PactDetail
         },
         {
-          meta: { title: '商务合作' },
+          meta: { title: 'Business Cooperation' },
           path: '/cooperate',                                    // 技术支持合作
           // component: CooperateDetail
           component: Contact
@@ -297,7 +297,7 @@ const router = createRouter({
         {
           
           path: '/download',                                        // 下载
-          meta: { title: '下载中心' },
+          meta: { title: 'Download Center' },
           component: Download
         },
         {
@@ -306,37 +306,37 @@ const router = createRouter({
         },
         {
           //path: '/news',                                          // 新闻
-          meta: { title: '新闻资讯' },
+          meta: { title: 'News' },
           path: '/news',                                            // 新闻https://www.nimotion.com/news/12_1.html
           component: NewsList
         },
         {
           path: '/news/detail/:id',
-          meta: { title: '内容详情' },
+          meta: { title: 'Content details' },
           component: NewsDetail
         },
         {
-          meta: { title: '关于我们' },
+          meta: { title: 'about Us' },
           path: '/about',                                         // 关于我们
           component: About
         },
         {
-          meta: { title: '企业文化' },
+          meta: { title: 'Corporate Culture' },
           path: '/culture',                                         // 关于我们-文化
           component: Culture
         },
         {
-          meta: { title: '荣誉资质' },
+          meta: { title: 'Honors and Qualifications' },
           path: '/honor',                                         // 关于我们-荣誉
           component: Honor
         },
         {
-          meta: { title: '企业风采' },
+          meta: { title: 'Corporate Style' },
           path: '/styles',                                         //关于我们-风采
           component: Style
         },
         {
-          meta: { title: '公司环境' },
+          meta: { title: 'Company Environment' },
           path: '/factory',                                         // 关于我们-厂房
           component: Factory
         },
