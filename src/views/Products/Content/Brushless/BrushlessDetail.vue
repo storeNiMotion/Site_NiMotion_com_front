@@ -9,7 +9,7 @@ import Curve from '../components/ContentCurve.vue'
 import CableConnection from '../components/ContentConnection.vue'
 import Downfile from '../components/ContentDownfile.vue'
 import Relate from '../components/ContentRelate.vue'
-
+import FormBottom from '../../../components/FormBottom.vue'
 import { watch, onMounted, ref } from "vue"
 import { useRoute, useRouter } from "vue-router"   // 引入路由
 
@@ -43,7 +43,9 @@ onMounted(() => {
         <Curve />
         <CableConnection />
         <Downfile />
+        
         <Relate />
+        <FormBottom />
     </div>
 
 
@@ -53,7 +55,7 @@ onMounted(() => {
 .product-panel-detail {
     width: 100vw;
     background-color: #fff;
-    padding-bottom: 30px;
+    // padding-bottom: 30px;
 
 }
 

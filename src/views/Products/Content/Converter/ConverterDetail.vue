@@ -3,7 +3,7 @@ import BreadNav from '../components/ContentBreadNav.vue'
 import Overview from '../components/ContentOverview.vue'
 
 import ContentInfo from './components/ContentInfo.vue'
-
+import FormBottom from '../../../components/FormBottom.vue'
 // import Draw from './components/ContentDraw.vue'
 import Downfile from '../components/ContentDownfile.vue'
 import Relate from '../components/ContentRelate.vue'
@@ -38,7 +38,9 @@ onMounted(() => {
         <ContentInfo />
         <!-- <Draw /> -->
         <Downfile />
+        
         <Relate />
+        <FormBottom />
     </div>
 
 
@@ -48,7 +50,7 @@ onMounted(() => {
 .product-panel-detail {
     width: 100vw;
     background-color: #fff;
-    padding-bottom: 30px;
+    // padding-bottom: 30px;
 
 }
 

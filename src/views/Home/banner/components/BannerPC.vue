@@ -64,10 +64,22 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="home-banner" ref="dataScreenRef">
-    <el-carousel :height="heightbox" interval="3000" trigger="click" indicator-position="outside" loop="false">
+    <el-carousel :height="heightbox" interval="300000" trigger="click" indicator-position="outside" loop="false">
       <el-carousel-item v-for="item in bannerList" :key="item.id" >
         <RouterLink :to="item.href"><img v-img-lazy="item.image" :alt="item.title" ></RouterLink>
         <!-- <div :style="`background-image: url(${item.image})`" class="imgbox"></div> -->
+         <!-- 图片信息 -->
+         <!-- <div class="info container">
+          <div class="title">
+            <h2>{{ item.name }}</h2>
+            <p></p>
+          </div>
+          <div class="contact">
+            <div class="header-contact">
+              <RouterLink to="/contact" class="btn-face">Contact Us</RouterLink>
+            </div>
+          </div>
+         </div> -->
       </el-carousel-item>
     </el-carousel>
   </div>
@@ -99,6 +111,50 @@ onBeforeUnmount(() => {
     // height: 100%;
     // height: 650px;
     transform: v-bind(imgScale);
+  }
+  .info {
+    position: absolute;
+    // float: left;
+    top: 20px;
+    left: 20px;
+    // bottom: 50px;
+    margin: 50px;
+    padding: 20px 120px;
+    // width: 100%;
+    // height: 100%;
+    max-width: 1000px;
+    .title {
+      h2 {
+        color: #fff;
+        font-size: 32px;
+      }
+    }
+    .contact {
+      margin-top: 50px;
+      // 2.3联系我们
+      .header-contact {
+
+        .btn-face {
+          display: flex;
+          // margin:0 15px 0 40px;
+          width: 185px;
+          height: 45px;
+          border: 1px solid #003abd;
+          border-radius: 5px;
+          background-color: #003abd;
+          font-size: 18px;
+          color: #fff;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          line-height: 26px;
+          &:hover {
+              background-color: #0131a1;
+              // color: #fff;
+          }
+        }
+      }
+    }
   }
 }
 

@@ -3,7 +3,7 @@
 import Bread from './components/bread.vue'
 // import Share from './components/share.vue'
 import Content from './components/content.vue'
-
+import FormBottom from '../../components/FormBottom.vue'
 
 </script>
 
@@ -12,6 +12,7 @@ import Content from './components/content.vue'
     <Bread />
     <!-- 主体 -->
     <Content />
+    <FormBottom />
 
 </template>
 

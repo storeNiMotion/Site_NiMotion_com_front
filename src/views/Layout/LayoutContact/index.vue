@@ -11,9 +11,8 @@ import { Service, ChatDotRound, Top } from '@element-plus/icons-vue'
 
   <!-- 返回顶部 -->
   <div class="tools">
-    <!-- help组件 -->
-    <div class="WhatsAPP-tool">
-      <!-- 电话 -->
+    <!-- 电话 -->
+    <div class="WhatsAPP-tool pc">
       <el-popover
         placement="left-start"
         title="WhatsAPP"
@@ -24,16 +23,13 @@ import { Service, ChatDotRound, Top } from '@element-plus/icons-vue'
         <template #reference>
           <div class="service">
               <a href="https://api.whatsapp.com/send?phone=%2B8613813020826" target="_blank"><img src="https://www.nimotion.cn/static/images/icon/icon_WhatsAPP.png" alt=""></a>
-            <!-- <span class="iconfont icon-fangzhi" style="font-size: 34px;"></span> -->
           </div>
         </template>
       </el-popover>
-
     </div>
 
-    <div class="WeChat-tool">
-
-      <!-- 微信客服 -->
+    <!-- 微信客服 -->
+    <!-- <div class="WeChat-tool pc">
       <el-popover
         placement="left-start"
         title="WeChat Service"
@@ -46,17 +42,71 @@ import { Service, ChatDotRound, Top } from '@element-plus/icons-vue'
               <a target="_blank" href="https://work.weixin.qq.com/"><img src="https://www.nimotion.cn/static/images/icon/icon_wechat.png" alt=""></a>
           </div>
         </template>
-          <!-- 1.北京 -->
            <div>
             <img src="https://www.nimotion.cn/static/images/icon/6c51b73f-bd13-4007-9a85-228c166658a8.jpg" alt="">
            </div>
+      </el-popover>
+    </div> -->
+
+    <!-- 邮箱 -->
+    <div class="WeChat-tool pc">
+      <el-popover
+        placement="left-start"
+        title="E-mail:"
+        :width="220"
+        trigger="hover"
+        content="nimotion-al@nimotion.com"
+      >
+        <template #reference>
+          <div class="ChatDotRound">
+              <a href="mailto:nimotion-al@nimotion.com"><img src="https://www.nimotion.cn/static/images/icon/icon_mail.png" alt=""></a>
+          </div>
+        </template>
 
       </el-popover>
     </div>
 
-    <div class="WeChat-tool">
 
-      <!-- 邮箱 -->
+    <!-- 移动端 -->
+    <!-- 电话 -->
+    <!-- <div class="WhatsAPP-tool mb">
+      <el-popover
+        placement="left-start"
+        title="WhatsAPP"
+        :width="auto"
+        trigger="hover"
+        content="+86 13813020826"
+      >
+        <template #reference>
+          <div class="service">
+              <a href="https://api.whatsapp.com/send?phone=%2B8613813020826" target="_blank"><img src="https://www.nimotion.cn/static/images/icon/icon_WhatsAPP.png" alt=""></a>
+          </div>
+        </template>
+      </el-popover>
+    </div> -->
+
+    <!-- 微信客服 -->
+    <!-- <div class="WeChat-tool mb">
+      <el-popover
+        placement="left-start"
+        title="WeChat Service"
+        :width="auto"
+        trigger="hover"
+        content="010-60213882"
+      >
+        <template #reference>
+          <div class="ChatDotRound">
+              <a target="_blank" href="https://work.weixin.qq.com/"><img src="https://www.nimotion.cn/static/images/icon/icon_wechat.png" alt=""></a>
+          </div>
+        </template>
+           <div>
+            <img src="https://www.nimotion.cn/static/images/icon/6c51b73f-bd13-4007-9a85-228c166658a8.jpg" alt="">
+           </div>
+      </el-popover>
+    </div> -->
+
+    <!-- 邮箱 -->
+    <!-- <div class="WeChat-tool mb">
       <el-popover
         placement="left-start"
         title="E-mail:"
@@ -69,10 +119,9 @@ import { Service, ChatDotRound, Top } from '@element-plus/icons-vue'
               <a href="#"><img src="https://www.nimotion.cn/static/images/icon/icon_mail.png" alt=""></a>
           </div>
         </template>
-          <!-- 1.北京 -->
 
       </el-popover>
-    </div>
+    </div> -->
 
     <!-- 返回组件 -->
     <div class="backtop-box">
@@ -169,7 +218,7 @@ import { Service, ChatDotRound, Top } from '@element-plus/icons-vue'
     width: 46px !important;
     height: 46px !important;
     right: calc(100% - 100vw + 24px) !important;
-    bottom: calc(40% - 156px) !important;
+    bottom: calc(40% - 104px) !important;
     box-shadow: 0 2px 14px 0 rgba(0, 0, 0, .08);
     .backtop {
       text-align: center;
@@ -192,6 +241,19 @@ import { Service, ChatDotRound, Top } from '@element-plus/icons-vue'
       padding: 0;
     }
   }
+
+}
+
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 960px) {
+
+}
+
+@media (max-width: 768px) {
 
 }
 

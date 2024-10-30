@@ -49,10 +49,11 @@ const icon = [
                 <ul>
                   <li class="logo-image"><img src="@/assets/images/横版白色透明-logo.png" alt=""></li>
                   <li class="tel">
-                    <a href="">
-                      <span class="iconfont icon-dianhua" style="margin-right: 4px;"></span><h4>Telephone</h4>
+                    <a href="http://wa.me/16262035767" target="_blank" rel="noopener noreferrer">
+                      
+                      <span class="iconfont icon-dianhua" style="margin-right: 4px;"></span><h4>WhatsApp</h4>
                     </a>
-                    <h3>010-60213882</h3>
+                    <h3>+1(626)203-5767</h3>
                   </li>
                   <li class="info">
                     <ul>

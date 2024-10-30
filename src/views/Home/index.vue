@@ -3,6 +3,7 @@ import HomeBanner from './banner/index.vue'
 import HomeNews from './news/index.vue'
 import HomeProduct from './product/index.vue'
 import HomeSolution from './solution/index.vue'
+import HomeForm from './Form/index.vue'
 
 import { computed, onMounted, defineProps, ref, watch } from 'vue'
 import { useRoute, onBeforeRouteUpdate } from "vue-router"   // 引入路由
@@ -24,6 +25,8 @@ onBeforeRouteUpdate((to) => {
     <HomeSolution />
 
     <HomeNews />
+
+    <HomeForm />
 <!-- 测试插槽面板 -->
 <!-- <HomePanel title="产品推荐" subTitle="">
 

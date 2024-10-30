@@ -5,7 +5,7 @@ import Overview from '../components/ContentOverview.vue'
 import SpecTxt from '../components/ContentSpecTxt.vue'
 // import Draw from '../components/ContentDraw.vue'
 import Draw from './components/DrawImgs.vue'    // 图纸
-
+import FormBottom from '../../../components/FormBottom.vue'
 import CableConnection from '../components/ContentConnection.vue'
 import Downfile from '../components/ContentDownfile.vue'
 import Relate from '../components/ContentRelate.vue'
@@ -40,7 +40,9 @@ onMounted(() => {
         <Draw />
         <CableConnection />
         <Downfile />
+        
         <Relate />
+        <FormBottom />
     </div>
 
 
@@ -50,7 +52,7 @@ onMounted(() => {
 .product-panel-detail {
     width: 100vw;
     background-color: #fff;
-    padding-bottom: 30px;
+    // padding-bottom: 30px;
 
 }
 
