@@ -102,6 +102,7 @@ onMounted(() => getsolutionList())
     // width: 100vw;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.70);
+    // background-image: url(@/assets/images/sol_bg.png);
 
     // 1.el-tags样式重定义
     ::v-deep(.el-tabs) {
@@ -143,7 +144,8 @@ onMounted(() => getsolutionList())
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
-                        // padding: 10px 0;
+                        padding: 0px 8px;
+                        width: 100%;
                         font-size: 18px;
                         // border-radius: 10px;
                         .iconfont {

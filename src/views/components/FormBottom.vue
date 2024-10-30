@@ -2,7 +2,7 @@
 // import { TabsPaneContext } from 'element-plus'
 // import { Calendar } from '@element-plus/icons-vue'
 import { messageAPI } from "@/apis/message"
-import { ElMessage, ElMessageBox } from "element-plus"
+import { ElMessage } from "element-plus"
 import 'element-plus/theme-chalk/el-message.css'
 import { ref, reactive } from "vue"
 

@@ -7,7 +7,6 @@ import { onMounted, ref } from "vue"
 </script>
 
 <template>
-    <!-- 标题描述区域 -->
     <Title />
     <Category />
 
