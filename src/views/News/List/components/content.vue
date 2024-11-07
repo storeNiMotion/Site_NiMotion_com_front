@@ -26,7 +26,7 @@ onMounted(() => getNewsList())
                     <div class="News-item">
                         <div class="picbox">
                             <!-- <img :src="item.default_image" alt=""> -->
-                            <RouterLink :to="`/news/detail/${item.id}`"><img v-img-lazy="item.default_image" alt="">
+                            <RouterLink :to="`/news/detail/${item.id}`"><img v-img-lazy="item.default_image" :alt="item.name">
                             </RouterLink>
                         </div>
                         <div class="info-box">

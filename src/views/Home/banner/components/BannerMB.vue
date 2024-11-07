@@ -52,7 +52,7 @@ onBeforeUnmount(() => {
   <div class="home-banner" ref="dataScreenRef">
     <el-carousel :height="heightbox" interval="3000" trigger="click" indicator-position="outside" loop="false">
       <el-carousel-item v-for="item in bannerList" :key="item.id" >
-        <RouterLink :to="item.href"><img v-img-lazy="item.image" :alt="item.title" ></RouterLink>
+        <RouterLink :to="item.href"><img v-img-lazy="item.image" :alt="item.name" ></RouterLink>
         <!-- <div :style="`background-image: url(${item.image})`" class="imgbox"></div> -->
       </el-carousel-item>
     </el-carousel>

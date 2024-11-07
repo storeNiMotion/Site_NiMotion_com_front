@@ -52,6 +52,7 @@ onMounted(() => {
                             <el-card class="card" shadow="hover" >
                                 <img
                                     v-img-lazy="item.image"
+                                    :alt="item.name"
                                     style="width: 100%"
                                     />
                             </el-card>

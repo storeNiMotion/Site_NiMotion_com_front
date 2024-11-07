@@ -89,6 +89,7 @@ watch(() => screenWidth.value, (val) => {
                             <RouterLink :to="`/product/${i.router}/detail/${i.id}`">
                                 <img
                                     :src="i.default_image"
+                                    :alt="i.name"
                                     style="width: 100%; height: auto;"
                                 />
                             </RouterLink>
