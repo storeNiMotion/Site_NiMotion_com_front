@@ -18,9 +18,13 @@ export function getSupportChannelAPI() {
  * @param {url}
  * @param {get}
  */
-export function getSupportProblemsListAPI() {
+export function getSupportProblemsListAPI(page, pageSize) {
   return httpInstance({
     url: '/api/v2/support/list/',
+    params: {
+      page,
+      pageSize
+    }
   })
 }
 

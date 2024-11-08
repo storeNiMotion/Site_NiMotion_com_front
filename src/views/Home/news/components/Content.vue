@@ -90,6 +90,10 @@ onMounted(() => getnewsList())
                         </RouterLink>
                     </li>
                 </ul>
+                <div class="more">
+                    <RouterLink to="/news" class="more"><el-button type="primary" round>Read More</el-button></RouterLink>
+                </div>
+                
             </div>
         </div>
     </div>
@@ -164,6 +168,13 @@ onMounted(() => getnewsList())
                 }
 
             }
+        }
+
+        // 更多
+        .more {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
         }
     }
 }

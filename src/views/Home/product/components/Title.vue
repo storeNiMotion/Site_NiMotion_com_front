@@ -60,6 +60,7 @@ onMounted(() => getcomproductList())
                 height: fit-content;
                 font-size: 16px;
                 color: #999;
+                color: #333;
             }
         }
 

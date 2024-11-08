@@ -67,19 +67,6 @@ onBeforeUnmount(() => {
     <el-carousel :height="heightbox" interval="300000" trigger="click" indicator-position="outside" loop="false">
       <el-carousel-item v-for="item in bannerList" :key="item.id" >
         <RouterLink :to="item.href"><img v-img-lazy="item.image" :alt="item.name" ></RouterLink>
-        <!-- <div :style="`background-image: url(${item.image})`" class="imgbox"></div> -->
-         <!-- 图片信息 -->
-         <!-- <div class="info container">
-          <div class="title">
-            <h2>{{ item.name }}</h2>
-            <p></p>
-          </div>
-          <div class="contact">
-            <div class="header-contact">
-              <RouterLink to="/contact" class="btn-face">Contact Us</RouterLink>
-            </div>
-          </div>
-         </div> -->
       </el-carousel-item>
     </el-carousel>
   </div>

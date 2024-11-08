@@ -1,20 +1,18 @@
 <script setup>
 // import Share from './components/share.vue'
+import leftNav from '../../components/leftNav.vue'
 import { Calendar, Search } from '@element-plus/icons-vue'
 import { getSolutionDetailAPI } from "@/apis/solution"
 import { onMounted, ref } from "vue"
-import { useRoute, onBeforeRouteUpdate } from "vue-router"   // 引入路由
+import { useRoute } from "vue-router"   // 引入路由
 
 const route = useRoute()                //调用路由
 // 1.获取数据
 const solutionDetail = ref([])
-
 const getsolutionDetail = async (id = route.params.id) => {
     const res = await getSolutionDetailAPI(id)
     solutionDetail.value = res.data[0]
     // document.title = solutionDetail.value.name + ' - 立迈胜NiMotion - "智能控制 驱动未来"！'
-    // console.log(solutionDetail.value);
-
 }
 
 onMounted(() => getsolutionDetail())
@@ -26,6 +24,8 @@ onMounted(() => getsolutionDetail())
     <div class="support-panel-detail">
         <div class="container">
             <div class="support-detail">
+                <!-- 左侧导航 -->
+                <leftNav />
                 <div class="article">
                     <div class="detail-title">
                         <h1>{{ solutionDetail.name }}</h1>
@@ -42,10 +42,7 @@ onMounted(() => getsolutionDetail())
                         </div>
                     </div>
                 </div>
-
             </div>
-
-
         </div>
     </div>
 
@@ -60,20 +57,19 @@ onMounted(() => getsolutionDetail())
 
     // 01.图文内容
     .support-detail {
-        margin: 0 auto;
-        margin: 0 10px;
-        padding: 40px;
-        background-color: #fff;
+        display: flex;
 
         // 01.图文
         .article {
+            flex: 1;
+            margin: 0 20px 20px;
             border-bottom: 1px solid #e5e9ef;
-            margin-bottom: 20px;
+            background-color: #fff;
 
             // 1.1 标题区
             .detail-title {
                 margin-bottom: 20px;
-                padding: 0px 40px;
+                padding: 20px 40px 0;
                 border-bottom: 1px solid #e5e9ef;
 
                 h1 {
@@ -170,7 +166,11 @@ onMounted(() => getsolutionDetail())
 
 @media (max-width: 1200px) {}
 
-@media (max-width: 960px) {}
+@media (max-width: 960px) {
+    .support-panel-detail {
+        margin-top: 20px;
+    }
+}
 
 @media (max-width: 768px) {
     .support-panel-detail {
@@ -183,10 +183,10 @@ onMounted(() => getsolutionDetail())
 
                 // 1.1 标题区
                 .detail-title {
-                    padding: 0px 10px;
+                    padding: 10px 10px;
 
                     h1 {
-                        margin-bottom: 2px;
+                        margin-bottom: 5px;
                         font-size: 20px;
                     }
 

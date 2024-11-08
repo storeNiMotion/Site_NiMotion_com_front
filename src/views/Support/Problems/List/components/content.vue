@@ -1,22 +1,35 @@
 <script setup>
-// import { TabsPaneContext } from 'element-plus'
-import { Search } from '@element-plus/icons-vue'
-
 import { onMounted, ref } from "vue"
 import { getSupportProblemsListAPI } from "@/apis/support"
-// import { useRoute, onBeforeRouteUpdate } from "vue-router"   // 引入路由
 
-// const route = useRoute()                //调用路由
-//获取数据
+
+// 获取数据
 const supportProblemsList = ref([])
-// const supportProblemstSelfData = ref({})
+const pages = ref(1)                            // 页码
+const pageSizes = ref(20)                       // 每页条数
+const total = ref(0)                            // 总数
 
-const getsupportList = async() => {
-    const res = await getSupportProblemsListAPI()
+const getsupportList = async(page=pages.value, pageSize=pageSizes.value) => {
+    const res = await getSupportProblemsListAPI(page, pageSize)
     supportProblemsList.value = res.data
-    // supportProblemstSelfData.value = res.category[0]
+    total.value = res.totalCnt
 }
 
+// 页码跳转
+const prev = (number) => {
+    pages.value = number
+    getsupportList()
+}
+
+const next = (number) => {
+    pages.value = number
+    getsupportList()
+}
+
+const change = (number) => {
+    pages.value = number
+    getsupportList()
+}
 
 onMounted(() => getsupportList())
 </script>
@@ -34,12 +47,22 @@ onMounted(() => getsupportList())
                                 <h4>{{ item.name }}</h4>
                                 <span class="date">{{ item.release_time }}</span>
                             </RouterLink>
-                            <!-- <h4>【知识问答】一体化电机</h4>
-                            <span class="date">2023-12-5</span> -->
                         </div>
                     </div>
                 </el-card>
             </div>
+            <el-pagination 
+                background 
+                layout="prev, pager, next" 
+                :total="total" 
+                :pager-count="11" 
+                :page-size="pageSizes" 
+                hide-on-single-page="true"
+                @prev-click="prev"
+                @next-click="next"
+                @change="change"
+                class="pagination"
+             />
         </div>
     </div>
 </template>
@@ -64,7 +87,6 @@ onMounted(() => getsupportList())
         width: 100%;
 
         .el-card__body {
-            //padding: 0; //去掉内边距
             border: none;
 
             // 3.1.1 自定义内容样式
@@ -105,6 +127,12 @@ onMounted(() => getsupportList())
         }
     }
 
+  }
+
+  // 页码
+  .pagination {
+    display: flex;
+    justify-content: center;
   }
 }
 

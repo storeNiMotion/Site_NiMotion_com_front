@@ -1,23 +1,17 @@
 <script setup>
-// import { TabsPaneContext } from 'element-plus'
-// import { Calendar } from '@element-plus/icons-vue'
+import leftNav from '../../components/leftNav.vue'
 import { getSolutionListAPI } from "@/apis/solution"
 import { onMounted, ref } from "vue"
-import { useRoute, onBeforeRouteUpdate } from "vue-router"   // 引入路由
+import { useRoute } from "vue-router"   // 引入路由
 
 const route = useRoute()                //调用路由
 
 //获取数据
 const solutionList = ref([])
-// const SelfData = ref({})                // 本身数据
 const getsolutionList = async (id = route.params.id) => {
     const res = await getSolutionListAPI(id)
     solutionList.value = res.data
-    // SelfData.value = res.category[0]
 }
-
-//切换标签
-
 
 onMounted(() => getsolutionList())
 </script>
@@ -26,31 +20,31 @@ onMounted(() => getsolutionList())
     <!-- 方案主体 -->
     <div class="Solution-panel">
         <div class="container">
-            <div class="Solution-display">
-                <el-card style="max-width: 100%" v-for="item in solutionList" :key="item.id">
-                    <div class="solution-item">
-                        <div class="picbox">
-                            <!-- <img v-img-lazy="item.default_image" alt=""> -->
-                            <RouterLink :to="`/solution/detail/${item.id}`"><img v-img-lazy="item.default_image" :alt="item.name">
-                            </RouterLink>
-                        </div>
-                        <div class="info-box">
-                            <!-- <h4>{{ item.name }}</h4> -->
-                            <RouterLink :to="`/solution/detail/${item.id}`">
-                                <h4>{{ item.name }}</h4>
-                            </RouterLink>
-                            <p>{{ item.description }}</p>
-                            <!-- <a href="/solution/list" class="btn-face">查看更多</a> -->
-                            <div class="sol-more">
-                                <!-- <a href="/solution/detail" class="btn-face">查看更多</a> -->
-                                <RouterLink class="btn-face" :to="`/solution/detail/${item.id}`">Read More</RouterLink>
-                                <span class="date">{{ item.release_time }}</span>
+            <div class="Solution">
+                <leftNav />
+                <div class="Solution-display">
+                    <el-card style="max-width: 100%" v-for="item in solutionList" :key="item.id">
+                        <div class="solution-item">
+                            <div class="picbox">
+                                <RouterLink :to="`/solution/detail/${item.id}`"><img v-img-lazy="item.default_image" :alt="item.name">
+                                </RouterLink>
                             </div>
-                        </div>
+                            <div class="info-box">
+                                <RouterLink :to="`/solution/detail/${item.id}`">
+                                    <h4>{{ item.name }}</h4>
+                                </RouterLink>
+                                <p>{{ item.description }}</p>
+                                <div class="sol-more">
+                                    <RouterLink class="btn-face" :to="`/solution/detail/${item.id}`">Read More</RouterLink>
+                                    <span class="date">{{ item.release_time }}</span>
+                                </div>
+                            </div>
 
-                    </div>
-                </el-card>
+                        </div>
+                    </el-card>
+                </div>
             </div>
+
         </div>
     </div>
 </template>
@@ -58,24 +52,26 @@ onMounted(() => getsolutionList())
 <style scoped lang='scss'>
 // 3.方案主体
 .Solution-panel {
-    margin-top: 20px;
     padding-bottom: 20px;
     width: 100vw;
 
-    // background-color: rgba(0, 0, 0, 0.70);
-    .Solution-display {
-        padding: 0 20px;
+    .Solution {
         display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+    }
+
+    .Solution-display {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        margin: 0 20px;
+        padding: 0 10px;
         width: 100%;
 
         // 3.1 重新定义el卡片
         ::v-deep(.el-card) {
             margin-bottom: 30px;
-            //padding: 0px 20px; //去掉内边距
-            width: 100%;
 
+            width: 100%;
             .el-card__body {
                 padding: 0px 20px; //去掉内边距
                 border: none;
@@ -87,14 +83,11 @@ onMounted(() => getsolutionList())
             display: flex;
             width: 100%;
             // 3.2 图片box
-            $picbox-height: 280px;
-
             .picbox {
                 display: flex;
                 flex: 0 0 33%;
                 justify-content: center;
-                // width: 32%;
-                max-width: $picbox-height;
+                max-width: 280px;
                 height: 180px;
                 overflow: hidden;
 
@@ -123,7 +116,6 @@ onMounted(() => getsolutionList())
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                // align-items: center;
                 flex: 1;
                 margin: 10px 0 0 20px;
                 padding: 20px 0px;
@@ -156,8 +148,6 @@ onMounted(() => getsolutionList())
                     align-items: end;
 
                     .date {
-                        // margin-top: 25px;
-                        // margin-right: 12px;
                         padding-right: 10px;
                         color: #5f5f5f;
                         font-size: 14px;

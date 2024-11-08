@@ -32,10 +32,10 @@ onMounted(() => getnewsList())
                     <h3>{{ caption }}</h3>
                     <p>{{ content }}</p>
                 </div>
-                <div class="right">
+                <!-- 右侧更多按钮 -->
+                <!-- <div class="right">
                     <RouterLink to="/news" class="more">View All<span class="iconfont icon-arrow-right-bold"></span></RouterLink>
-                    <!-- <a href="#" class="more">查看全部<span class="iconfont icon-arrow-right-bold"></span></a> -->
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

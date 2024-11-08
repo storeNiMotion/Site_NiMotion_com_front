@@ -58,12 +58,10 @@ const icon = [
                   <li class="info">
                     <ul>
                       <li>
-                        <h5>Beijing NiMotion Control Technology Co.,Ltd.</h5>
-                        <!-- <p>Beijing NiMotion Control Technology Co.,Ltd.</p -->
+                        <span>Beijing NiMotion Control Technology Co.,Ltd.</span>
                       </li>
-                      <!-- <li><h5>cell phone：15652093730</h5></li> -->
-                      <li><h5>Mail：nimotion-al@nimotion.com</h5></li>
-                      <li><h5>Website：www.nimotion.com</h5></li>
+                      <li><span>Mail：nimotion-al@nimotion.com</span></li>
+                      <li><span>Website：www.nimotion.com</span></li>
                     </ul>
                   </li>
                 </ul>
@@ -215,12 +213,11 @@ const icon = [
             ul{
               li{
                 padding: 4px 0;
-                // margin: 5px 0;
-                h5{
+                span {
                   display: block;
                   font-size: 14px;
                 }
-                p{
+                p {
                   margin-top: 4px;
                   font-size: 12px;
                   // margin-bottom: 5px;

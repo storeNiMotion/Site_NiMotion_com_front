@@ -97,7 +97,7 @@ watch(() => screenWidth.value, (val) => {
         <!-- 1.logo -->
         <div class="header-logo">
           <div class="logo">
-            <RouterLink to="/"><img src="@/assets/images/logo.png" alt=""></RouterLink>
+            <RouterLink to="/"><img src="@/assets/images/logo.png" alt="LOGO of NiMotion"></RouterLink>
           </div>
         </div>
         <!-- 2.导航 -->

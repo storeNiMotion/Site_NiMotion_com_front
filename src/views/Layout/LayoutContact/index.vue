@@ -22,7 +22,7 @@ import { Service, ChatDotRound, Top } from '@element-plus/icons-vue'
       >
         <template #reference>
           <div class="service">
-              <a href="https://api.whatsapp.com/send?phone=%2B8613813020826" target="_blank"><img src="https://www.nimotion.cn/static/images/icon/icon_WhatsAPP.png" alt=""></a>
+              <a href="https://api.whatsapp.com/send?phone=%2B8613813020826" target="_blank"><img src="https://www.nimotion.cn/static/images/icon/icon_WhatsAPP.png" alt="WhatsAPP"></a>
           </div>
         </template>
       </el-popover>
@@ -59,7 +59,7 @@ import { Service, ChatDotRound, Top } from '@element-plus/icons-vue'
       >
         <template #reference>
           <div class="ChatDotRound">
-              <a href="mailto:nimotion-al@nimotion.com"><img src="https://www.nimotion.cn/static/images/icon/icon_mail.png" alt=""></a>
+              <a href="mailto:nimotion-al@nimotion.com"><img src="https://www.nimotion.cn/static/images/icon/icon_mail.png" alt="mail"></a>
           </div>
         </template>
 

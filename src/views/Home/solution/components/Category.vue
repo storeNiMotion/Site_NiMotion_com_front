@@ -276,16 +276,19 @@ onMounted(() => getsolutionList())
                             /* margin: 4.6rem 5rem; */
                             padding: 6px 12px 6px 18px;
                             max-width: 90%;
-                            /* height: 2.6rem; */
+                            /* height: 2.6rem;0034ae */
                             border-radius: 5px;
-                            background-color: #b2b2b2;
+                            // background-color: #b2b2b2;
+                            background-color: #0034ae;
                             text-align: center;
                             font-size: 12px;
-                            color: #fff;
+                            // color: #fff;
+                            color: #e7e7e7;
                             line-height: 26px;
 
                             &:hover {
-                            background-color: #003abd;
+                                background-color: #003abd;
+                                color: #fff;
                             }
                         }
 
