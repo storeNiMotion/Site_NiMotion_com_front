@@ -17,13 +17,13 @@ const activeNames = ref(['spec-SpecNum'])     // 默认显示面板
 const numberHeadList = [                // 型号表头
     {
         "key": "number",
-        "label": "model",
+        "label": "Model",
         "fixed": true,
         "width":150
     },
     {
         "key": "bus",
-        "label": "model",
+        "label": "Bus",
         "fixed": false,
         "width":200
     },
@@ -54,12 +54,12 @@ const numberHeadList = [                // 型号表头
     },
     {
         "key": "encoder",
-        "label": "encoder",
+        "label": "Encoder",
         "fixed": false
     },
     {
         "key": "torque",
-        "label": "torque(N·m)",
+        "label": "Torque(N·m)",
         "fixed": false
     },
     {
@@ -69,7 +69,7 @@ const numberHeadList = [                // 型号表头
     },
     {
         "key": "length",
-        "label": "length(mm)",
+        "label": "Length(mm)",
         "fixed": false
     },
     // {

@@ -1,27 +1,15 @@
 <script setup>
 
 // 图纸尺寸
-
 import { watch, onMounted, ref } from "vue"
 
 // 导入pinia
 import { useContentStore } from '@/stores/content'
 
-const ContentDraw = ref('')
-//使用pinia中的数据
-const getContentDraw = () => {
-    const res = useContentStore()                // 实例化
-    ContentDraw.value = res.productDetail.drawing_image
-}
-
-
 // 折叠面板
-// const activeNames = ref(['spec-3'])     // 默认显示面板
-const handleChange = () => {
-    getContentDraw()
-}
-
-// 4.钩子生命周期函数
+const activeNames = ref(['spec-Draw'])     // 默认显示面板
+// 使用pinia中的数据
+const ContentDraw = useContentStore()                // 实例化
 
 </script>
 
@@ -33,10 +21,10 @@ const handleChange = () => {
             <div class="Product-spec">
                 <el-collapse v-model="activeNames" @change="handleChange">
 
-                    <el-collapse-item title="Dimensions" name="spec-3">
+                    <el-collapse-item title="Dimensions" name="spec-Draw">
                         <div class="spec-img">
                             <img
-                                :src="ContentDraw"
+                                :src="ContentDraw.productDetail.drawing_image"
                                 style="width: 100%"
                                 />
                         </div>

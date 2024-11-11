@@ -59,7 +59,7 @@ onMounted(() => getsolutionList())
                         <div class="item" v-for="(i,index) in item.SolutionList.slice(0, 5)" :key="index">
                             <ul>
                                 <li class="pic">
-                                    <RouterLink :to="`/solution/detail/${i.id}`"><img v-img-lazy="i.image" :alt="i.name"></RouterLink>
+                                    <RouterLink :to="`/solution/detail/${i.id}`"><img v-img-lazy="i.image" :alt="'NiMotion' + `${i.name}`"></RouterLink>
                                 </li>
                                 <li class="txt">
                                     <RouterLink :to="`/solution/detail/${i.id}`">

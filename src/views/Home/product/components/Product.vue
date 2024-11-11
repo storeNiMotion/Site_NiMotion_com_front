@@ -90,7 +90,7 @@ onBeforeRouteUpdate((to) => {
                             <div v-if="i.name === '传动组件'">
                                 <RouterLink :to="`/product/${i.id}`" target="_blank" >
                                     <div class="pic-box">
-                                        <img v-img-lazy="i.image" :alt="i.name" style="width: 100%" />
+                                        <img v-img-lazy="i.image" :alt="'NiMotion' + `${i.name}`" style="width: 100%" />
                                     </div>
                                     <h3>{{ i.name }}</h3>
                                 </RouterLink>
@@ -98,7 +98,7 @@ onBeforeRouteUpdate((to) => {
                             <div v-else-if="i.name === '智能控制器'">
                                 <RouterLink :to="`/product/${i.id}`" target="_blank" >
                                     <div class="pic-box">
-                                        <img v-img-lazy="i.image" :alt="i.name" style="width: 100%" />
+                                        <img v-img-lazy="i.image" :alt="'NiMotion' + `${i.name}`" style="width: 100%" />
                                     </div>
                                     <h3>{{ i.name }}</h3>
                                 </RouterLink>
@@ -106,7 +106,7 @@ onBeforeRouteUpdate((to) => {
                             <div v-else>
                                 <RouterLink :to="`/product/list/${i.id}`" target="_blank" >
                                     <div class="pic-box">
-                                        <img v-img-lazy="i.image" :alt="i.name" style="width: 100%" />
+                                        <img v-img-lazy="i.image" :alt="'NiMotion' + `${i.name}`" style="width: 100%" />
                                     </div>
                                     <h3>{{ i.name }}</h3>
                                 </RouterLink>
@@ -170,6 +170,7 @@ onBeforeRouteUpdate((to) => {
                         img {
                             margin-bottom: 5px;
                             transition: all .3s;
+                            width: 100%;
                         }
 
                         h3 {

@@ -234,6 +234,28 @@ const numberHeadList = [                // 型号表头
 }
 
 @media (max-width: 768px) {
+//产品内容
+.product-panel-SpecNum {
+
+    // 02.产品规格
+    .Product-spec {
+
+        ::v-deep(.el-collapse) {
+
+            .el-collapse-item {
+                // 2.1.1 头部
+                .el-collapse-item__header { 
+                    padding: 0 10px;
+                    font-size: 16px;
+                    font-weight: 650;
+                }
+
+            }
+
+        }
+    }
+
+}
 
 }
 

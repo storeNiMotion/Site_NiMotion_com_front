@@ -17,13 +17,13 @@ const activeNames = ref(['SpecNum'])     // 默认显示面板
 const numberHeadList = [                // 型号表头
     {
         "key": "number",
-        "label": "model",
+        "label": "Model",
         "fixed": true,
         "width":150
     },
     {
         "key": "bus",
-        "label": "bus",
+        "label": "Bus",
         "fixed": false,
         "width":180
     },
@@ -54,12 +54,12 @@ const numberHeadList = [                // 型号表头
     },
     {
         "key": "encoder",
-        "label": "encoder",
+        "label": "Encoder",
         "fixed": false
     },
     {
         "key": "torque",
-        "label": "torque(N·m)",
+        "label": "Torque(N·m)",
         "fixed": false
     },
     {
@@ -69,7 +69,7 @@ const numberHeadList = [                // 型号表头
     },
     {
         "key": "length",
-        "label": "length(mm)",
+        "label": "Length(mm)",
         "fixed": false
     },
     // {
@@ -108,7 +108,7 @@ const numberHeadList = [                // 型号表头
                              <el-table-column prop="Inertia" >
                                 <template #header>
                                     <span class="sup">
-                                        惯量(kg·m²×10
+                                        Inertia(kg·m²×10
                                         <sup><span class="sup">-6</span></sup>)
                                     </span>
                                 </template>

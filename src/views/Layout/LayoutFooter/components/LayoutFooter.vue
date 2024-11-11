@@ -118,7 +118,7 @@ const icon = [
                   <!-- <RouterLink :to="item.href" target="_blank" rel="noopener noreferrer" >
                     <img :src="item.imgsrc" alt="">
                   </RouterLink> -->
-                  <a :href="item.href" target="_blank" rel="noopener noreferrer"><img v-img-lazy="item.imgsrc" alt=""></a>
+                  <a :href="item.href" target="_blank" rel="noopener noreferrer"><img v-img-lazy="item.imgsrc" :alt="item.value"></a>
                 </li>
               </ul>
             </div>

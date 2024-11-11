@@ -1,26 +1,15 @@
 <script setup>
 
 // 矩频曲线
-
 import { watch, onMounted, ref } from "vue"
 
 // 导入pinia
 import { useContentStore } from '@/stores/content'
 
-//使用pinia中的数据
-// const ContentCurve = useContentStore()                // 实例化
-const ContentCurve = ref('')
-
-const getContentCurve = () => {
-    const res = useContentStore()                // 实例化
-    ContentCurve.value = res.productDetail.curve_image
-}
-
-const handleChange = () => {
-    getContentCurve()
-}
-
-// 4.钩子生命周期函数
+// 使用pinia中的数据
+const ContentCurve = useContentStore()                // 实例化
+// 折叠面板
+const activeNames = ref(['spec-4'])     // 默认显示面板
 
 
 </script>
@@ -34,7 +23,7 @@ const handleChange = () => {
                     <el-collapse-item title="Moment-frequency curve" name="spec-4">
                         <div class="spec-img">
                             <img
-                                :src="ContentCurve"
+                                :src="ContentCurve.productDetail.curve_image"
                                 style="width: 100%"
                                 />
                         </div>

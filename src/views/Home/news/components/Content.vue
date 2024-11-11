@@ -76,7 +76,7 @@ onMounted(() => getnewsList())
                     <li class="col-lg-4 col-md-12 col-sm-12" v-for="item in newsList.slice(0, 3)" :key="item.id">
                         <RouterLink :to="`/news/detail/${item.id}`">
                             <div class="pic">
-                                <img v-img-lazy="item.default_image" :alt="item.name">
+                                <img v-img-lazy="item.default_image" :alt="'NiMotion' + `${item.name}`">
                                 <!-- <img src="" style="width: 100%"/> -->
                                 <div class="cover">
                                     <div class="info">
@@ -91,7 +91,7 @@ onMounted(() => getnewsList())
                     </li>
                 </ul>
                 <div class="more">
-                    <RouterLink to="/news" class="more"><el-button type="primary" round>Read More</el-button></RouterLink>
+                    <RouterLink to="/news" ><el-button type="primary" round><span>Read More </span> <span> > </span></el-button></RouterLink>
                 </div>
                 
             </div>
@@ -175,6 +175,9 @@ onMounted(() => getnewsList())
             display: flex;
             justify-content: center;
             margin-top: 20px;
+            button {
+                background-color: #003abd;
+            }
         }
     }
 }

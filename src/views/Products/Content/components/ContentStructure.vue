@@ -1,27 +1,14 @@
 <script setup>
 // 产品结构示意图
-import { watch, onMounted, ref } from "vue"
-
+import { ref } from "vue"
 // 导入pinia
 import { useContentStore } from '@/stores/content'
 
 //使用pinia中的数据
+const ContentStructure = useContentStore()                // 实例化
 
-
-// 2.处理数据 => 折叠面板
-const ContentStructure = ref('')
-
-const getContentStructure = () => {
-    const res = useContentStore()                // 实例化
-    ContentStructure.value = res.productDetail.structure
-}
-
-const handleChange = () => {
-    getContentStructure()
-}
-
-
-// 4.钩子生命周期函数
+// 处理数据 => 折叠面板
+const activeNames = ref(['spec-0'])     // 默认显示面板
 
 </script>
 
@@ -36,7 +23,7 @@ const handleChange = () => {
                     <el-collapse-item title="Structural diagram" name="spec-0">
                         <div class="spec-img">
                             <img
-                                :src="ContentStructure"
+                                :src="ContentStructure.productDetail.structure"
                                 style="width: 100%"
                              />
                         </div>
