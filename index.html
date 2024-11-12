@@ -18,6 +18,67 @@
   <!-- // 统计鸟 (统计代码) -->
   <script type="text/javascript" src="//api.tongjiniao.com/c?_=672027616506896384" async></script>
 
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16756362615"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+
+gtag('config', 'AW-16756362615', { 'allow_enhanced_conversions': true });
+</script>
+
+
+
+<!-- Event snippet for 提交表单 conversion page -->
+<script>
+window.addEventListener('load', function (event) {
+document.querySelectorAll('[type="button"]').forEach(function (e) {
+e.addEventListener('click', function () {
+var email = document.querySelector('[placeholder="*E-mail"]').value
+var name = document.querySelector('[placeholder="*Name"]').value;
+var msg = document.querySelector('[placeholder="*Describe your specific request"]').value;
+if (msg != "" && name != "" && email != "") {
+gtag('set', 'user_data', { 'email': email });
+gtag('event', 'conversion', {'send_to': 'AW-16756362615/4G2NCOSgsOgZEPeah7Y-'});
+
+
+}
+});
+});
+});
+</script>
+
+
+<!-- Event snippet for whatsapp点击 conversion page -->
+<script>
+window.addEventListener('load', function (event) {
+document.querySelectorAll('a[href*="whatsapp"]').forEach(function (e) {
+e.addEventListener("click", function () {
+gtag('event', 'conversion', {'send_to': 'AW-16756362615/R094COqgsOgZEPeah7Y-'});
+})
+})
+document.querySelectorAll('a[href*="wa.me"]').forEach(function (e) {
+e.addEventListener("click", function () {
+gtag('event', 'conversion', {'send_to': 'AW-16756362615/R094COqgsOgZEPeah7Y-'});
+})
+})
+})
+</script>
+
+
+<!-- Event snippet for 邮箱点击 conversion page -->
+<script>
+window.addEventListener('load', function (event) {
+document.querySelectorAll('a[href*="mailto:"]').forEach(function (e) {
+e.addEventListener("click", function () {
+gtag('event', 'conversion', {'send_to': 'AW-16756362615/uKxqCOegsOgZEPeah7Y-'});
+})
+})
+})
+</script>
+
 </head>
 
 <body>
