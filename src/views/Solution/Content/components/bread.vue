@@ -27,16 +27,16 @@ onMounted(() => getsolutionDetail())
                     </div>
 
                     <div class="bread-item">
-                        <span> > </span>
+                        <span>&nbsp; > &nbsp;</span>
                         <RouterLink to="/solution/">Solution</RouterLink>
                     </div>
                     <div class="bread-item">
-                        <span> > </span>
+                        <span>&nbsp; > &nbsp;</span>
                         <RouterLink :to="`/solution/${solutionDetail.category}`">{{ solutionDetail.category_name }}
                         </RouterLink>
                     </div>
                     <div class="bread-item">
-                        <span> > </span>
+                        <span>&nbsp; > &nbsp;</span>
                         <RouterLink class="active" :to="`/solution/detail/${solutionDetail.id}`">{{ solutionDetail.name
                             }}</RouterLink>
                     </div>

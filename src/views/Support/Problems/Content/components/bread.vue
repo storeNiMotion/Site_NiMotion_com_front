@@ -2,7 +2,7 @@
 // import { TabsPaneContext } from 'element-plus'
 import { Calendar, Search } from '@element-plus/icons-vue'
 import { getSupportProblemsDetailAPI } from "@/apis/support"
-import { onMounted, ref } from "vue"
+import { computed, onMounted, ref } from "vue"
 import { useRoute, onBeforeRouteUpdate } from "vue-router"   // 引入路由
 
 const route = useRoute()                //调用路由
@@ -11,11 +11,18 @@ const supportProblemsDetail = ref({})
 const supportProblemsList = ref({})
 const getsupportProblemsDetail = async(id = route.params.id) => {
     const res = await getSupportProblemsDetailAPI(id)
-    supportProblemsDetail.value = res.data[0]
+    supportProblemsDetail.value = res.data[0].name
     supportProblemsList.value = res.category[0]
     document.title = supportProblemsDetail.value.name + ' - 立迈胜NiMotion - "智能控制 驱动未来"！'
 
 }
+
+const shortText = computed(() => {
+  if (supportProblemsDetail.value.length > 80) {
+    return supportProblemsDetail.value.slice(0, 80) + '...';
+  }
+  return supportProblemsDetail.value
+})
 
 
 onMounted(() => getsupportProblemsDetail())
@@ -32,16 +39,16 @@ onMounted(() => getsupportProblemsDetail())
                     </div>
                     
                     <div class="bread-item">
-                        <span> > </span>
+                        <span>&nbsp; > &nbsp;</span>
                         <RouterLink to="/support/">Support</RouterLink>
                     </div>
                     <div class="bread-item">
-                        <span> > </span>
+                        <span>&nbsp; > &nbsp;</span>
                         <RouterLink :to="`/${supportProblemsList.router}`">{{ supportProblemsList.name }}</RouterLink>
                     </div>
                     <div class="bread-item">
-                        <span> > </span>
-                        <span class="active">{{ supportProblemsDetail.name }}</span>
+                        <span>&nbsp; > &nbsp;</span>
+                        <span class="active">{{ shortText }}</span>
                     </div>
                 </div>
 
@@ -60,12 +67,22 @@ onMounted(() => getsupportProblemsDetail())
     // height: 36px;
     .bread {
         display: flex;
-        justify-content: space-between;
-        padding-right: 20px;
+        justify-content: center;
+        // padding-right: 20px;
         padding: 0 10px;
         .bread-box {
             display: flex;
-            // margin-left: 30px;
+            width: 880px;
+            height: 100%;
+            overflow: hidden;
+            .bread-item {
+                display: flex;
+                // flex: 1;
+                align-items: center;
+                // max-width: 600px;
+                height: 100%;
+                overflow: hidden;
+            }
         }
 
     }

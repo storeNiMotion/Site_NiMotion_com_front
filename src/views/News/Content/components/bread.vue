@@ -1,7 +1,7 @@
 <script setup>
 
 import { getNewDetailAPI } from "@/apis/news"
-import { onMounted, ref } from "vue"
+import { computed, onMounted, ref } from "vue"
 import { useRoute, onBeforeRouteUpdate } from "vue-router"   // 引入路由
 import router from '@/router/index'
 const route = useRoute()                //调用路由
@@ -12,11 +12,19 @@ const NewDetail = ref([])
 const getNewDetail = async (id = route.params.id) => {
     const res = await getNewDetailAPI(id)
     // console.log(router);
-    NewDetail.value = res.data[0]
+    NewDetail.value = res.data[0].name
     document.title = NewDetail.value.name
     // console.log(document.title);
-
 }
+
+
+const shortText = computed(() => {
+  if (NewDetail.value.length > 120) {
+    return NewDetail.value.slice(0, 120) + '...';
+  }
+  return NewDetail.value
+})
+
 
 onMounted(() => getNewDetail())
 </script>
@@ -31,14 +39,14 @@ onMounted(() => getNewDetail())
                         <RouterLink to="/">Home</RouterLink>
                     </div>
                     <div class="bread-item">
-                        <span> > </span>
+                        <span>&nbsp; > &nbsp;</span>
                         <RouterLink to="/news/">News</RouterLink>
                     </div>
 
                     <div class="bread-item">
-                        <span> > </span>
+                        <span>&nbsp; > &nbsp;</span>
                         <!-- <RouterLink class="active" :to="`/news/detail/${NewDetail.id}`">{{ NewDetail.name }}</RouterLink> -->
-                        <span class="active"> {{ NewDetail.name }} </span>
+                        <span class="active"> {{ shortText }} </span>
                     </div>
                 </div>
 
@@ -54,26 +62,27 @@ onMounted(() => getNewDetail())
     margin-top: 10px;
     padding: 15px 0;
     width: 100vw;
-    // height: 36px;
     .bread {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         padding: 0 10px;
-        // padding-right: 20px;
+        width: 100%;
         height: 100%;
         .bread-box {
             display: flex;
-            // margin-left: 30px;
+            width: 880px;
             height: 100%;
+            overflow: hidden;
             .bread-item {
                 display: flex;
+                // flex: 1;
                 align-items: center;
+                // max-width: 600px;
                 height: 100%;
+                overflow: hidden;
             }
         }
-
-
     }
 
     a {

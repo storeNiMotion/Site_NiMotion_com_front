@@ -62,17 +62,20 @@ onMounted(() => getsupportProblemsDetail())
 
     // 01.图文内容
     .support-detail {
-        margin: 0 10px;
-        padding: 40px;
-        // max-width: 900px;
-        // height: 600px;
-        background-color: #fff;
-        // border-bottom: 1px solid #e5e9ef;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        // margin: 0 10px;
+        // padding: 40px;
+        
 
         // 01.图文
         .article {
             border-bottom: 1px solid #e5e9ef;
             margin-bottom: 20px;
+            padding-top: 40px;
+            max-width: 880px;
+            background-color: #fff;
 
             // 1.1 标题区
             .detail-title {
@@ -87,6 +90,7 @@ onMounted(() => getsupportProblemsDetail())
                     min-height: 39px;
                     font-size: 28px;
                     font-weight: 600;
+                    font-family: Helvetica, Verdana, Arial, sans-serif, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif, SimHei, SimSun;
                 }
 
                 .info-box {
@@ -104,7 +108,7 @@ onMounted(() => getsupportProblemsDetail())
             :deep(.detail-content) {
                 margin-bottom: 50px;
                 padding: 0px 40px;
-                font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif, SimHei, SimSun;
+                font-family: Helvetica, Verdana, Arial, sans-serif, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif, SimHei, SimSun;
 
                 blockquote {
                     color: #6d757a;
@@ -112,7 +116,7 @@ onMounted(() => getsupportProblemsDetail())
                     position: relative;
 
                     p {
-                        margin-bottom: 12px;
+                        margin-bottom: 14px;
                     }
                 }
 
@@ -136,13 +140,13 @@ onMounted(() => getsupportProblemsDetail())
 
                 h3 {
                     margin: 20px 0;
-                    font-size: 16px !important;
+                    font-size: 18px !important;
                     font-weight: 600 !important;
                 }
 
                 p {
                     margin: 10px 0;
-                    font-size: 14px;
+                    font-size: 16px;
                     cursor: text;
                     line-height: 26px;
                     // cursor: text;

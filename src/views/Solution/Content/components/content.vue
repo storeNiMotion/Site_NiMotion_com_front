@@ -76,6 +76,7 @@ onMounted(() => getsolutionDetail())
                     margin-bottom: 16px;
                     font-size: 28px;
                     font-weight: 600;
+                    font-family: Helvetica, Verdana, Arial, sans-serif, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif, SimHei, SimSun;
                 }
 
                 .info-box {
@@ -93,7 +94,7 @@ onMounted(() => getsolutionDetail())
             :deep(.detail-content) {
                 margin-bottom: 50px;
                 padding: 0px 40px;
-                font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif, SimHei, SimSun;
+                font-family: Helvetica, Verdana, Arial, sans-serif, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif, SimHei, SimSun;
 
                 blockquote {
                     color: #6d757a;
@@ -101,7 +102,7 @@ onMounted(() => getsolutionDetail())
                     position: relative;
 
                     p {
-                        margin-bottom: 12px;
+                        margin-bottom: 14px;
                     }
                 }
 
@@ -125,13 +126,13 @@ onMounted(() => getsolutionDetail())
 
                 h3 {
                     margin: 20px 0;
-                    font-size: 16px !important;
+                    font-size: 18px !important;
                     font-weight: 600 !important;
                 }
 
                 p {
                     margin: 10px 0;
-                    font-size: 14px;
+                    font-size: 16px;
                     line-height: 26px;
                     // cursor: text;
 
