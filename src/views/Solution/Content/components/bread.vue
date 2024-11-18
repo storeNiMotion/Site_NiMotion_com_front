@@ -2,6 +2,7 @@
 import { getSolutionDetailAPI } from "@/apis/solution"
 import { onMounted, ref } from "vue"
 import { useRoute } from "vue-router"   // 引入路由
+import { useHead } from '@unhead/vue'               // SEO
 
 const route = useRoute()                //调用路由
 // 1.获取数据
@@ -10,7 +11,19 @@ const solutionDetail = ref([])
 const getsolutionDetail = async (id = route.params.id) => {
     const res = await getSolutionDetailAPI(id)
     solutionDetail.value = res.data[0]
-    document.title = solutionDetail.value.name + ' - 立迈胜NiMotion - "智能控制 驱动未来"！'
+    // document.title = solutionDetail.value.name + ' - 立迈胜NiMotion - "智能控制 驱动未来"！'
+    useHead({
+        title: solutionDetail.value.name + ' - NiMotion - Professional motion control service platform',
+        meta: [
+            {
+            name: 'description',
+            content: solutionDetail.value.description,
+            }, {
+            name: 'keywords',
+            content: solutionDetail.value.keywords,
+            },
+        ],
+    })
 }
 
 onMounted(() => getsolutionDetail())

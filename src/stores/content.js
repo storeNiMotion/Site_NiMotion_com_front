@@ -1,7 +1,7 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
 import { getProductDetailAPI, getProductScrewDetailAPI } from "@/apis/product"   //导入API
-
+import { useHead } from '@unhead/vue'               // SEO
 export const useContentStore = defineStore('content', () => {
 
     // 1.产品内容数据
@@ -23,9 +23,20 @@ export const useContentStore = defineStore('content', () => {
         specImgListData.value = productDetail.value.images.filter((ele) => ele.tag === '规格参数')
         drawImgListData.value = productDetail.value.images.filter((ele) => ele.tag === '图纸尺寸')
 
-        document.title = productDetail.value.name + ' - NiMotion - Professional motion control service platform'
+        // document.title = productDetail.value.name + ' - NiMotion - Professional motion control service platform'
+        useHead({
+            title: productDetail.value.name + ' - NiMotion - Professional motion control service platform',
+            meta: [
+              {
+                name: 'description',
+                content: productDetail.value.description,
+              }, {
+                name: 'keywords',
+                content: productDetail.value.keywords,
+              },
+            ],
+          })
     }
-
 
 
     // 2.产品内容数据
@@ -44,7 +55,19 @@ export const useContentStore = defineStore('content', () => {
         specScrewListData.value = productScrewDetail.value.product_Detailspec
         specScrewImgListData.value = productScrewDetail.value.images.filter((ele) => ele.tag === '规格参数')
 
-        document.title = productScrewDetail.value.name + ' - NiMotion - Professional motion control service platform'
+        // document.title = productScrewDetail.value.name + ' - NiMotion - Professional motion control service platform'
+        useHead({
+            title: productScrewDetail.value.name + ' - NiMotion - Professional motion control service platform',
+            meta: [
+              {
+                name: 'description',
+                content: productScrewDetail.value.description,
+              }, {
+                name: 'keywords',
+                content: productScrewDetail.value.keywords,
+              },
+            ],
+          })
     }
 
     return {

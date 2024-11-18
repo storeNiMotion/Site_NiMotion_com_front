@@ -19,6 +19,7 @@ import '@/styles/common.scss'
 import { lazyPlugin } from '@/directives'
 import { useOffsetPagination } from '@vueuse/core'
 
+import { createHead } from '@unhead/vue'
 
 router.beforeEach((to, from, next) => {
     // console.log(to)
@@ -32,12 +33,14 @@ router.beforeEach((to, from, next) => {
 
 const app = createApp(App)
 const pinia = createPinia()
+const head = createHead()
 
 //注册持久化插件
 pinia.use(piniaPluginPersistedstate)
 app.use(pinia)
 app.use(router)
 app.use(lazyPlugin)
+app.use(head)
 // app.use(VueWechatTitle)
 app.use(vue3videoPlay)
 app.mount('#app')

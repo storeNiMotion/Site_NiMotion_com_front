@@ -4,6 +4,7 @@ import { getNewDetailAPI } from "@/apis/news"
 import { computed, onMounted, ref } from "vue"
 import { useRoute, onBeforeRouteUpdate } from "vue-router"   // 引入路由
 import router from '@/router/index'
+import { useHead } from '@unhead/vue'               // SEO
 const route = useRoute()                //调用路由
 
 //获取数据
@@ -13,8 +14,20 @@ const getNewDetail = async (id = route.params.id) => {
     const res = await getNewDetailAPI(id)
     // console.log(router);
     NewDetail.value = res.data[0].name
-    document.title = NewDetail.value.name
+    // document.title = NewDetail.value.name
     // console.log(document.title);
+    useHead({
+        title: NewDetail.value.name + ' - NiMotion - Professional motion control service platform',
+        meta: [
+            {
+            name: 'description',
+            content: NewDetail.value.description,
+            }, {
+            name: 'keywords',
+            content: NewDetail.value.keywords,
+            },
+        ],
+    })
 }
 
 
