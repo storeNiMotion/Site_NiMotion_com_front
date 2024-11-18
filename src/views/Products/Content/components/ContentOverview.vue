@@ -65,7 +65,7 @@ onMounted(() => {
                     <h2>{{ ContentStoreOver.productDetail.name }}</h2>
                     <!-- <h3>一体化步进电机</h3> -->
                     <div class="description">
-                        <div v-html="ContentStoreOver.productDetail.description" class="description"></div>
+                        <div v-html="ContentStoreOver.productDetail.abstract" class="description"></div>
                     </div>
                     <Content />
                     <!-- <a href="https://affim.baidu.com/unique_30577829/chat?siteId=15043094&userId=30577829&siteToken=8b9903f017898a80ab853887d15b9743" 
