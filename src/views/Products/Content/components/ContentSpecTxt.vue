@@ -14,6 +14,7 @@ const ContentSpecTxt = useContentStore()                // 实例化
 const activeNames = ref(['spec-SpecTxt'])     // 默认显示面板
 
 // 2.3技术规格
+// 初始表头
 const specHeadList = [
     {
         "key": "name",
@@ -29,6 +30,23 @@ const specHeadList = [
     },
 ]
 
+const specHeadList1 = [
+    {
+        "key": "name",
+        "label": "Specification",
+        "fixed": false,
+        "width": 180
+    },
+]
+
+const specHeadList2 = [
+    {
+        "key": "value",
+        "label": "Content",
+        "fixed": false,
+        "width": ''
+    },
+]
 // 4.钩子生命周期函数
 
 
@@ -48,14 +66,40 @@ const specHeadList = [
                         <!-- 这里使用文本域content -->
                         <!-- <div v-html="productDetail.content"></div> -->
                         <el-table class="specList" :data="ContentSpecTxt.specListData"  border="true" style="width: 100%" :height="{ 480: ContentSpecTxt.specListData.length > 8 }">
-                            <el-table-column 
+                            <!-- 原表 -->
+                            <!-- <el-table-column 
                                 :fixed="item.fixed" 
                                 :prop="item.key" 
                                 :label="item.label" 
                                 v-for="item in specHeadList" 
                                 :key="item.id" 
                                 :width="item.width"
-                             />
+                             /> -->
+                            <el-table-column
+                            :fixed="item.fixed" 
+                                :prop="item.key" 
+                                :label="item.label" 
+                                v-for="item in specHeadList1" 
+                                :key="item.id" 
+                                :width="item.width"
+                             >
+                                <template #default="{ row }" >
+                                    <div v-html="row.name" ></div>
+                                </template>
+                            </el-table-column>
+
+                            <el-table-column
+                            :fixed="item.fixed" 
+                                :prop="item.key" 
+                                :label="item.label" 
+                                v-for="item in specHeadList2" 
+                                :key="item.id" 
+                                :width="item.width"
+                             >
+                                <template #default="{ row }" >
+                                    <div v-html="row.value"></div>
+                                </template>
+                            </el-table-column>
                         </el-table>
                     </el-collapse-item>
                 </el-collapse>
