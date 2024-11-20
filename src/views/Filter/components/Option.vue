@@ -132,7 +132,11 @@ const optionFlange = [
     {
         value: '',
         label: 'All',
-        },
+    },
+    {
+        value: '20',
+        label: '20mm',
+    },
     {
         value: '28',
         label: '28mm',
