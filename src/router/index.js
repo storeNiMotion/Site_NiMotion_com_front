@@ -26,6 +26,7 @@ import StepperDetail from '@/views/Products/Content/Stepper/StepperDetail.vue'  
 import DriverDetail from '@/views/Products/Content/Driver/DriverDetail.vue'                       // 驱动器详情页
 import ScrewDetail from '@/views/Products/Content/Screw/ScrewDetail.vue'                          // 丝杆电机详情页
 import ServoDetail from '@/views/Products/Content/Servo/ServoDetail.vue'                          // 伺服电机详情页
+import ActuatorDetail from '@/views/Products/Content/PositionActuator/index.vue'                          // 位置执行器详情页
 import BrushlessDetail from '@/views/Products/Content/Brushless/BrushlessDetail.vue'              // 无刷电机详情页
 
 import TransmissionDetail from '@/views/Products/Content/Transmission/TransmissionDetail.vue'     // 传动组件详情页
@@ -140,6 +141,11 @@ const router = createRouter({
           meta: { title: 'Integrated servo motor details' },
           path: '/product/servo/detail/:id',                     // 伺服电机详情页
           component: ServoDetail
+        },
+        {
+          meta: { title: 'Position Actuators details' },
+          path: '/product/actuator/detail/:id',                     // 位置执行器详情页
+          component: ActuatorDetail
         },
         {
           meta: { title: 'Integrated brushless motor details' },
